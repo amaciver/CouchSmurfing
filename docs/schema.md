@@ -53,3 +53,14 @@ id          | integer   | not null, primary key
 user_id     | string    | not null, foreign key (references users), indexed
 host_id     | string    | not null, foreign key (references hosts), indexed
 body        | text      | not null
+
+
+## requests
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | string    | not null, foreign key (references users), indexed
+host_id     | string    | not null, foreign key (references hosts), indexed
+start_date  | date      | not null
+end_date    | date      | not null
+status      | string    | not null, default: 'Approved'
