@@ -32,7 +32,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
-description | string    | not null
+description | text      | not null
 image_url   | string    | not null
 banner_url  | string    | not null
 map_url     | string    | not null
