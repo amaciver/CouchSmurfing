@@ -2,7 +2,7 @@
 
 
 **LandingContainer**
-  - Landing
+  - LandingView
     + LandingHeader
       - AuthFormContainer
     + MovingGraphic

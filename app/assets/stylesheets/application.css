@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+ body {
+
+   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+ }
+ html {
+   font-weight: lighter;
+   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+ }
+ button {
+   font-weight: lighter;
+   letter-spacing: .5px;
+
+ }
+
+
+ .main-view {
+   display: block;
+   margin: 0 auto;
+   width: 900px;
+   background: gray;
+ }
