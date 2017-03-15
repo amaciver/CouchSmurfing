@@ -22,8 +22,9 @@
    font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
  }
  button {
+   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    font-weight: lighter;
-   letter-spacing: .5px;
+   letter-spacing: .25px;
 
  }
 

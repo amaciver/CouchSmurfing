@@ -1,6 +1,18 @@
 import React from 'react';
 import AuthFormContainer from '../auth/auth_form_container';
 import Modal from 'react-modal';
+import { withRouter } from 'react-router';
+
+const authStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 class LandingHeader extends React.Component {
   constructor(props) {
@@ -17,6 +29,10 @@ class LandingHeader extends React.Component {
     Modal.setAppElement('body');
   }
 
+  componentWillUpdate() {
+
+  }
+
   openModal(formType) {
     return () => {
       this.setState({modalIsOpen: true, formType:formType});
@@ -25,6 +41,7 @@ class LandingHeader extends React.Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
+
   }
 
 
@@ -48,7 +65,9 @@ class LandingHeader extends React.Component {
         </div>
         <Modal
           isOpen={this.state.modalIsOpen}
-          contentLabel='Auth Modal'>
+          contentLabel='Auth Modal'
+          style={authStyles}
+          >
           <AuthFormContainer
             formType={this.state.formType}
             closeModal={this.closeModal}/>
@@ -58,4 +77,4 @@ class LandingHeader extends React.Component {
   }
 }
 
-export default LandingHeader;
+export default withRouter(LandingHeader);

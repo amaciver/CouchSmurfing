@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
+
 
 class AuthForm extends React.Component {
 	constructor(props) {
@@ -30,8 +31,9 @@ class AuthForm extends React.Component {
     // debugger;
 		this.props.processForm(user)
     .then(
-      this.props.closeModal()
-    );
+      () => this.props.closeModal()
+    )
+    .then(() => hashHistory.push("/home"));
 	}
 
 	navLink() {
