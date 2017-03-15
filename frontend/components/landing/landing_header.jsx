@@ -56,7 +56,7 @@ class LandingHeader extends React.Component {
     return (
       <div id="landing-header" className="landing-header">
         <div className="landing-header-left">
-          <img src="/assets/logo.jpeg" width="30" height="30" />
+          <img src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg" width="30" height="30" />
           <div className="brand-name">CouchSmurfing</div>
           Hello {currentUser}
         </div>
