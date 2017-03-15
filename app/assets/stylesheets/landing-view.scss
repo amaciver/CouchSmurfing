@@ -33,14 +33,17 @@
 }
 
 .bg-image-wrapper {
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-  background: linear-gradient(rgba(0, 0, 0, 0.498039), rgba(0, 0, 0, 0.498039));
-  background-color: #000;
+  // background: linear-gradient(rgba(0, 0, 0, 0.45),
+  //  rgba(0, 0, 0, 0.45)),
+  //   url(http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/care-bears-banner_qdmud7.jpg);
+  // width: 100%;
+  // background-size: cover;
+  // height: 500px;
 }
 .bg-image {
-  width: 100%
+  width: 100%;
 }
+
 
 .x-box {
   position: absolute;
@@ -53,4 +56,11 @@
   height: auto;
   margin: 40px;
   border: 1px solid blue;
+}
+
+.testimonial-content {
+  height: 600px;
+  width: 250px;
+  position: absolute;
+  right: 50px;
 }
