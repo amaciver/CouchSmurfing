@@ -2,10 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px 5px 10px 5px;
   background: white;
   height: 35px;
   border: 1px solid blue;
@@ -20,4 +17,9 @@
     background: white;
     font-weight: 400;
   }
+  
+}
+
+#landing-splash {
+  width: 100%;
 }
