@@ -9,6 +9,24 @@ class AuthForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+  componentDidMount() {
+    if (this.props.formType === 'demo') {
+      this.setState({ username: "guest", password: "demopassword"});
+
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.formType === 'demo') {
+      const user = this.state;
+      setTimeout( () => (
+        this.props.processForm(user)
+        .then( () => this.props.closeModal())
+        .then(() => hashHistory.push("/home")), 3000
+      ));
+    }
+
+  }
 	// componentDidUpdate() {
 	// 	this.redirectIfLoggedIn();
 	// }
@@ -59,6 +77,9 @@ class AuthForm extends React.Component {
 	render() {
 		return (
 			<div className="login-form-container">
+
+        <img className="x-box" src='assets/close-icon' width="20" height="20" onClick={this.props.closeModal}/>
+
         {this.renderErrors()}
 				<form onSubmit={this.handleSubmit} className="login-form-box">
 					Welcome to CouchSmurfing!

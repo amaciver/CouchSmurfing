@@ -55,11 +55,13 @@ class LandingHeader extends React.Component {
 
     return (
       <div id="landing-header" className="landing-header">
-        <div>
+        <div className="landing-header-left">
           <img src="/assets/logo.jpeg" width="30" height="30" />
+          <div className="brand-name">CouchSmurfing</div>
           Hello {currentUser}
         </div>
         <div>
+          <button onClick={this.openModal('demo')}>Demo</button>
           <button onClick={this.openModal('signup')}>Sign Up</button>
           <button onClick={this.openModal("login")}>Log In</button>
         </div>
