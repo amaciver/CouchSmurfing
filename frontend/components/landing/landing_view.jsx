@@ -8,10 +8,12 @@ const LandingView = () => (
   <div id="landing-view" className="main-view">
     <LandingHeader />
     <div id="landing-splash" className="bg-image-wrapper">
-      <img src='/assets/smurfs-banner.jpg' width="100%" />
+      <img
+        src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/smurfs-banner_uks7vm.jpg' 
+        width="100%" />
     </div>
-    <Testimonial source='/assets/care-bears-banner.jpeg'  />
-    <Testimonial source='/assets/thundercats-banner.jpeg'/>
+    <Testimonial source='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/care-bears-banner_qdmud7.jpg'  />
+    <Testimonial source='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/thundercats-banner_triz12.jpg'/>
     <CitiesIndexContainer type="landing" />
 
   </div>

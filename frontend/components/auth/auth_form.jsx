@@ -78,7 +78,11 @@ class AuthForm extends React.Component {
 		return (
 			<div className="login-form-container">
 
-        <img className="x-box" src='assets/close-icon' width="20" height="20" onClick={this.props.closeModal}/>
+        <img className="x-box"
+          src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
+          width="20"
+          height="20"
+          onClick={this.props.closeModal}/>
 
         {this.renderErrors()}
 				<form onSubmit={this.handleSubmit} className="login-form-box">
