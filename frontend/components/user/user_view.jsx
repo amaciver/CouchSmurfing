@@ -1,5 +1,7 @@
 import React from 'react';
-
+import Header from '../general/header';
+import UserCard from './user_card';
+import CitiesIndexContainer from '../cities/cities_index_container';
 
 class UserView extends React.Component {
   constructor(props) {
@@ -12,7 +14,11 @@ class UserView extends React.Component {
   render() {
     return (
       <div id="user-view" className="main-view">
-        User View for {this.state.user.username}
+        <Header user={this.state.user} />
+        <div id='user-view-content' className='view-content'>
+          <UserCard />
+          <CitiesIndexContainer type='user-view' />
+        </div>
       </div>
     );
   }
