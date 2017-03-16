@@ -5,7 +5,7 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 username        | string    | not null, indexed, unique
-email           | string    | not null, indexed, unique
+image_url       | text      |
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 
@@ -20,7 +20,7 @@ sex         | string    | not null
 city        | string    | not null
 location    | string    | not null
 lat         | float     | not null
-lon         | float     | not null
+lng         | float     | not null
 interests   | string    | default: [], array: true
 about me    | text      |
 image_url   | string    | not null
