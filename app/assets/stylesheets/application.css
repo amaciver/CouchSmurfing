@@ -38,6 +38,10 @@
    outline: none;
  }
 
+ .hidden {
+	display: none;
+}
+
 .brand-name {
   font-family: 'Shadows Into Light', cursive;
   font-size: 25px;

@@ -4,10 +4,16 @@ import {logout} from  '../../actions/session_actions';
 import UserDropdown from './user_dropdown';
 
 const mapStateToProps = state => {
+  let username;
+  let image_url;
+  if (state.session.currentUser) {
+    username = state.session.currentUser.username;
+    image_url = state.session.currentUser.image_url;
+  }
   return ({
 
-      username: state.session.currentUser.username,
-      image_url: state.session.currentUser.image_url
+      username: username,
+      image_url: image_url
   });
 }
 

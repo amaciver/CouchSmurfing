@@ -28,28 +28,40 @@
 }
 
 .cities-user-view {
+  margin: 30px;
   min-height: 300px;
   width: 60%;
   min-width: 300px;
   border: 1px solid blue;
 }
 
+.dropdown-wrapper {
+  display: block;
+  height: 35px;
+  position: absolute;
+  right: 30px;
+  top: 12px;
+}
+
 .user-dropdown {
+  position: absolute;
+  display: flex;
+  right: 20px;
+  top: 40px;
   width: 250px;
   min-height: 400px;
-
-}
-
-.dropdown-image-wrapper {
   border: 1px solid blue;
+  button {}
+
 }
+
 
 .dropdown-image {
-  position: absolute;
-  top: 30px;
-  right: 30px;
+  // position: absolute;
+
   border: 2px solid gray;
   border-radius: 30px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
   }

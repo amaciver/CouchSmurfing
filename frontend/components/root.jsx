@@ -5,15 +5,24 @@ import App from './app';
 import LandingView from './landing/landing_view';
 import UserViewContainer from './user/user_view_container';
 
-const Root = ({ store }) => (
-  <Provider store={ store }>
-    <Router history={ hashHistory }>
-      <Route path="/" component={ App }>
-        <IndexRoute component={LandingView} />
-        <Route path="/home" component={UserViewContainer} />
-      </Route>
-    </Router>
-  </Provider>
-);
+const Root = ({ store }) => {
+  const _ensureLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+    if (!currentUser) {
+      replace('/about');
+    }
+  };
+
+  return (
+    <Provider store={ store }>
+      <Router history={ hashHistory }>
+        <Route path="/" component={ App }>
+          <IndexRoute component={UserViewContainer} onEnter={_ensureLoggedIn}/>
+          <Route path="/about" component={LandingView} />
+        </Route>
+      </Router>
+    </Provider>
+  );
+}
 
 export default Root;

@@ -22,7 +22,7 @@ class AuthForm extends React.Component {
       setTimeout( () => (
         this.props.processForm(user)
         .then( () => this.props.closeModal())
-        .then(() => hashHistory.push("/home")), 3000
+        .then(() => hashHistory.push("/")), 3000
       ));
     }
 
@@ -51,7 +51,7 @@ class AuthForm extends React.Component {
     .then(
       () => this.props.closeModal()
     )
-    .then(() => hashHistory.push("/home"));
+    .then(() => hashHistory.push("/"));
 	}
 
 	navLink() {
@@ -98,7 +98,7 @@ class AuthForm extends React.Component {
 								className="login-input" />
 						</label>
 						<br/>
-						<label> Password: 
+						<label> Password:
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
