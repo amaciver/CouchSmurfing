@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchContainer from './search_container';
+import UserDropdownContainer from './user_dropdown_container';
 
 
 class Header extends React.Component {
@@ -8,6 +9,10 @@ class Header extends React.Component {
   }
 
   render(){
+    let username;
+    if (this.props.user) {
+      username = this.props.user.username;
+    }
     return (
       <div id="general-header" className="landing-header">
         <div className="landing-header-left">
@@ -16,7 +21,7 @@ class Header extends React.Component {
             width="30"
             height="30" />
           <div className="brand-name">CouchSmurfing</div>
-          Hello {this.props.user.username}
+          Hello {username}
         </div>
         <SearchContainer text="Explore Cities" />
         <div>

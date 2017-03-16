@@ -11,7 +11,9 @@
 
 .user-view-content {
   display: flex;
+  width: 100%;
   flex-flow: row;
+  flex-wrap: wrap;
 
 }
 
@@ -26,7 +28,28 @@
 }
 
 .cities-user-view {
-  height: auto;
+  min-height: 300px;
   width: 60%;
+  min-width: 300px;
   border: 1px solid blue;
 }
+
+.user-dropdown {
+  width: 250px;
+  min-height: 400px;
+
+}
+
+.dropdown-image-wrapper {
+  border: 1px solid blue;
+}
+
+.dropdown-image {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: 2px solid gray;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  }

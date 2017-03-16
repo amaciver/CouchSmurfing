@@ -9,16 +9,23 @@ class UserDropdown extends React.Component {
     }
   }
 
-  redner() {
+  render() {
 
     let className;
-    
+
 
     return (
-      <div className='user-dropdown'>
+      <div>
+        <img className='dropdown-image' src={this.state.image_url} />
+        <div className='user-dropdown'>
+          <div>
 
+          </div>
 
+        </div>
       </div>
     );
   }
 }
+
+export default UserDropdown;

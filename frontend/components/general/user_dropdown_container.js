@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {logout} from  '../../actions/session_actions';
-import UserDropdown from './user_dropdown_container';
+import UserDropdown from './user_dropdown';
 
-const mapStateToProps = state => ({
-  username: state.currentUser.username,
-  image_url: state.currentUser.image_url
-});
+const mapStateToProps = state => {
+  return ({
+
+      username: state.session.currentUser.username,
+      image_url: state.session.currentUser.image_url
+  });
+}
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout())
