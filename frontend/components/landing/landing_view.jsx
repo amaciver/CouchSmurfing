@@ -1,7 +1,7 @@
 import React from 'react';
 import LandingHeader from './landing_header';
 import CitiesIndexContainer from '../cities/cities_index_container';
-import Testimonial1 from './Testimonial1';
+import Testimonial1 from './testimonial1';
 import Testimonial2 from './testimonial2';
 
 
