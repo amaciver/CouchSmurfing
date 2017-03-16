@@ -56,8 +56,8 @@
    /*border: 1px solid blue;*/
  }
 
- @import "api/landing-view.scss";
  @import "api/sessions.scss";
+ @import "api/landing-view.scss";
  @import "api/users.scss";
  @import "api/search.scss";
  @import "api/cities.scss";
