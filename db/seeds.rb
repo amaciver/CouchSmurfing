@@ -52,5 +52,6 @@ ActiveRecord::Base.transaction do
       map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489631222/CityImages/equestria_map.jpg"
     }
   ]
+  City.create!(cities)
 
 end
