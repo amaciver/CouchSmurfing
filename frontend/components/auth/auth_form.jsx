@@ -98,14 +98,14 @@ class AuthForm extends React.Component {
 								className="login-input" />
 						</label>
 						<br/>
-						<label> Password:
+						<label> Password: 
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
 								className="login-input" />
 						</label>
 						<br/>
-						<input type="submit" value="Submit" />
+						<input id="auth-submit-button" type="submit" value="Submit" />
 					</div>
 				</form>
 			</div>

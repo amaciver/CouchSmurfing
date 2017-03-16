@@ -32,16 +32,39 @@
   width: 100%;
 }
 
-.bg-image-wrapper {
-  // background: linear-gradient(rgba(0, 0, 0, 0.45),
-  //  rgba(0, 0, 0, 0.45)),
-  //   url(http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/care-bears-banner_qdmud7.jpg);
-  // width: 100%;
-  // background-size: cover;
-  // height: 500px;
+input[type=submit] {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border: 1px solid blue;
+  background: white;
+  letter-spacing: .3px;
+  font-weight: 150;
 }
-.bg-image {
+
+.splash-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    color: white;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+.bg-image-wrapper {
   width: 100%;
+  display: flex;
+
+  align-items: center;
+  padding-left: 60px;
+  h1 {
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 200;
+  }
 }
 
 
@@ -52,15 +75,88 @@
   opacity: 50%;
 }
 
-.testimonial-main {
+.testimonial1-main {
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  background-position: 50% 80px;
+  background-size: 90%;
+  box-sizing: border-box;
+  align-items: center;
   height: auto;
-  margin: 40px;
-  border: 1px solid blue;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  margin-left: 60px;
+  margin-right: 60px;
+
+  button {
+    border: none;
+    height: 45px;
+    border-radius: 3px;
+    background: #61B3FF;
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  // border: 1px solid blue;
 }
 
-.testimonial-content {
+.test-mod-left {
+  width: 90%;
+  padding: 40px 20px 20px;
+
+  h1 {
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 56px;
+  }
+}
+.testimonial2-main {
+  display: flex;
+  align-items: center;
+  height: auto;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  margin-left: 60px;
+  margin-right: 60px;
+  button {
+    border: none;
+    height: 45px;
+    border-radius: 3px;
+    background: #61B3FF;
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  // border: 1px solid blue;
+}
+
+.testimonial-content-right {
   height: 600px;
-  width: 250px;
+  width: 350px;
   position: absolute;
   right: 50px;
+  background: white;
+  border: 1px solid blue;
+  margin: 30px;
+
+}
+.testimonial-content-left {
+  height: 600px;
+  width: 350px;
+  position: absolute;
+  left: 50px;
+  background: white;
+  border: 1px solid blue;
+  margin: 30px;
+
 }

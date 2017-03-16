@@ -30,7 +30,6 @@ class LandingHeader extends React.Component {
   }
 
   componentWillUpdate() {
-
   }
 
   openModal(formType) {
@@ -41,25 +40,18 @@ class LandingHeader extends React.Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
-
   }
 
-
-
   render() {
-
     let currentUser;
     if (window.currentUser) {
       currentUser = window.currentUser.username;
     }
 
-    
-
     return (
       <div id="landing-header" className="landing-header">
         <div className="landing-header-left">
           <img
-
             src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
             width="30"
             height="30" />
@@ -73,6 +65,7 @@ class LandingHeader extends React.Component {
         </div>
         <Modal
           isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
           contentLabel='Auth Modal'
           style={authStyles}
           >
