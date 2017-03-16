@@ -19,6 +19,7 @@ const Root = ({ store }) => {
         <Route path="/" component={ App }>
           <IndexRoute component={UserViewContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/about" component={LandingView} />
+          
         </Route>
       </Router>
     </Provider>
