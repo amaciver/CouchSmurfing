@@ -10,9 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+
  *= require_self
  */
+ @import "landing-view.scss";
+ @import "api/sessions.scss";
+ @import "api/users.scss";
+ @import "api/search.scss";
+ @import "api/cities.scss";
 
  body {
 
@@ -26,7 +31,11 @@
    font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    font-weight: lighter;
    letter-spacing: .25px;
+   outline: none;
 
+ }
+ input {
+   outline: none;
  }
 
 .brand-name {

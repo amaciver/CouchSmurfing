@@ -13,7 +13,7 @@ class UserView extends React.Component {
 
   render() {
     return (
-      <div id="user-view" className="main-view">
+      <div id="user-view" className="user-main-view">
         <Header user={this.state.user} />
         <div id='user-view-content' className='view-content'>
           <UserCard />

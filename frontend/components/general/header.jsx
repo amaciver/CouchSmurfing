@@ -20,7 +20,7 @@ class Header extends React.Component {
         </div>
         <SearchContainer text="Explore Cities" />
         <div>
-          User dropdown
+          <UserDropdownContainer />
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 .header-search {
   display: block;
   float: left;
-  text-align: right;
+  text-align: left;
   width: 51%;
 }
 
@@ -15,7 +15,7 @@
   width: auto;
 
   margin: 12px auto;
-  margin-bottom: 11px;
+  margin-bottom: 15px;
 }
 
 .header-search-oval {
@@ -30,9 +30,16 @@
   min-height: 0;
   padding: 0;
   button {
+    padding: 8px 1px 8px 8px;
+    margin-top: 3px;
     border: none;
     color: #929dad;
     background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background: none;
+    }
   }
 }
 
@@ -42,4 +49,16 @@
   width: 160px;
   margin-top: 5px;
   padding: 7px 5px;
+  font-weight: 100;
+  // letter-spacing: .5px;
+}
+
+.header-search-submit {
+  border: none;
+
+
+}
+
+.fa-2x {
+    font-size: 15px;
 }
