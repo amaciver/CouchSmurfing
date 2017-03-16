@@ -13,11 +13,6 @@
 
  *= require_self
  */
- @import "landing-view.scss";
- @import "api/sessions.scss";
- @import "api/users.scss";
- @import "api/search.scss";
- @import "api/cities.scss";
 
  body {
 
@@ -60,3 +55,9 @@
    background: #ECF0F1;
    /*border: 1px solid blue;*/
  }
+
+ @import "api/landing-view.scss";
+ @import "api/sessions.scss";
+ @import "api/users.scss";
+ @import "api/search.scss";
+ @import "api/cities.scss";
