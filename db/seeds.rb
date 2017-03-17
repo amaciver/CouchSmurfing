@@ -54,4 +54,89 @@ ActiveRecord::Base.transaction do
   ]
   City.create!(cities)
 
+  hosts = [
+    {
+      city_id: 1,
+      name: "Papa Smurf"
+      age: 62
+      sex: "Male"
+      city: "Smurf Village",
+      location: "Papa Smurf's House",
+      lat: 20
+      lng: 20
+      interests: ["Leadership", "Beards"],
+      about_me: "I'm a fun-loving grandfather-type who has his hands full managing a crazy bunch of my mostly male offspring",
+      image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489716912/Smurfs/papa_smurf.png",
+      house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489717100/Smurfs/Houses/smurf_house_1.png",
+      status: "Accepting Guests"
+    },
+    {
+      city_id: 1,
+      name: "Smurfette"
+      age: 24
+      sex: "Female"
+      city: "Smurf Village",
+      location: "Smurfette's House",
+      lat: 20
+      lng: 20
+      interests: ["Hair", "Flowers", "Chastity"],
+      about_me: "I'm a happy-go-lucky type of girl who gets a lot of attention from the guys. I enjoy spending my time picking flowers and creating tension in my small village.",
+      image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489717334/Smurfs/smurfette.png",
+      house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489717449/Smurfs/Houses/smurfettes_house.jpg",
+      status: "Accepting Guests"
+    },
+
+    {
+      city_id: 2,
+      name: "Liono"
+      age: 26
+      sex: "Male"
+      city: "Thundera",
+      location: "ThunderCats Lair",
+      lat: 20
+      lng: 20
+      interests: ["Swords", "Leadership", "Lasers"],
+      about_me: "I'm pretty busy battling enemies most days of the week, although I try to carve out some time now and then to enjoy a craft catnip.",
+      image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489717711/ThunderCats/liono.png",
+      house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489717795/ThunderCats/Houses/thundercats_lair.jpg",
+      status: "Maybe Accepting Guests"
+    },
+    {
+      city_id: 2,
+      name: "Cheetara"
+      age: 23
+      sex: "Female"
+      city: "Thundera",
+      location: "ThunderCats Lair",
+      lat: 20
+      lng: 20
+      interests: ["Running", "Bo Staff", "Leotards"],
+      about_me: "I'm a speedy gal who knows how to defend herself. I'm heavily involved in women's rights activism. Can you keep up?",
+      image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489718114/ThunderCats/cheetara.jpg",
+      house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489717795/ThunderCats/Houses/thundercats_lair.jpg",
+      status: "Accepting Guests"
+    },
+
+    {
+      city_id: 3,
+      name: "Grumpy Bear"
+      age: 30
+      sex: "Male"
+      city: "Kingdom of Caring",
+      location: "Rain Cloud",
+      lat: 20
+      lng: 20
+      interests: ["Frowning", "Rain"],
+      about_me: "I don't understand what there is to be so happy about. I prefer cold rainy days curled up with some tea and my existential angst.",
+      image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489718402/CareBears/grumpy_bear.png",
+      house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489718780/CareBears/Houses/grumpy_house.jpg",
+      status: "Not Accepting Guests"
+    },
+
+
+
+
+
+  ]
+
 end

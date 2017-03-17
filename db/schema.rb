@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316004541) do
+ActiveRecord::Schema.define(version: 20170317030251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,25 @@ ActiveRecord::Schema.define(version: 20170316004541) do
     t.text     "map_url",     null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "hosts", force: :cascade do |t|
+    t.integer  "city_id",                                      null: false
+    t.string   "name",                                         null: false
+    t.integer  "age",                                          null: false
+    t.string   "sex",                                          null: false
+    t.string   "city",                                         null: false
+    t.string   "location",                                     null: false
+    t.float    "lat",                                          null: false
+    t.float    "lng",                                          null: false
+    t.string   "interests",       default: [],                              array: true
+    t.text     "about_me"
+    t.string   "image_url",                                    null: false
+    t.string   "house_image_url"
+    t.string   "status",          default: "Accepting Guests", null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.index ["city_id"], name: "index_hosts_on_city_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

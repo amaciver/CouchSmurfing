@@ -16,10 +16,15 @@ class CitiesIndex extends React.Component {
       className = "cities-user-view";
     }
 
-
+    const names = this.props.cities.map( city => city.name + " " );
 
     return(
-      <div className={className}>Cities Index</div>
+      <div className={className}>
+        <h3>
+          Cities Index
+        </h3>
+        {names}
+      </div>
     );
   }
 }
