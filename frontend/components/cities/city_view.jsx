@@ -10,6 +10,11 @@ class CityView extends React.Component {
     };
   }
 
+  componentDidMount(){
+    debugger;
+    this.props.fetchCity(this.props.params.cityId)
+  }
+
   render() {
     return (
       <div id="user-view" className="user-main-view">

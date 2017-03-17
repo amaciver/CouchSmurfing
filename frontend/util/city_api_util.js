@@ -8,8 +8,7 @@ export const fetchCities = (query_string) => {
 
 export const fetchCity = (id) => {
   return $.ajax({
-    method: 'POST',
-    url: '/api/users',
-    data: {id}
+    method: 'GET',
+    url: `/api/cities/${id}`,
   });
 };

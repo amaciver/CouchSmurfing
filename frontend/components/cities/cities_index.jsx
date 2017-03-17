@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+import CityIndexItem from './city_index_item';
 
 class CitiesIndex extends React.Component {
   constructor(props) {
@@ -16,14 +17,18 @@ class CitiesIndex extends React.Component {
       className = "cities-user-view";
     }
 
-    const names = this.props.cities.map( city => city.name + " " );
+    const cities = this.props.cities.map( city => (
+      <CityIndexItem key={city.id} id={city.id} name={city.name} imageUrl={city.image_url} />
+    ));
 
     return(
       <div className={className}>
         <h3>
           Cities Index
         </h3>
-        {names}
+        <div className='cities-index'>
+          {cities}
+        </div>
       </div>
     );
   }

@@ -20,7 +20,7 @@ const Root = ({ store }) => {
         <Route path="/" component={ App }>
           <IndexRoute component={UserViewContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/about" component={LandingView} />
-          <Route path="/cities/:cityId" component={CityViewContainer} onEnter={_ensureLoggedIn} />
+          <Route path="/cities/:cityId" component={CityViewContainer} />
         </Route>
       </Router>
     </Provider>
