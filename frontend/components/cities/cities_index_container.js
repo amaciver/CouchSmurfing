@@ -7,6 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  fetchCities: (query_string) => dispatch(fetchCities(query_string)) 
 
 });
 

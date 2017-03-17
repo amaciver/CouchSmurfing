@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import CityView from './user_view';
+import CityView from './city_view';
 
 const mapStateToProps = (state) => ({
   user: state.session.currentUser

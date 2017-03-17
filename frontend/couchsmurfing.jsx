@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root'
 
 import * as SessionActions from './actions/session_actions';
+import * as CitiesActions from './actions/cities_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
 
   window.store = store;
+  window.fetchCities = CitiesActions.fetchCities;
   window.signup = SessionActions.signup;
   window.login = SessionActions.login;
   window.logout = SessionActions.logout;

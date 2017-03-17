@@ -6,7 +6,7 @@ const CityReducer = (state = {}, action) => {
   let newState = merge({}, state);
 
   switch(action.type) {
-    case RECEIVE_CITIES:
+    case RECEIVE_CITY:
       return action.city;
     default:
       return state;

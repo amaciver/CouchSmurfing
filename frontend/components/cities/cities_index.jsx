@@ -6,11 +6,17 @@ class CitiesIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchCities("");
+  }
+
   render(){
     let className;
     if (this.props.type === "user-view") {
       className = "cities-user-view";
     }
+
+
 
     return(
       <div className={className}>Cities Index</div>
