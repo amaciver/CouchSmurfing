@@ -49,7 +49,7 @@ ActiveRecord::Base.transaction do
       name: "Equestria",
       description: "Equestria is inhabited by magical ponies and other talking creatures, such as griffons and dragons. Other animals and creatures also live in Equestria.",
       image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489631982/CityImages/equestria.jpg",
-      banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489631911/CityImages/equestria_banner.png",
+      banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,h_815,x_61,y_281/v1489631911/CityImages/equestria_banner.png",
       map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489631222/CityImages/equestria_map.jpg"
     }
   ]

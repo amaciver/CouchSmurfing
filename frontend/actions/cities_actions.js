@@ -18,7 +18,9 @@ export const fetchCities = () => dispatch => (
     .then(cities => dispatch(receiveCities(cities)))
 );
 
-export const fetchCity = id => dispatch => (
-  APIUtil.fetchCity(id)
-    .then(city => dispatch(receiveCity(city)))
-);
+export const fetchCity = id => dispatch => {
+  return (
+    APIUtil.fetchCity(id)
+      .then(city => dispatch(receiveCity(city)))
+  );
+}
