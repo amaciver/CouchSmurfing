@@ -13,7 +13,7 @@ class CitiesIndex extends React.Component {
     }
 
     return(
-      <div className={className}>Index</div>
+      <div className={className}>Cities Index</div>
     );
   }
 }
