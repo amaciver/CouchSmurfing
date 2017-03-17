@@ -7,17 +7,15 @@ class HostIndex extends React.Component {
   }
 
   render() {
-    const hosts = this.props.hosts.map( host => {
-      <li>
-        <HostIndexItem
-          key={host.id}
-          host={host} />
-      </li>
-    })
+    const hosts = this.props.hosts.map( host => (
+      <HostIndexItem
+        key={host.id}
+        host={host} />
+    ));
     return(
-      <ul>
+      <div className='host-index-list'>
         {hosts}
-      </ul>
+      </div>
 
 
     );
