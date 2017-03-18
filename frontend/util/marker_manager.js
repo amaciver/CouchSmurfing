@@ -12,14 +12,18 @@ export default class MarkerManager {
   }
 
   updateMarkers(hosts){
+    // debugger;
     this.hosts = hosts;
-    this._hostsToAdd().forEach(this._createMarkerFromHost);
+    this.hosts.forEach(this._createMarkerFromHost);
+    // this._hostsToAdd().forEach(this._createMarkerFromHost);
     // this._markersToRemove().forEach(this._removeMarker);
   }
 
   _hostsToAdd() {
     const currentHosts = this.markers.map( marker => marker.hostId );
-    return this.hosts.filter( bench => !currentHosts.includes(host.id) );
+    if (this.hosts) {
+      return this.hosts.filter( host => !currentHosts.includes(host.id) );
+    }
   }
 
   _markersToRemove(){

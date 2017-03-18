@@ -1,7 +1,29 @@
 // Place all the styles related to the api/cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cities-index {
+  display: inline-block;
 
+  justify-content: space-around;
+  color: white;
+  text-decoration: none;
+  flex-flow: wrap;
+}
+
+.city-index-item-wrapper {
+  min-width: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  // padding: 10px;
+  margin: 20px;
+  &:hover {
+    cursor: pointer;
+    // border: 1px solid blue;
+  }
+
+
+}
 
 .city-view-content {
   display: flex;

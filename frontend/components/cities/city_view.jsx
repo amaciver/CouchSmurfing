@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../general/header';
 import HostIndexContainer from '../hosts/host_index_container';
-import CityMap from '../general/city_map';
+import CityMapContainer from '../general/city_map_container';
 
 
 class CityView extends React.Component {
@@ -27,7 +27,7 @@ class CityView extends React.Component {
       backgroundSize: "cover",
       height: "400px"
     }
-
+    console.log(this.props);
 
     return (
       <div id="city-view" className="user-main-view">
@@ -41,7 +41,7 @@ class CityView extends React.Component {
             <HostIndexContainer />
 
           </div>
-          <CityMap hosts={this.props.hosts}/>
+          <CityMapContainer />
         </div>
 
       </div>

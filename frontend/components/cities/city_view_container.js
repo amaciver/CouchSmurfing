@@ -6,7 +6,7 @@ import CityView from './city_view';
 const mapStateToProps = (state, ownProps) => ({
   user: state.session.currentUser,
   city: state.currentCity,
-  hosts: state.hosts
+  hosts: Object.keys(state.hosts).map( id => state.hosts[id])
 });
 
 const mapDispatchToProps = (dispatch) => ({

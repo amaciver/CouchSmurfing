@@ -1,9 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {Link, hashHistory} from 'react-router';
 
 class CityIndexItem extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(){
+    hashHistory.push(`/cities/${this.props.id}`)
   }
 
   render() {
@@ -11,14 +16,16 @@ class CityIndexItem extends React.Component {
       background: `linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
       url(${this.props.imageUrl})`,
-      width: "200px",
+      width: "250px",
       backgroundSize: "cover",
       height: "200px"
     }
 
     return(
-      <div className="city-index-item" style={imageStyle}>
-        <h3><Link to={`cities/${this.props.id}`}>{this.props.name}</Link></h3>
+      <div className='city-index-item-wrapper'>
+        <div className="city-index-item" style={imageStyle} onClick={this.handleClick} >
+          <p>{this.props.name}</p>
+        </div>
       </div>
     );
   }
