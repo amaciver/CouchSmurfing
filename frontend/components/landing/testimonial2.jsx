@@ -49,19 +49,26 @@ class Testimonial2 extends React.Component {
       <div className='testimonial2-main'>
 
         <div className='testimonial-content-left'>
-          testimonial-box
-          <Modal
-            onRequestClose={this.closeModal}
-            isOpen={this.state.modalIsOpen}
-            contentLabel='How Modal'
-            style={modalStyles}>
-            <HowItWorks
-              closeModal={this.closeModal} />
-          </Modal>
+          <div className="testimonial-header">
+            <h3>connected with</h3>
+          </div>
+          <figure className='testimonial-image mod-float-right'>
+            <img
+              src="http://res.cloudinary.com/couchsmurfing/image/upload/c_pad,h_526,w_526/v1489872645/Smurfs/papa_smurf_head.png"
+              className='testimonial-headshot' />
+            <figcaption>Papa Smurf</figcaption>
+          </figure>
+          <figure className='testimonial-image mod-float-left'>
+            <img
+              src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489874768/headshots/profile_photo2_head.png"
+              className='testimonial-headshot' />
+            <figcaption>Carlos</figcaption>
+          </figure>
         </div>
 
 
-        <div className='bg-image-wrapper' style={sectionStyle}>
+        <div className='test-mod-right' style={sectionStyle}>
+          <h1>Meet celebrities</h1>
           <button onClick={this.openModal}>How It Works</button>
         </div>
 

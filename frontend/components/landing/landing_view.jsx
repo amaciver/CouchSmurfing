@@ -24,7 +24,7 @@ const LandingView = () => {
 
       </div>
       <Testimonial1 source='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/care-bears-banner_qdmud7.jpg'  />
-      <Testimonial2 source='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/thundercats-banner_triz12.jpg'/>
+      <Testimonial2 source='http://res.cloudinary.com/couchsmurfing/image/upload/v1489875434/splashes/heman_test.png'/>
       <CitiesIndexContainer type="landing" />
 
     </div>

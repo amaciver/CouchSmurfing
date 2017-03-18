@@ -41,15 +41,32 @@ class Testimonial1 extends React.Component {
       background: `linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
       url(${this.props.source})`,
-      width: "90%",
+      width: "100%",
       backgroundSize: "cover",
       height: "500px"
     }
     return (
-      <div className='testimonial1-main' >
+      <div className='testimonial2-main' >
 
         <div className='testimonial-content-right'>
-          testimonial-box
+          <div className="testimonial-header">
+            <h3>CONNECTED WITH</h3>
+          </div>
+          <figure className='testimonial-image mod-float-right'>
+            <img
+              src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489872613/liono_head_hp1oom.png"
+              className='testimonial-headshot' />
+            <figcaption>Liono</figcaption>
+          </figure>
+          <figure className='testimonial-image mod-float-left'>
+            <img
+              src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489874358/headshots/profile_photo1_head.png"
+              className='testimonial-headshot' />
+            <figcaption>Jane</figcaption>
+          </figure>
+
+
+
           <Modal
             onRequestClose={this.closeModal}
             isOpen={this.state.modalIsOpen}
