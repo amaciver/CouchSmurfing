@@ -11,18 +11,37 @@
 }
 
 .city-index-item-wrapper {
+  height: 200px;
+  width: 250px;
   min-width: 200px;
   text-align: center;
   display: flex;
   align-items: center;
   // padding: 10px;
   margin: 20px;
+  overflow: hidden;
   &:hover {
     cursor: pointer;
     // border: 1px solid blue;
   }
 
 
+}
+
+.city-index-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 250px;
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  -ms-transition: .2s ease-out;
+  transition: .2s ease-out;
+  &:hover {
+    transform: scale(1.2,1.2);
+  }
 }
 
 .city-view-content {
@@ -52,7 +71,7 @@
   max-width: 500px;
   height: 400px;
   max-height: 500px;
-  border: 1px solid blue;
+  border-bottom: 1px solid gray;
 }
 
 .map {
@@ -61,5 +80,5 @@
   max-width: 500px;
   height: 500px;
   max-height: 500px;
-  border: 1px solid blue;
+  border-bottom: 1px solid gray;
 }

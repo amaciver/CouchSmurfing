@@ -7,6 +7,18 @@
   list-style: none;
   background: white;
 }
+
+.hosts-header {
+  height: 45px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  box-sizing: border-box;
+
+}
 .host-index-item {
   background: white;
   align-items: center;

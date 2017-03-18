@@ -43,6 +43,14 @@
   }
 }
 
+.react-autosuggest__container {
+  padding: 5px;
+  input{
+    border: none;
+    height: 20px;
+  }
+}
+
 .header-search {
   border: none;
   border-radius: 5px;

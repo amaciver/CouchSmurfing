@@ -16,9 +16,7 @@ class CityIndexItem extends React.Component {
       background: `linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
       url(${this.props.imageUrl})`,
-      width: "250px",
-      backgroundSize: "cover",
-      height: "200px"
+      backgroundSize: "cover"
     }
 
     return(

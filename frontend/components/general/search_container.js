@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Search from './search';
 
 const mapStateToProps = state => ({
+  cities: Object.keys(state.cities).map( id => state.cities[id])
 
 });
 

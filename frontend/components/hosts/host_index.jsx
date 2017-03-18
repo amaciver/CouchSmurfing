@@ -14,6 +14,9 @@ class HostIndex extends React.Component {
     ));
     return(
       <div className='host-index-list'>
+        <div className='hosts-header'>
+          Hosts
+        </div>
         {hosts}
       </div>
 
