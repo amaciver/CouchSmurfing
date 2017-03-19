@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170317030251) do
+ActiveRecord::Schema.define(version: 20170319011421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,27 @@ ActiveRecord::Schema.define(version: 20170317030251) do
     t.datetime "created_at",                                   null: false
     t.datetime "updated_at",                                   null: false
     t.index ["city_id"], name: "index_hosts_on_city_id", using: :btree
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "user_id",                         null: false
+    t.integer  "host_id",                         null: false
+    t.date     "start_date",                      null: false
+    t.date     "end_date",                        null: false
+    t.string   "status",     default: "APPROVED"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.index ["host_id"], name: "index_requests_on_host_id", using: :btree
+    t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "host_id",    null: false
+    t.text     "body",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["host_id"], name: "index_reviews_on_host_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,7 +1,7 @@
 .back-link {
   display: flex;
   align-items: center;
-  width: 50px;
+  width: 80px;
   min-width: 40px;
   position: absolute;
   font-size: 30px;
@@ -9,4 +9,9 @@
   left: 25px;
   color: #9c9c9c;
   cursor: pointer;
+}
+
+.fa-chevron-left {
+  padding-top: 5px;
+  padding-right: 3px;
 }
