@@ -1,5 +1,5 @@
 import React from 'react';
-import { router, hashHistory} from 'react-router';
+import { Link, router, hashHistory} from 'react-router';
 
 class UserDropdown extends React.Component {
   constructor(props) {
@@ -36,13 +36,20 @@ class UserDropdown extends React.Component {
       <div className="dropdown-wrapper">
         <img className='dropdown-image' onClick={this.handleClick(this.state.dropdown)} src={this.state.image_url} />
         <div className={this.state.dropdown}>
-          <div>
-            {this.state.username}
-            <button onClick={this.handleLogout}>
-              Logout
-            </button>
+          <ul className='dropdown-links-list'>
+            <li className='dropdown-links-list-item'>
+              <Link className='dropdown-link' to="/">
+                My Dashboard
+              </Link>
+            </li>
 
-          </div>
+            <li className='dropdown-links-list-item'>
+              <Link className='dropdown-link' onClick={this.handleLogout}>
+                Logout
+              </Link >
+            </li>
+
+          </ul>
 
         </div>
       </div>

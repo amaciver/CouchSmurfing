@@ -22,8 +22,8 @@ class AuthForm extends React.Component {
       setTimeout( () => (
         this.props.processForm(user)
         .then( () => this.props.closeModal())
-        .then(() => hashHistory.push("/")), 3000
-      ));
+        .then( () => hashHistory.push("/"))
+      ), 3000  );
     }
 
   }
