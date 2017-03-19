@@ -48,7 +48,7 @@ class Request < ApplicationRecord
 
     Request
       .where.not(id: self.id)
-      .where(cat_id: cat_id)
+      .where(host_id: host_id)
       .where(<<-SQL, start_date: start_date, end_date: end_date)
          NOT( (start_date > :end_date) OR (end_date < :start_date) )
       SQL
