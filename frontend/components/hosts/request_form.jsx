@@ -1,6 +1,6 @@
 import React from 'react';
 import { DateRangePicker } from 'react-dates';
-// import 'react-dates/lib/css/_datepicker.css';
+import 'react-dates/lib/css/_datepicker.css';
 import {START_DATE, END_DATE} from 'react-dates/constants';
 
 class RequestForm extends React.Component {
@@ -18,7 +18,7 @@ class RequestForm extends React.Component {
     return(
       <div>
         <DateRangePicker
-          
+
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           focusedInput={this.state.focused}
