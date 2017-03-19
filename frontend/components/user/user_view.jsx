@@ -16,7 +16,7 @@ class UserView extends React.Component {
       <div id="user-view" className="user-main-view">
         <Header user={this.state.user} />
         <div id='user-view-content' className='user-view-content'>
-          <UserCard />
+          <UserCard type='user-card' user={this.state.user}/>
           <CitiesIndexContainer type='user-view' />
         </div>
       </div>

@@ -24,7 +24,7 @@ class CitiesIndex extends React.Component {
     return(
       <div className={className}>
         <h3>
-          Cities Index
+          Where do you want to go?
         </h3>
         <div className='cities-index'>
           {cities}

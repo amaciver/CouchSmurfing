@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../general/header';
+import { withRouter } from 'react-router';
 import HostIndexContainer from '../hosts/host_index_container';
 import CityMapContainer from '../general/city_map_container';
 
@@ -17,6 +18,8 @@ class CityView extends React.Component {
     this.props.fetchHosts(this.props.params.cityId)
   }
 
+
+
   render() {
 
     const imageStyle = {
@@ -27,13 +30,16 @@ class CityView extends React.Component {
       backgroundSize: "cover",
       height: "400px"
     }
-    console.log(this.props);
 
     return (
       <div id="city-view" className="user-main-view">
         <Header user={this.state.user} />
         <div id='city-view-content' className='city-view-content'>
           <div id="city-splash" className="splash-wrapper" style={imageStyle}>
+              <div className='back-link' onClick={() => this.props.router.goBack()}>
+                <i className="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+                Back
+              </div>
               <h1>{this.props.city.name}</h1>
           </div>
           <div className='city-description'>{this.props.city.description}</div>
@@ -49,4 +55,4 @@ class CityView extends React.Component {
   }
 }
 
-export default CityView;
+export default withRouter(CityView);

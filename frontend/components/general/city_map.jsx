@@ -29,10 +29,11 @@ class CityMap extends Component {
   }
 
   componentDidUpdate() {
+
     // if(this.props.singleHost){
     //   this.MarkerManager.updateMarkers([this.props.hosts[Object.keys(this.props.hosts)[0]]]); //grabs only that one host
     // } else {
-    //   this.MarkerManager.updateMarkers(this.props.hosts);
+      this.MarkerManager.updateMarkers(this.props.hosts);
     // }
   }
 
