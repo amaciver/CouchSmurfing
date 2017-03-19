@@ -84,6 +84,7 @@ class HostView extends React.Component {
             style={requestStyles}
             >
             <RequestFormContainer
+              host={this.state.host}
               closeModal={this.closeModal}/>
 
           </Modal>

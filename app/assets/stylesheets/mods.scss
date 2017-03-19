@@ -48,3 +48,64 @@
       margin: 0 0 0.75em 0;
     }
 }
+
+.box-header {
+  background-color: #ecf0f1;
+  border: none;
+  padding: 24px 50px 24px 20px;
+}
+
+.box-header-title {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    word-break: break-word;
+}
+
+.form-content {
+  padding: 20px 20px;
+}
+
+.form-actions {
+    background-color: #d5dde2;
+    border-top: 1px solid #bfcad2;
+    padding: 0 20px 10px;
+}
+
+fieldset {
+    border: 0;
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+fieldset:last-of-type {
+    margin-bottom: 0;
+}
+
+
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+is-required {
+    margin-bottom: 2px;
+}
+
+textarea {
+  background-color: white;
+  border: 1px solid #aeb5ba;
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: block;
+  padding: 6px 10px;
+  width: 100%;
+  resize: vertical;
+
+}
