@@ -60,13 +60,22 @@ class HostView extends React.Component {
 
           <UserCard type="host-card" host={this.state.host}/>
 
-          <div>
-            <button className="request-button" onClick={this.openModal}>
-              <i className="fa fa-bed fa-2x" aria-hidden="true"> </i>
-              Request
+        <section className='box'>
+          <div className="box-content mod-padded">
+            <div className="multicolumn">
+              <div className="multicolumn-column">
+                <h1>
+                  <span className='mod-large mod-positive'>{this.state.host.status}</span>
+                </h1>
+                <button className="request-button" onClick={this.openModal}>
+                  <i className="fa fa-bed fa-2x mod-on-left" aria-hidden="true"> </i>
+                  Request
 
-            </button>
+                </button>
+              </div>
+            </div>
           </div>
+        </section>
 
           <Modal
             isOpen={this.state.modalIsOpen}

@@ -4,3 +4,47 @@
 .mod-float-left {
   float: left;
 }
+
+.mod-padded {
+  padding: 20px;
+}
+
+.mod-large {
+  font-size: 1.4em;
+}
+
+.mod-positive {
+  color: #41b866;
+}
+
+.mod-on-left {
+  margin-right: 10px
+}
+
+.multicolumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.multicolumn-column {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+}
+
+.box-content {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.box {
+    background-color: white;
+    border-bottom: 2px solid #bfcad2;
+    margin: 10px auto;
+    position: relative;
+    h1 {
+      font-size: 1em;
+      margin: 0 0 0.75em 0;
+    }
+}
