@@ -3,6 +3,7 @@ import Header from '../general/header';
 import UserCard from '../user/user_card';
 import { withRouter } from 'react-router'
 import Modal from 'react-modal';
+import RequestFormContainer from './request_form_container';
 
 class HostView extends React.Component {
   constructor(props) {
