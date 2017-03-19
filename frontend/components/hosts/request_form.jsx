@@ -13,10 +13,17 @@ class RequestForm extends React.Component {
       focused: null,
       body: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateBody = this.updateBody.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.state);
+  }
+
+  updateBody(e) {
+    this.setState({body: e.currentTarget.value})
   }
 
   render() {
@@ -40,7 +47,7 @@ class RequestForm extends React.Component {
 
               <fieldset>
                 <label className='is-required'>Message</label>
-                <textarea placeholder={placeholder} height='158px'></textarea>
+                <textarea onChange={this.updateBody} placeholder={placeholder} height='158px'></textarea>
               </fieldset>
             </div>
             <div className='form-actions'>
