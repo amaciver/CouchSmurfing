@@ -1,5 +1,9 @@
 class Api::RequestsController < ApplicationController
 
+  def index
+    @requests = Request.where("user_id = ?", params[:user_id])
+  end
+
   def create
     @request = Request.new(request_params)
     if @request.save
