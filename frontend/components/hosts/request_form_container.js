@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import RequestForm from './request_form';
 
 const mapStateToProps = state => ({
-  user: state.currentUser
+  user: state.session.currentUser,
+  host: state.currentHost
 });
 
 const mapDispatchToProps = dispatch => ({

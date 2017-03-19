@@ -1,5 +1,5 @@
 import React from 'react';
-import HostIndexItem from './host_index_item';
+import HostIndexItemContainer from './host_index_item_container';
 
 class HostIndex extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class HostIndex extends React.Component {
 
   render() {
     const hosts = this.props.hosts.map( host => (
-      <HostIndexItem
+      <HostIndexItemContainer
         key={host.id}
         host={host} />
     ));

@@ -32,11 +32,11 @@ class HostView extends React.Component {
 
   componentWillMount() {
     Modal.setAppElement('body');
-    this.props.fetchHost(this.props.params.hostId);
+    // this.props.fetchHost(this.props.params.hostId);
   }
 
   componentDidMount() {
-    this.props.fetchHost(this.props.params.hostId);
+    // this.props.fetchHost(this.props.params.hostId);
   }
 
   openModal() {
@@ -84,7 +84,7 @@ class HostView extends React.Component {
             style={requestStyles}
             >
             <RequestFormContainer
-              host={this.state.host}
+              
               closeModal={this.closeModal}/>
 
           </Modal>

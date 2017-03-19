@@ -19,8 +19,13 @@ class RequestForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
-    console.log(this.state.startDate._d);
+    const request = {
+      user_id: this.props.user.id,
+      host_id: this.props.host.id,
+      start_date: this.state.startDate._d,
+      end_date: this.state.endDate._d
+    }
+    // console.log(request);
   }
 
   updateBody(e) {

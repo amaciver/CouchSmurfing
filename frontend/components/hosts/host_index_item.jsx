@@ -8,7 +8,9 @@ class HostIndexItem extends React.Component {
   }
 
   handleClick() {
-    hashHistory.push(`/hosts/${this.props.host.id}`)
+    this.props.fetchHost(this.props.host.id)
+    .then( () => hashHistory.push(`/hosts/${this.props.host.id}`)
+    );
   }
 
   render() {
