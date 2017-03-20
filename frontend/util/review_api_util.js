@@ -6,8 +6,7 @@ export const fetchReviews = (host_id) => {
   });
 };
 
-export const createRequest = (review) => {
-  console.log(review);
+export const createReview = (review) => {
 
   return $.ajax({
     method: 'POST',

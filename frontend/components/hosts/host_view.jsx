@@ -4,6 +4,7 @@ import UserCard from '../user/user_card';
 import { withRouter } from 'react-router'
 import Modal from 'react-modal';
 import RequestFormContainer from './request_form_container';
+import ReviewFormContainer from './review_form_container';
 
 
 const requestStyles = {
@@ -24,10 +25,13 @@ class HostView extends React.Component {
     this.state = {
       user: props.user,
       host: props.host,
-      modalIsOpen: false
+      requestModalIsOpen: false,
+      reviewModalIsOpen: false
     };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.openRequestModal = this.openRequestModal.bind(this);
+    this.closeRequestModal = this.closeRequestModal.bind(this);
+    this.openReviewModal = this.openReviewModal.bind(this);
+    this.closeReviewModal = this.closeReviewModal.bind(this);
     props.fetchReviews(props.host.id);
     props.fetchHost(props.params.hostId)
     console.log(props.params);
@@ -42,12 +46,20 @@ class HostView extends React.Component {
     // this.props.fetchHost(this.props.params.hostId);
   }
 
-  openModal() {
-    this.setState({modalIsOpen: true});
+  openRequestModal() {
+    this.setState({requestModalIsOpen: true});
   }
 
-  closeModal() {
-    this.setState({modalIsOpen: false});
+  closeRequestModal() {
+    this.setState({requestModalIsOpen: false});
+  }
+
+  openReviewModal() {
+    this.setState({reviewModalIsOpen: true});
+  }
+
+  closeReviewModal() {
+    this.setState({reviewModalIsOpen: false});
   }
 
   render() {
@@ -63,7 +75,7 @@ class HostView extends React.Component {
     return (
       <div id="host-view" className="user-main-view">
         <Header user={this.state.user} />
-        <div id='host-view-content' className='host-view-content'>
+        <div id='host-view-content' className='host-view-content main'>
 
           <div className='back-link' onClick={() => this.props.router.goBack()}>
             <i className="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
@@ -97,10 +109,14 @@ class HostView extends React.Component {
                     <h1>
                       <span className='mod-large mod-positive'>{this.state.host.status}</span>
                     </h1>
-                    <button className="request-button" onClick={this.openModal}>
-                      <i className="fa fa-bed fa-2x mod-on-left" aria-hidden="true"> </i>
-                      Request
-                    </button>
+                  </div>
+                  <div className='multicolumn-column'>
+                    <ul className='mod-buttons'>
+                      <button className="request-button" onClick={this.openRequestModal}>
+                        <i className="fa fa-bed fa-2x mod-on-left" aria-hidden="true"> </i>
+                        Request
+                      </button>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -143,14 +159,25 @@ class HostView extends React.Component {
             </section>
 
             <section className="box">
-              <header className='box-header'>
-                <h3 className='box-header-title'>
-                  Reviews
-                </h3>
-              </header>
+              <div className='box-header'>
+                <div className='multicolumn-column'>
+                  <h3 className='box-header-title'>
+                    Reviews
+                  </h3>
+                </div>
+
+              </div>
               <div className='box-content mod-padded'>
                 <ul>
                   {reviews}
+                  <div className='multicolumn-column'>
+                    <ul className='mod-buttons'>
+                      <button className="request-button" onClick={this.openReviewModal}>
+                        <i className="fa fa-pencil-square-o fa-2x mod-on-left" aria-hidden="true"> </i>
+                        Leave Review
+                      </button>
+                    </ul>
+                  </div>
                 </ul>
               </div>
             </section>
@@ -158,12 +185,22 @@ class HostView extends React.Component {
 
           </div>
           <Modal
-            isOpen={this.state.modalIsOpen}
-            onRequestClose={this.closeModal}
+            isOpen={this.state.requestModalIsOpen}
+            onRequestClose={this.closeRequestModal}
             contentLabel='Request Modal'
             style={requestStyles}>
+
             <RequestFormContainer
-              closeModal={this.closeModal}/>
+              closeModal={this.closeRequestModal}/>
+
+          </Modal>
+          <Modal
+            isOpen={this.state.reviewModalIsOpen}
+            onRequestClose={this.closeReviewModal}
+            contentLabel='Review Modal'
+            style={requestStyles}>
+            <ReviewFormContainer
+              closeModal={this.closeReviewModal}/>
           </Modal>
         </div>
       </div>
