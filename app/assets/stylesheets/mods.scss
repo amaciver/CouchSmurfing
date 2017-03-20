@@ -91,6 +91,18 @@ flex-direction: row;
     width: 50%;
 }
 
+.mod-outline {
+  background: transparent;
+  border: 1px solid #287fb8;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.mod-blue {
+  color: #287fb8;
+}
+
 .box-content {
     word-break: break-word;
     overflow-wrap: break-word;

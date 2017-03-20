@@ -59,9 +59,17 @@ class LandingHeader extends React.Component {
           Hello {currentUser}
         </div>
         <div>
-          <button onClick={this.openModal('demo')}>Demo</button>
-          <button onClick={this.openModal('signup')}>Sign Up</button>
-          <button onClick={this.openModal("login")}>Log In</button>
+          <ul className='header-nav-buttons-list'>
+            <li className='header-nav-buttons-list-item'>
+              <button className='request-button' onClick={this.openModal('demo')}>Demo</button>
+            </li>
+            <li className='header-nav-buttons-list-item'>
+              <button className='request-button' onClick={this.openModal('signup')}>Sign Up</button>
+            </li>
+            <li className='header-nav-buttons-list-item'>
+              <button className='button mod-outline mod-blue' onClick={this.openModal("login")}>Log In</button>
+            </li>
+          </ul>
         </div>
         <Modal
           isOpen={this.state.modalIsOpen}
