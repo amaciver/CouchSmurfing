@@ -23,11 +23,15 @@ class UserView extends React.Component {
 
   render() {
     const requests = this.props.requests.map( (request, idx) => {
+
+      const start = new Date(request.start_date).toDateString();
+      const end = new Date(request.end_date).toDateString();
       return (
         <li key={idx} className='list-item'>
-          <p>Host: {request.host}</p>
-          <p>Start: {request.start_date}</p>
-          <p>End: {request.end_date}</p>
+          <p>Host: {request.host.name}</p>
+          <p>Location: {request.host.location}, {request.host.city}</p>
+          <p>Start: {start}</p>
+          <p>End: {end}</p>
         </li>
       );
     })
