@@ -31,7 +31,7 @@ class UserView extends React.Component {
         </li>
       );
     })
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div id="user-view" className="user-main-view">
         <Header user={this.state.user} />

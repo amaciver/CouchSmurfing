@@ -5,7 +5,7 @@ import { fetchRequests } from '../../actions/requests_actions';
 
 const mapStateToProps = (state) => {
   const requests = Object.keys(state.requests).map(id => state.requests[id]);
-  console.log(requests);
+  // console.log(requests);
   return ({
     user: state.session.currentUser,
     requests: requests

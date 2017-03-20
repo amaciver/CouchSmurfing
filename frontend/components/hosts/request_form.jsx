@@ -25,7 +25,7 @@ class RequestForm extends React.Component {
       start_date: this.state.startDate._d,
       end_date: this.state.endDate._d
     }
-    debugger;
+    
     this.props.createRequest(request);
     // console.log(request);
   }
