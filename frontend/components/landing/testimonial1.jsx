@@ -52,18 +52,24 @@ class Testimonial1 extends React.Component {
           <div className="testimonial-header">
             <h3>CONNECTED WITH</h3>
           </div>
-          <figure className='testimonial-image mod-float-right'>
-            <img
-              src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489872613/liono_head_hp1oom.png"
-              className='testimonial-headshot' />
-            <figcaption>Liono</figcaption>
-          </figure>
-          <figure className='testimonial-image mod-float-left'>
-            <img
-              src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489874358/headshots/profile_photo1_head.png"
-              className='testimonial-headshot' />
-            <figcaption>Jane</figcaption>
-          </figure>
+          <div className='testimonial-images'>
+
+            <figure className='testimonial-image mod-float-right'>
+              <img
+                src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489872613/liono_head_hp1oom.png"
+                className='testimonial-headshot' />
+              <figcaption>Liono</figcaption>
+            </figure>
+            <figure className='testimonial-image mod-float-left'>
+              <img
+                src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489874358/headshots/profile_photo1_head.png"
+                className='testimonial-headshot' />
+              <figcaption>Jane</figcaption>
+            </figure>
+          </div>
+          <p className='testimonial-subtitle'>in New Thundera</p>
+          <hr className='mod-short'/>
+          <p className='testimonial-text'>I had a great time staying with Liono. I couldn't believe I was actually meeting such a legend, but he really put me at ease. He really knows a lot about swords, and Snarf is just the cutest!</p>
 
 
 

@@ -183,6 +183,13 @@ input[type=submit] {
   text-transform: uppercase;
 }
 
+.testimonial-images {
+    margin: 0 auto 0.5em;
+    margin: 0 auto 0.5rem;
+    text-align: left;
+    width: 90%;
+}
+
 .testimonial-image {
   margin-bottom: 40px;
   text-align: center;
@@ -195,6 +202,17 @@ input[type=submit] {
   border: 4px solid #EAECEE;
   border-radius: 50px;
   box-sizing: content-box;
+}
+
+.testimonial-subtitle {
+  color: #929dad;
+  font-size: 14px;
+  text-align: center;
+}
+
+.testimonial-text {
+  color: #34495e;
+  text-align: center;
 }
 
 #how-it-works {
