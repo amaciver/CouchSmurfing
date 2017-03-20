@@ -18,7 +18,9 @@ export const fetchHosts = (city_id) => dispatch => (
     .then(hosts => dispatch(receiveHosts(hosts)))
 );
 
-export const fetchHost = id => dispatch => (
-  APIUtil.fetchHost(id)
-    .then(host => dispatch(receiveHost(host)))
-);
+export const fetchHost = id => dispatch => {
+  return (
+    APIUtil.fetchHost(id)
+      .then(host => dispatch(receiveHost(host)))
+  );
+}

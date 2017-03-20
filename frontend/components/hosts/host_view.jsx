@@ -33,13 +33,13 @@ class HostView extends React.Component {
     this.openReviewModal = this.openReviewModal.bind(this);
     this.closeReviewModal = this.closeReviewModal.bind(this);
     props.fetchReviews(props.host.id);
-    props.fetchHost(props.params.hostId)
+    // props.fetchHost(props.params.hostId)
     console.log(props.params);
   }
 
   componentWillMount() {
     Modal.setAppElement('body');
-    // this.props.fetchHost(this.props.params.hostId);
+    this.props.fetchHost(this.props.params.hostId);
   }
 
   componentDidMount() {
@@ -66,7 +66,7 @@ class HostView extends React.Component {
     const reviews = this.props.reviews.map( (review, idx) => {
       return(
         <li key={idx} className='list-item'>
-          <p>{review.user_id}</p>
+          <p>{review.user.username}</p>
           <p>{review.body}</p>
         </li>
       );
@@ -74,17 +74,17 @@ class HostView extends React.Component {
 
     return (
       <div id="host-view" className="user-main-view">
-        <Header user={this.state.user} />
+        <Header user={this.props.user} />
         <div id='host-view-content' className='host-view-content main'>
-
           <div className='back-link' onClick={() => this.props.router.goBack()}>
             <i className="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
             Back
           </div>
 
+
           <div className='column mod-sidebar'>
             <div className='box'>
-              <UserCard type="host-card" host={this.state.host}/>
+              <UserCard type="host-card" host={this.props.host}/>
             </div>
 
             <div className='box'>
@@ -95,7 +95,7 @@ class HostView extends React.Component {
               </header>
               <div className='box-content mod-padded'>
                 <figure>
-                  <img src={this.state.host.house_image_url} width='100%' />
+                  <img src={this.props.host.house_image_url} width='100%' />
                 </figure>
               </div>
             </div>
@@ -107,7 +107,7 @@ class HostView extends React.Component {
                 <div className="multicolumn">
                   <div className="multicolumn-column">
                     <h1>
-                      <span className='mod-large mod-positive'>{this.state.host.status}</span>
+                      <span className='mod-large mod-positive'>{this.props.host.status}</span>
                     </h1>
                   </div>
                   <div className='multicolumn-column'>
@@ -133,13 +133,13 @@ class HostView extends React.Component {
                   <div className='multicolumn-column mod-1-2'>
                     <ul>
                       <li>
-                        <span>{this.state.host.sex}, {this.state.host.age}</span>
+                        <span>{this.props.host.sex}, {this.props.host.age}</span>
                       </li>
                       <li>
-                        <span>{this.state.host.interests}</span>
+                        <span>{this.props.host.interests}</span>
                       </li>
                       <li>
-                        <span>{this.state.host.location}</span>
+                        <span>{this.props.host.location}</span>
                       </li>
                     </ul>
                   </div>
@@ -154,7 +154,7 @@ class HostView extends React.Component {
                 </h3>
               </header>
               <div className='box-content mod-padded'>
-                <p>{this.state.host.about_me}</p>
+                <p>{this.props.host.about_me}</p>
               </div>
             </section>
 

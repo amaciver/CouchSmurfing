@@ -25,7 +25,7 @@ class UserView extends React.Component {
     const requests = this.props.requests.map( (request, idx) => {
       return (
         <li key={idx} className='list-item'>
-          <p>Host: {request.host_id}</p>
+          <p>Host: {request.host}</p>
           <p>Start: {request.start_date}</p>
           <p>End: {request.end_date}</p>
         </li>
