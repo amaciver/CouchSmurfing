@@ -28,6 +28,9 @@ class HostView extends React.Component {
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    props.fetchReviews(props.host.id);
+    props.fetchHost(props.params.hostId)
+    console.log(props.params);
   }
 
   componentWillMount() {
@@ -48,6 +51,15 @@ class HostView extends React.Component {
   }
 
   render() {
+    const reviews = this.props.reviews.map( (review, idx) => {
+      return(
+        <li key={idx} className='list-item'>
+          <p>{review.user_id}</p>
+          <p>{review.body}</p>
+        </li>
+      );
+    });
+
     return (
       <div id="host-view" className="user-main-view">
         <Header user={this.state.user} />
@@ -137,7 +149,9 @@ class HostView extends React.Component {
                 </h3>
               </header>
               <div className='box-content mod-padded'>
-                <p>Review</p>
+                <ul>
+                  {reviews}
+                </ul>
               </div>
             </section>
 

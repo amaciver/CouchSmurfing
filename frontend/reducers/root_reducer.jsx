@@ -7,6 +7,7 @@ import HostsReducer from './hosts_reducer';
 import HostReducer from './host_reducer';
 import RequestsReducer from './requests_reducer';
 import RequestReducer from './request_reducer';
+import ReviewsReducer from './reviews_reducer';
 
 const rootReducer = combineReducers({
   session: SessionReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   hosts: HostsReducer,
   currentHost: HostReducer,
   requests: RequestsReducer,
-  currentRequest: RequestReducer
+  currentRequest: RequestReducer,
+  reviews: ReviewsReducer
 });
 
 export default rootReducer;
