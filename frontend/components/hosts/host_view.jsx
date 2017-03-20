@@ -58,37 +58,86 @@ class HostView extends React.Component {
             Back
           </div>
 
-          <UserCard type="host-card" host={this.state.host}/>
-
-        <section className='box'>
-          <div className="box-content mod-padded">
-            <div className="multicolumn">
-              <div className="multicolumn-column">
-                <h1>
-                  <span className='mod-large mod-positive'>{this.state.host.status}</span>
-                </h1>
-                <button className="request-button" onClick={this.openModal}>
-                  <i className="fa fa-bed fa-2x mod-on-left" aria-hidden="true"> </i>
-                  Request
-
-                </button>
-              </div>
+          <div className='column mod-sidebar'>
+            <div className='box'>
+              <UserCard type="host-card" host={this.state.host}/>
             </div>
           </div>
-        </section>
 
+          <div className='column mod-main'>
+            <section className='box'>
+              <div className="box-content mod-padded">
+                <div className="multicolumn">
+                  <div className="multicolumn-column">
+                    <h1>
+                      <span className='mod-large mod-positive'>{this.state.host.status}</span>
+                    </h1>
+                    <button className="request-button" onClick={this.openModal}>
+                      <i className="fa fa-bed fa-2x mod-on-left" aria-hidden="true"> </i>
+                      Request
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="box">
+              <header className='box-header'>
+                <h3 className='box-header-title'>
+                  Overview
+                </h3>
+              </header>
+              <div className='box-content mod-padded'>
+                <div className='multicolumn'>
+                  <div className='multicolumn-column mod-1-2'>
+                    <ul>
+                      <li>
+                        <span>{this.state.host.sex}, {this.state.host.age}</span>
+                      </li>
+                      <li>
+                        <span>{this.state.host.interests}</span>
+                      </li>
+                      <li>
+                        <span>{this.state.host.location}</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="box">
+              <header className='box-header'>
+                <h3 className='box-header-title'>
+                  About Me
+                </h3>
+              </header>
+              <div className='box-content mod-padded'>
+                <p>{this.state.host.about_me}</p>
+              </div>
+            </section>
+
+            <section className="box">
+              <header className='box-header'>
+                <h3 className='box-header-title'>
+                  Reviews
+                </h3>
+              </header>
+              <div className='box-content mod-padded'>
+                <p>Review</p>
+              </div>
+            </section>
+
+
+          </div>
           <Modal
             isOpen={this.state.modalIsOpen}
             onRequestClose={this.closeModal}
             contentLabel='Request Modal'
-            style={requestStyles}
-            >
+            style={requestStyles}>
             <RequestFormContainer
-              
               closeModal={this.closeModal}/>
-
           </Modal>
-
         </div>
       </div>
     );

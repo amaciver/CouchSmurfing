@@ -12,3 +12,21 @@ a:focus, a:hover, a.is-selected {
 ul li:last-child {
     margin-bottom: 0;
 }
+
+ul:last-child {
+    margin-bottom: 0;
+}
+
+ol>li, ul>li {
+    margin-bottom: 0.75em;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
