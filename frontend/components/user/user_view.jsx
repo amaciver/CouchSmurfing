@@ -22,9 +22,9 @@ class UserView extends React.Component {
 
 
   render() {
-    const requests = this.props.requests.map( request => {
+    const requests = this.props.requests.map( (request, idx) => {
       return (
-        <li className='list-item'>
+        <li key={idx} className='list-item'>
           <p>Host: {request.host_id}</p>
           <p>Start: {request.start_date}</p>
           <p>End: {request.end_date}</p>
@@ -35,7 +35,7 @@ class UserView extends React.Component {
     return (
       <div id="user-view" className="user-main-view">
         <Header user={this.state.user} />
-        <div id='user-view-content' className='user-view-content'>
+        <div id='user-view-content' className='user-view-content main'>
           <div className='column mod-sidebar'>
             <div className='box'>
               <UserCard type='user-card' user={this.state.user}/>

@@ -25,7 +25,7 @@ class RequestForm extends React.Component {
       start_date: this.state.startDate._d,
       end_date: this.state.endDate._d
     }
-    
+
     this.props.createRequest(request);
     // console.log(request);
   }
@@ -59,7 +59,9 @@ class RequestForm extends React.Component {
               </fieldset>
             </div>
             <div className='form-actions'>
-              <button className="request-button" type='submit'>Submit</button>
+              <ul className='mod-buttons'>
+                <button className="request-button" type='submit'>Submit</button>
+              </ul>
             </div>
 
           </form>

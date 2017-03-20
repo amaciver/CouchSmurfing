@@ -43,11 +43,13 @@ class CityView extends React.Component {
               <h1>{this.props.city.name}</h1>
           </div>
           <div className='city-description'>{this.props.city.description}</div>
-          <div className='hosts-index'>
-            <HostIndexContainer />
+          <div className='main'>
+            <div className='hosts-index'>
+              <HostIndexContainer />
 
+            </div>
+            <CityMapContainer />
           </div>
-          <CityMapContainer />
         </div>
 
       </div>
