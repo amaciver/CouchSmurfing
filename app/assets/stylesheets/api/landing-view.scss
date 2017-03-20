@@ -6,20 +6,20 @@
   background: white;
   height: 35px;
   border-bottom: 2px solid gray;
-  // button {
-  //   margin-left: 3px;
-  //   margin-right: 3px;
-  //   border-radius: 2px;
-  //   padding: 8px 12px;
-  //   box-shadow: 0;
-  //   box-sizing: border-box;
-  //   border: 1px solid #287fb8;
-  //   background: white;
-  //   font-weight: 400;
-  //   &:hover {
-  //     background: #61B3FF;
-  //   }
-  // }
+  button {
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 2px;
+    padding: 8px 12px;
+    box-shadow: 0;
+    box-sizing: border-box;
+    border: 1px solid #287fb8;
+    background: white;
+    font-weight: 400;
+    &:hover {
+      background: #61B3FF;
+    }
+  }
 }
 
 .landing-header-left {

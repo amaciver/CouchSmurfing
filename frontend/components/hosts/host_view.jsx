@@ -62,6 +62,19 @@ class HostView extends React.Component {
             <div className='box'>
               <UserCard type="host-card" host={this.state.host}/>
             </div>
+
+            <div className='box'>
+              <header className='box-header'>
+                <h3 className='box-header-title'>
+                  My Home
+                </h3>
+              </header>
+              <div className='box-content mod-padded'>
+                <figure>
+                  <img src={this.state.host.house_image_url} width='100%' />
+                </figure>
+              </div>
+            </div>
           </div>
 
           <div className='column mod-main'>
