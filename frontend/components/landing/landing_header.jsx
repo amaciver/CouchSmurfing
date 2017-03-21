@@ -56,7 +56,7 @@ class LandingHeader extends React.Component {
             width="30"
             height="30" />
           <div className="brand-name">CouchSmurfing</div>
-          Hello {currentUser}
+          
         </div>
         <div>
           <ul className='header-nav-buttons-list'>

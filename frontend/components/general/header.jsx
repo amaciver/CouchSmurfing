@@ -21,7 +21,7 @@ class Header extends React.Component {
             width="30"
             height="30" />
           <div className="brand-name">CouchSmurfing</div>
-          Hello {username}
+          
         </div>
         <SearchContainer text="Explore Cities" />
         <div>

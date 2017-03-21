@@ -11,7 +11,7 @@ class AuthForm extends React.Component {
 
   componentDidMount() {
     if (this.props.formType === 'demo') {
-      this.setState({ username: "guest", password: "demopassword"});
+      this.setState({ username: "Guest", password: "demopassword"});
 
     }
   }
