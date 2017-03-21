@@ -14,20 +14,24 @@ class Header extends React.Component {
       username = this.props.user.username;
     }
     return (
-      <div id="general-header" className="landing-header">
-        <div className="landing-header-left">
-          <img
-            src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
-            width="30"
-            height="30" />
-          <div className="brand-name">CouchSmurfing</div>
-          
+      <header className='header'>
+        <div id="general-header" className="header-wrapper">
+          <div className="header-content">
+            <div className='brand'>
+              <img
+                className='brand-icon'
+                src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
+                />
+              <div className="brand-name">CouchSmurfing</div>
+            </div>
+
+            <SearchContainer text="Explore Cities" />
+            <div>
+              <UserDropdownContainer />
+            </div>
+          </div>
         </div>
-        <SearchContainer text="Explore Cities" />
-        <div>
-          <UserDropdownContainer />
-        </div>
-      </div>
+      </header>
     );
   }
 }

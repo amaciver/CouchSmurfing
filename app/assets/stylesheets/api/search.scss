@@ -1,8 +1,16 @@
 .header-search {
+  border: none;
+  border-radius: 5px;
+  // width: 160px;
+  margin-top: 5px;
+  padding: 7px 5px;
+  font-weight: 100;
+  // letter-spacing: .5px;
+
   display: block;
   float: left;
-  text-align: left;
-  width: 51%;
+  text-align: right;
+  width: 55%;
 }
 
 .header-search-form {
@@ -16,6 +24,7 @@
 
   margin: 12px auto;
   margin-bottom: 15px;
+  // margin-top: 20px;
 }
 
 .header-search-oval {
@@ -51,15 +60,6 @@
   }
 }
 
-.header-search {
-  border: none;
-  border-radius: 5px;
-  width: 160px;
-  margin-top: 5px;
-  padding: 7px 5px;
-  font-weight: 100;
-  // letter-spacing: .5px;
-}
 
 .header-search-submit {
   border: none;

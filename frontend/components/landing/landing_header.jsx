@@ -49,41 +49,80 @@ class LandingHeader extends React.Component {
     }
 
     return (
-      <div id="landing-header" className="landing-header">
-        <div className="landing-header-left">
-          <img
-            src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
-            width="30"
-            height="30" />
-          <div className="brand-name">CouchSmurfing</div>
-          
+      <header className='header'>
+        <div id="general-header" className="header-wrapper">
+          <div className="landing-header-content">
+            <div className='brand'>
+              <img
+                className='brand-icon'
+                src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
+                />
+              <div className="brand-name">CouchSmurfing</div>
+            </div>
+            <div>
+              <ul className='header-nav-buttons-list'>
+                <li className='header-nav-buttons-list-item'>
+                  <button className='request-button' onClick={this.openModal('demo')}>Demo</button>
+                </li>
+                <li className='header-nav-buttons-list-item'>
+                  <button className='request-button' onClick={this.openModal('signup')}>Sign Up</button>
+                </li>
+                <li className='header-nav-buttons-list-item'>
+                  <button className='button mod-outline mod-blue' onClick={this.openModal("login")}>Log In</button>
+                </li>
+              </ul>
+            </div>
+            <Modal
+              isOpen={this.state.modalIsOpen}
+              onRequestClose={this.closeModal}
+              contentLabel='Auth Modal'
+              style={authStyles}
+              >
+              <AuthFormContainer
+                formType={this.state.formType}
+                closeModal={this.closeModal}/>
+            </Modal>
+          </div>
         </div>
-        <div>
-          <ul className='header-nav-buttons-list'>
-            <li className='header-nav-buttons-list-item'>
-              <button className='request-button' onClick={this.openModal('demo')}>Demo</button>
-            </li>
-            <li className='header-nav-buttons-list-item'>
-              <button className='request-button' onClick={this.openModal('signup')}>Sign Up</button>
-            </li>
-            <li className='header-nav-buttons-list-item'>
-              <button className='button mod-outline mod-blue' onClick={this.openModal("login")}>Log In</button>
-            </li>
-          </ul>
-        </div>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          contentLabel='Auth Modal'
-          style={authStyles}
-          >
-          <AuthFormContainer
-            formType={this.state.formType}
-            closeModal={this.closeModal}/>
-        </Modal>
-      </div>
+      </header>
+
+
+
     );
   }
 }
+// <div id="landing-header" className="landing-header">
+//   <div className="landing-header-left">
+//     <img
+//       src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
+//       width="30"
+//       height="30" />
+//     <div className="brand-name">CouchSmurfing</div>
+//
+//   </div>
+//   <div>
+//     <ul className='header-nav-buttons-list'>
+//       <li className='header-nav-buttons-list-item'>
+//         <button className='request-button' onClick={this.openModal('demo')}>Demo</button>
+//       </li>
+//       <li className='header-nav-buttons-list-item'>
+//         <button className='request-button' onClick={this.openModal('signup')}>Sign Up</button>
+//       </li>
+//       <li className='header-nav-buttons-list-item'>
+//         <button className='button mod-outline mod-blue' onClick={this.openModal("login")}>Log In</button>
+//       </li>
+//     </ul>
+//   </div>
+//   <Modal
+//     isOpen={this.state.modalIsOpen}
+//     onRequestClose={this.closeModal}
+//     contentLabel='Auth Modal'
+//     style={authStyles}
+//     >
+//     <AuthFormContainer
+//       formType={this.state.formType}
+//       closeModal={this.closeModal}/>
+//   </Modal>
+// </div>
 
 export default withRouter(LandingHeader);

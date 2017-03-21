@@ -16,6 +16,7 @@
  @import "defaults.scss";
  @import "util.scss";
  @import "mods.scss";
+ @import "api/header.scss";
  @import "api/sessions.scss";
  @import "api/landing-view.scss";
  @import "api/user-dropdown.scss";
@@ -80,15 +81,6 @@
 	display: none;
 }
 
-.brand-name {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 25px;
-  color: gray;
-  letter-spacing: .4px;
-  font-weight: lighter;
-  padding: 5px;
-  margin-left: 5px;
-}
 
 
  .main-view {
