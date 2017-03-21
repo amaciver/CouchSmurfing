@@ -118,3 +118,22 @@
 
   }
 }
+
+.card-content {
+  display: block;
+  padding-right: 0;
+  width: 100%;
+
+}
+
+.card-content-title {
+    font-size: 1.1em;
+}
+
+.card-content-date {
+    color: #929EAE;
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
+}

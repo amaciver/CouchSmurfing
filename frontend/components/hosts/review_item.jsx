@@ -13,20 +13,38 @@ class ReviewItem extends React.Component {
 
 
   render() {
-
+    let deleteButton;
+    if (this.props.review.user.id === this.props.userId) {
+      deleteButton =
+      <div className='multicolumn-column'>
+        <ul className='mod-buttons'>
+          <button className="button" onClick={this.handleDelete}>
+            Delete
+          </button>
+        </ul>
+      </div>
+    }
     return (
       <li className='list-item'>
-        <div className='multicolumn-column'>
+        <div className='multicolumn'>
+          <div className='card-content'>
+            <div className='multicolumn-column'>
+              <h3 className='card-content-title mod-tight'>
+                {this.props.review.user.username}
+              </h3>
+              <ul>
+                <li className='card-content-date'>
+                  <small>
+                    Date
+                  </small>
+                </li>
+              </ul>
+              <p>{this.props.review.body}</p>
+            </div>
 
-          <p>{this.props.review.user.username}</p>
-          <p>{this.props.review.body}</p>
-        </div>
-        <div className='multicolumn-column'>
-          <ul className='mod-buttons'>
-            <button className="button" onClick={this.handleDelete}>
-              Delete
-            </button>
-          </ul>
+
+          </div>
+          {deleteButton}
         </div>
       </li>
     )

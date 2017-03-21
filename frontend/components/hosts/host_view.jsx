@@ -33,20 +33,15 @@ class HostView extends React.Component {
     this.closeRequestModal = this.closeRequestModal.bind(this);
     this.openReviewModal = this.openReviewModal.bind(this);
     this.closeReviewModal = this.closeReviewModal.bind(this);
-    // props.fetchHost(props.params.hostId)
     props.fetchReviews(props.params.hostId);
-    // console.log(props.params);
   }
 
   componentWillMount() {
     Modal.setAppElement('body');
     this.props.fetchHost(this.props.params.hostId);
-    // this.props.fetchReviews(this.props.host.id);
   }
 
   componentDidMount() {
-    // this.props.fetchReviews(this.props.host.id);
-    // this.props.fetchHost(this.props.params.hostId);
   }
 
   openRequestModal() {
