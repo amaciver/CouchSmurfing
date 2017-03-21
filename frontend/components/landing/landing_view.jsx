@@ -10,15 +10,13 @@ const LandingView = () => {
     background: `linear-gradient(rgba(0, 0, 0, 0.45),
     rgba(0, 0, 0, 0.45)),
     url("http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/smurfs-banner_uks7vm.jpg")`,
-    width: "100%",
-    backgroundSize: "cover",
-    height: "400px"
+    backgroundSize: "cover"
   }
   return (
     <div id="landing-view" className="main-view">
       <LandingHeader />
-      <div>
-        <div id="landing-splash" className="splash-wrapper" style={imageStyle}>
+      <div className='splash-wrapper'>
+        <div id="landing-splash" className="splash" style={imageStyle}>
           <h1>Stay with 80s Cartoons and Meet Your Heroes </h1>
         </div>
 

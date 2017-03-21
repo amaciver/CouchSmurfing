@@ -2,9 +2,7 @@
 
 
 
-#landing-splash {
-  width: 100%;
-}
+
 //
 // input[type=submit] {
 //   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -13,11 +11,17 @@
 //   letter-spacing: .3px;
 //   font-weight: 150;
 // }
-
 .splash-wrapper {
+
+}
+
+.splash {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background-size: cover;
+  height: 600px;
   h1 {
     text-align: center;
     font-size: 50px;

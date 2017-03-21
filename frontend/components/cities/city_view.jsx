@@ -13,8 +13,11 @@ class CityView extends React.Component {
     };
   }
 
-  componentDidMount(){
+  componentWillMount() {
+
     this.props.fetchCity(this.props.params.cityId)
+  }
+  componentDidMount(){
     this.props.fetchHosts(this.props.params.cityId)
   }
 
@@ -26,8 +29,6 @@ class CityView extends React.Component {
       background: `linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
       url(${this.props.city.banner_url})`,
-      width: "100%",
-      backgroundSize: "cover",
       height: "400px"
     }
 
@@ -35,7 +36,7 @@ class CityView extends React.Component {
       <div id="city-view" className="user-main-view">
         <Header user={this.state.user} />
         <div id='city-view-content' className='city-view-content'>
-          <div id="city-splash" className="splash-wrapper" style={imageStyle}>
+          <div id="city-splash" className="splash" style={imageStyle}>
               <div className='back-link' onClick={() => this.props.router.goBack()}>
                 <i className="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
                 Back
@@ -43,7 +44,7 @@ class CityView extends React.Component {
               <h1>{this.props.city.name}</h1>
           </div>
           <div className='city-description-wrapper'>
-            
+
             <div className='city-description'>{this.props.city.description}</div>
           </div>
           <div className='main'>

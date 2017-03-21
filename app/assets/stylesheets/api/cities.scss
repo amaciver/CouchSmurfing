@@ -92,11 +92,11 @@
   justify-content: center;
   height: 200px;
   width: 250px;
-  -webkit-transition: .2s ease-out;
-  -moz-transition: .2s ease-out;
-  -o-transition: .2s ease-out;
-  -ms-transition: .2s ease-out;
-  transition: .2s ease-out;
+  -webkit-transition: .1s ease-out;
+  -moz-transition: .1s ease-out;
+  -o-transition: .1s ease-out;
+  -ms-transition: .1s ease-out;
+  transition: .1s ease-out;
   &:hover {
     transform: scale(1.05,1.05);
   }

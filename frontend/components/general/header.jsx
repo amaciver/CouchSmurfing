@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, hashHistory } from 'react-router';
 import SearchContainer from './search_container';
 import UserDropdownContainer from './user_dropdown_container';
 
@@ -17,7 +18,7 @@ class Header extends React.Component {
       <header className='header'>
         <div id="general-header" className="header-wrapper">
           <div className="header-content">
-            <div className='brand'>
+            <div className='brand' onClick={() => hashHistory.push('/')}>
               <img
                 className='brand-icon'
                 src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
