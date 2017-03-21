@@ -7,6 +7,7 @@ import Root from './components/root'
 import * as SessionActions from './actions/session_actions';
 import * as CitiesActions from './actions/cities_actions';
 import * as HostsActions from './actions/hosts_actions';
+import * as ReviewsActions from './actions/reviews_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -24,7 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchHosts = HostsActions.fetchHosts;
   window.fetchHost = HostsActions.fetchHost;
-  
+
+  window.fetchReviews = ReviewsActions.fetchReviews;
+
   window.signup = SessionActions.signup;
   window.login = SessionActions.login;
   window.logout = SessionActions.logout;

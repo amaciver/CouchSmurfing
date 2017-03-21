@@ -5,6 +5,7 @@ import { withRouter } from 'react-router'
 import Modal from 'react-modal';
 import RequestFormContainer from './request_form_container';
 import ReviewFormContainer from './review_form_container';
+import ReviewItemContainer from './review_item_container';
 
 
 const requestStyles = {
@@ -32,17 +33,19 @@ class HostView extends React.Component {
     this.closeRequestModal = this.closeRequestModal.bind(this);
     this.openReviewModal = this.openReviewModal.bind(this);
     this.closeReviewModal = this.closeReviewModal.bind(this);
-    props.fetchReviews(props.host.id);
     // props.fetchHost(props.params.hostId)
-    console.log(props.params);
+    props.fetchReviews(props.params.hostId);
+    // console.log(props.params);
   }
 
   componentWillMount() {
     Modal.setAppElement('body');
     this.props.fetchHost(this.props.params.hostId);
+    // this.props.fetchReviews(this.props.host.id);
   }
 
   componentDidMount() {
+    // this.props.fetchReviews(this.props.host.id);
     // this.props.fetchHost(this.props.params.hostId);
   }
 
@@ -65,10 +68,7 @@ class HostView extends React.Component {
   render() {
     const reviews = this.props.reviews.map( (review, idx) => {
       return(
-        <li key={idx} className='list-item'>
-          <p>{review.user.username}</p>
-          <p>{review.body}</p>
-        </li>
+        <ReviewItemContainer key={idx} review= {review} />
       );
     });
 

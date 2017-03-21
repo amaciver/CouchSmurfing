@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :cities, only: [:index, :show]
     resources :hosts, only: [:index, :show]
     resources :requests, only: [:index, :create]
-    resources :reviews, only: [:index, :create]
+    resources :reviews, only: [:index, :create, :destroy]
   end
   root "static_pages#root"
 end

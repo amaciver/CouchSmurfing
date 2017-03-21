@@ -1,4 +1,4 @@
-import { RECEIVE_REVIEWS } from '../actions/reviews_actions';
+import { RECEIVE_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/reviews_actions';
 import merge from 'lodash/merge';
 
 const ReviewsReducer = (state = {}, action) => {
@@ -8,6 +8,14 @@ const ReviewsReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_REVIEWS:
       return action.reviews;
+    case RECEIVE_REVIEW:
+      const newReview = {[action.review.id]: action.review};
+      return merge({}, state, newReview);
+    case REMOVE_REVIEW:
+      debugger;
+      newState = merge({}, state);
+      delete newState[action.id];
+      return newState;
     default:
       return state;
   }

@@ -12,6 +12,15 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find(params[:id])
+    if @review.destroy
+      render :show
+    else
+      render json: "Delete unsuccessful", status: 422
+    end
+  end
+
   private
   def review_params
     params.require(:review).permit(:user_id, :host_id, :body)

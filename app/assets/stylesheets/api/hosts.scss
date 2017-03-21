@@ -1,6 +1,14 @@
 // Place all the styles related to the api/hosts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.host-view-content {
+  padding-top: 20px;
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  flex-wrap: wrap;
+  margin-top: 62px;
+}
 
 .hosts-index{
   justify-content: space-between;
@@ -67,13 +75,6 @@
 }
 
 
-.host-view-content {
-  padding-top: 20px;
-  display: flex;
-  width: 100%;
-  flex-flow: row;
-  flex-wrap: wrap;
-}
 
 .host-card {
   margin-top: 50px;

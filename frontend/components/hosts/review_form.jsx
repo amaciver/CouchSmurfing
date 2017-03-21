@@ -20,7 +20,7 @@ class ReviewForm extends React.Component {
     }
 
     this.props.createReview(review)
-      .then(() => this.props.fetchReviews(this.props.host.id))
+      // .then(() => this.props.fetchReviews(this.props.host.id))
       .then(this.props.closeModal);
     // console.log(request);
   }
