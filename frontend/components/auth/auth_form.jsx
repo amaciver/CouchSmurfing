@@ -23,7 +23,7 @@ class AuthForm extends React.Component {
         this.props.processForm(user)
         .then( () => this.props.closeModal())
         .then( () => hashHistory.push("/"))
-      ), 3000  );
+      ), 1500  );
     }
 
   }
@@ -77,41 +77,75 @@ class AuthForm extends React.Component {
 	render() {
 		return (
 			<div className="login-form-container">
+				<section className='box mod-login'>
+					<header className='box-header'>
+						<h1 className='box-header-title'>
+							Welcome to CouchSmurfing! Please {this.props.formType}
+						</h1>
 
+					</header>
+					<div className='box-content mod-padded'>
+						{this.renderErrors()}
+
+						<form onSubmit={this.handleSubmit}>
+							<fieldset>
+								<input
+									type='text'
+									className='mod-rounded mod-padded mod-no-shadow'
+									placeholder='Username'
+									value={this.state.username}
+									onChange={this.update("username")}/>
+							</fieldset>
+							<fieldset>
+								<input
+									type='password'
+									className='mod-rounded mod-padded mod-no-shadow'
+									placeholder='Password'
+									value={this.state.password}
+									onChange={this.update("password")}/>
+							</fieldset>
+							<input className="mod-full-width" id="auth-submit-button" type="submit" value="Submit" />
+						</form>
+						<div className='footer-action u-text-center'>
+							<p>Don't have an account?</p>
+							<button className='button mod-outline mod-blue'>Join</button>
+						</div>
+					</div>
+				</section>
         <img className="x-box"
           src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
           width="20"
           height="20"
           onClick={this.props.closeModal}/>
 
-        {this.renderErrors()}
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to CouchSmurfing!
-					<br/>
-					Please {this.props.formType} or {this.navLink()}
-					<div className="login-form">
-						<br/>
-						<label> Username:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input id="auth-submit-button" type="submit" value="Submit" />
-					</div>
-				</form>
 			</div>
 		);
 	}
 
 }
+// {this.renderErrors()}
+// <form onSubmit={this.handleSubmit} className="login-form-box">
+// 	Welcome to CouchSmurfing!
+// 	<br/>
+// 	Please {this.props.formType} or {this.navLink()}
+// 	<div className="login-form">
+// 		<br/>
+// 		<label> Username:
+// 			<input type="text"
+// 				value={this.state.username}
+// 				onChange={this.update("username")}
+// 				className="login-input" />
+// 		</label>
+// 		<br/>
+// 		<label> Password:
+// 			<input type="password"
+// 				value={this.state.password}
+// 				onChange={this.update("password")}
+// 				className="login-input" />
+// 		</label>
+// 		<br/>
+// 		<input id="auth-submit-button" type="submit" value="Submit" />
+// 	</div>
+// </form>
 
 export default withRouter(AuthForm);

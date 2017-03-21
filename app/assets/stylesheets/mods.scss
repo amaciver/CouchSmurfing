@@ -103,6 +103,33 @@ flex-direction: row;
   color: #287fb8;
 }
 
+.mod-rounded {
+  border-radius: 4px;
+}
+
+.mod-no-shadow {
+  box-shadow: none;
+}
+
+.mod-full-width {
+  width: 100%;
+}
+
+.mod-login {
+  fieldset {
+    margin-bottom: .5em;
+  }
+  .box-header {
+    background-color: #ecf0f1;
+  }
+}
+
+.mod-image {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .box-content {
     word-break: break-word;
     overflow-wrap: break-word;
@@ -146,11 +173,20 @@ flex-direction: row;
     padding: 0 20px 10px;
 }
 
+.footer-action {
+    padding: 50px 0;
+}
+
+.u-text-center {
+    text-align: center;
+}
+
 fieldset {
     border: 0;
     margin: 0 0 1em 0;
     padding: 0;
 }
+
 
 fieldset:last-of-type {
     margin-bottom: 0;

@@ -23,15 +23,32 @@ class CitiesIndex extends React.Component {
 
     return(
       <div className={className}>
-        <h3>
-          Where do you want to go?
-        </h3>
-        <div className='cities-index'>
-          {cities}
-        </div>
+        <section className='box'>
+          <header className='box-header'>
+            <h1 className='box-header-title'>
+              <i className="fa fa-binoculars mod-on-left" aria-hidden="true"></i>
+              Explore Cities
+            </h1>
+          </header>
+          <div className='box-content mod-padded'>
+            <div className='grid-items'>
+              {cities}
+            </div>
+
+          </div>
+
+
+        </section>
+
       </div>
     );
   }
 }
 
+// <h3>
+//   Where do you want to go?
+// </h3>
+// <div className='cities-index'>
+//   {cities}
+// </div>
 export default CitiesIndex;
