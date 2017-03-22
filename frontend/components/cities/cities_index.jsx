@@ -18,7 +18,7 @@ class CitiesIndex extends React.Component {
     }
 
     const cities = this.props.cities.map( city => (
-      <CityIndexItem key={city.id} id={city.id} name={city.name} imageUrl={city.image_url} />
+      <CityIndexItem key={city.id} id={city.id} name={city.name} imageUrl={city.image_url} fetchCity={this.props.fetchCity}/>
     ));
 
     return(

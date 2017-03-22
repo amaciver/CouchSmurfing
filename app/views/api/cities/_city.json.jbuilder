@@ -1,2 +1,2 @@
 json.extract! city, :id, :name,
- :description, :image_url, :banner_url, :map_url
+ :description, :image_url, :banner_url, :map_url, :lat, :lng

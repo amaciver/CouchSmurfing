@@ -19,6 +19,7 @@ class CityView extends React.Component {
   }
   componentDidMount(){
     this.props.fetchHosts(this.props.params.cityId)
+
   }
 
 
@@ -30,8 +31,10 @@ class CityView extends React.Component {
       rgba(0, 0, 0, 0.45)),
       url(${this.props.city.banner_url})`,
       height: "400px",
-      backgroundPosition: "center"
+      backgroundPosition: "center",
+      backgroundSize: "cover"
     }
+    // console.log(this.props.city);
 
     return (
       <div id="city-view" className="user-main-view">

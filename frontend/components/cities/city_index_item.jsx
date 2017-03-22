@@ -8,7 +8,10 @@ class CityIndexItem extends React.Component {
   }
 
   handleClick(){
-    hashHistory.push(`/cities/${this.props.id}`)
+    this.props.fetchCity(this.props.id).then(
+
+      hashHistory.push(`/cities/${this.props.id}`)
+    )
   }
 
   render() {

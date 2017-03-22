@@ -177,14 +177,7 @@ class HostView extends React.Component {
               <div className='box-content mod-padded'>
                 <ul>
                   {reviews}
-                  <div className='multicolumn-column'>
-                    <ul className='mod-buttons'>
-                      <button className="request-button" onClick={this.openReviewModal}>
-                        <i className="fa fa-pencil-square-o fa-2x mod-on-left" aria-hidden="true"> </i>
-                        Leave Review
-                      </button>
-                    </ul>
-                  </div>
+                  
                 </ul>
               </div>
             </section>

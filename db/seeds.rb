@@ -44,7 +44,9 @@ ActiveRecord::Base.transaction do
     description: "The Smurf Village is the home residence for the Smurfs. It is located in a forest, the exact location of which is unknown to all but Smurfs. It is protected by a magical field that renders it invisible to all outsiders.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489627724/CityImages/smurf_village.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489627879/CityImages/smurf_village_banner.jpg",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489628820/CityImages/smurf_village_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489628820/CityImages/smurf_village_map.jpg",
+    lat: 34.07086232376631,
+    lng: -118.19091796875
   )
 
   thundera = City.create!(
@@ -52,7 +54,9 @@ ActiveRecord::Base.transaction do
     description: "Thundera is the homeworld of the Thunderians. Before its destruction there was such great peace - particularly among the Cats - that the natives did not even need to worry about covering themselves in protection from attack or the elements.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489629362/CityImages/thundera.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489628990/CityImages/thundera_banner.png",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489629414/CityImages/thundera_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489629414/CityImages/thundera_map.jpg",
+    lat: 19.40443049681278,
+    lng: -99.129638671875
   )
 
   kingdom_of_caring = City.create!(
@@ -60,7 +64,9 @@ ActiveRecord::Base.transaction do
     description: "The Kingdom of Caring is an establishment of the Care Bear Family. It may or may not be a monarchy. It is known to include the Bears' Care-a-Lot and the Cousins' Forest of Feelings.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489629659/CityImages/kingdom_of_caring.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489629831/CityImages/kingdom_of_caring_banner.jpg",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489630009/CityImages/kingdom_of_caring_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489630009/CityImages/kingdom_of_caring_map.jpg",
+    lat: -22.93025503698591,
+    lng: -43.1982421875
   )
 
   eternia = City.create!(
@@ -68,7 +74,9 @@ ActiveRecord::Base.transaction do
     description: "Eternia is at the center of the universe. At the planet's center lies the Star Seed, a spark left over from the creation of the universe. Possessing it would grant infinite power to its holder.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489630328/CityImages/eternia.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489630507/CityImages/eternia_banner.png",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489630876/CityImages/eternia_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489630876/CityImages/eternia_map.jpg",
+    lat: 30.021543509740027,
+    lng: 31.146240234375
   )
 
   equestria = City.create!(
@@ -76,7 +84,9 @@ ActiveRecord::Base.transaction do
     description: "Equestria is inhabited by magical ponies and other talking creatures, such as griffons and dragons. Other animals and creatures also live in Equestria.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489631982/CityImages/equestria.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,h_815,x_61,y_281/v1489631911/CityImages/equestria_banner.png",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489631222/CityImages/equestria_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489631222/CityImages/equestria_map.jpg",
+    lat: 48.88639177703194,
+    lng: 2.28515625
   )
 
   cybertron = City.create!(
@@ -84,7 +94,9 @@ ActiveRecord::Base.transaction do
     description: "Cybertron is the home planet of the Transformers and the body of their creator, Primus. Cybertron is a shining metal, technological world; a planet of towering future cities without end and vast metallic plains, spiraling metal mountains and bottomless neon-lit chasms.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490060251/CityImages/cybertron.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490060310/CityImages/cybertron_banner.jpg",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490060375/CityImages/cybertron_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490060375/CityImages/cybertron_map.jpg",
+    lat: 35.70414710206052,
+    lng: 139.72000122070312
   )
 
   new_york = City.create!(
@@ -92,7 +104,9 @@ ActiveRecord::Base.transaction do
     description: "The 'Big Apple' is home to millionaires and artists alike, but most importantly, it's sewers host the baddest bunch of teenage mutants around.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490060886/CityImages/new_york.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490061068/CityImages/new_york_banner.jpg",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490061231/CityImages/new_york_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490061231/CityImages/new_york_map.jpg",
+    lat: 40.753499070431374,
+    lng: -73.92631530761719
   )
 
   classified = City.create!(
@@ -100,7 +114,9 @@ ActiveRecord::Base.transaction do
     description: "We cannot reveal the location of these hosts, due to issues of national security; you are invited to book your stay nonetheless, as long as you are willing to be blindfolded for the journey there.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490061968/CityImages/gi_joe_city.jpg",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490062159/CityImages/gi_joe_banner.png",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490062240/CityImages/gi_joe_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490062240/CityImages/gi_joe_map.jpg",
+    lat: 33.43144133557529,
+    lng: -135
   )
 
   arus = City.create!(
@@ -108,7 +124,9 @@ ActiveRecord::Base.transaction do
     description: "Arus is a planet inhabited by a humanoid species, although other species, such as the Space Mice, are represented as part of the planet's population. Arus serves as home base for Voltron and the Voltron Force.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490062549/CityImages/arus.png",
     banner_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490062616/CityImages/arus_banner.png",
-    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490062863/CityImages/arus_map.jpg"
+    map_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490062863/CityImages/arus_map.jpg",
+    lat: 19.05173366503917,
+    lng: 72.88330078125
   )
 
 
