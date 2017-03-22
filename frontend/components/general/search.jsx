@@ -40,7 +40,7 @@ const getSuggestionValue = suggestion => suggestion.name;
 
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
-  <div>
+  <div className='search-list-item'>
     {suggestion.name}
   </div>
 );
@@ -51,16 +51,22 @@ class Search extends React.Component {
     super(props);
     this.state = {
       value: '',
-      suggestions: props.cities
+      suggestions: []
     };
     this.onChange = this.onChange.bind(this);
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this);
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this);
   }
 
+  componentWillMount() {
+    this.props.fetchCities()
+    ;
+  }
+
   onChange(event, { newValue }){
     this.setState({
       value: newValue
+
     })
   }
 
@@ -68,7 +74,7 @@ class Search extends React.Component {
   // You already implemented this logic above, so just use it.
   onSuggestionsFetchRequested({ value }) {
     this.setState({
-      suggestions: getSuggestions(value)
+      suggestions: this._getSuggestions(value)
     });
   }
 
@@ -78,6 +84,17 @@ class Search extends React.Component {
       suggestions: []
     });
   }
+
+  _getSuggestions(value) {
+    console.log(this.props.cities);
+    console.log(this.state.suggestions);
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    return inputLength === 0 ? [] : this.props.cities.filter(city =>
+      city.name.toLowerCase().slice(0, inputLength) === inputValue
+    );
+  };
 
 
   render(){
