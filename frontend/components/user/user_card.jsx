@@ -16,13 +16,15 @@ const UserCard = (props) => {
     );
   } else {
     return (
-      <div className={props.type}>
-        <figure className='user-image'>
-          <img
-            src={props.host.image_url}
-            className='user-headshot' />
-          <figcaption>{props.host.name}</figcaption>
-        </figure>
+      <div className='box'>
+        <div className={props.type}>
+          <figure className='user-image'>
+            <img
+              src={props.host.image_url}
+              className='user-headshot' />
+            <figcaption>{props.host.username}</figcaption>
+          </figure>
+        </div>
       </div>
     )
   }

@@ -70,7 +70,7 @@ class HostView extends React.Component {
       return(
         <ReviewItemContainer key={idx} review= {review} />
       );
-    });
+    }).reverse();
 
     return (
       <div id="host-view" className="user-main-view">
@@ -83,9 +83,8 @@ class HostView extends React.Component {
 
 
           <div className='column mod-sidebar'>
-            <div className='box'>
-              <UserCard type="host-card" host={this.props.host}/>
-            </div>
+
+            <UserCard type="host-card" host={this.props.host}/>
 
             <div className='box'>
               <header className='box-header'>
@@ -159,11 +158,19 @@ class HostView extends React.Component {
             </section>
 
             <section className="box">
-              <div className='box-header'>
+              <div className='box-header multicolumn'>
                 <div className='multicolumn-column'>
                   <h3 className='box-header-title'>
                     Reviews
                   </h3>
+                </div>
+                <div className='multicolumn-column'>
+                  <ul className='mod-buttons'>
+                    <button className="request-button" onClick={this.openReviewModal}>
+                      <i className="fa fa-pencil-square-o fa-2x mod-on-left" aria-hidden="true"> </i>
+                      Leave Review
+                    </button>
+                  </ul>
                 </div>
 
               </div>

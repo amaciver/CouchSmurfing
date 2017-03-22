@@ -7,8 +7,8 @@ class ReviewItem extends React.Component {
   }
 
   handleDelete() {
-    debugger;
-    this.props.removeReview(this.props.review.id)
+    // debugger;
+    this.props.deleteReview(this.props.review.id)
   }
 
 

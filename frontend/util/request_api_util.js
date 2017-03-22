@@ -7,7 +7,7 @@ export const fetchRequests = (user_id) => {
 };
 
 export const createRequest = (request) => {
-  console.log(request);
+  // console.log(request);
 
   return $.ajax({
     method: 'POST',

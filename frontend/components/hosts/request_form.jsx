@@ -63,6 +63,7 @@ class RequestForm extends React.Component {
           <h1 className='box-header-title'>Request to stay with {this.props.host.name}</h1>
         </div>
         <div className="box-content">
+          <h3 className='errors'>{this.props.errors}</h3>
           <form onSubmit={this.handleSubmit}>
             <div className='form-content'>
               <DateRangePicker
