@@ -1,3 +1,25 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.auth-input {
+  width: 400px;
+  font-size: 16px;
+}
+
+.auth-box-header {
+  // background-color: #ecf0f1;
+  // border: none;
+  // padding: 24px 50px 24px 20px;
+  border-bottom: 1px solid #bfcad2;
+  padding: 16px 20px;
+  text-align: center;
+
+}
+
+.x-box {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: 30%;
+}

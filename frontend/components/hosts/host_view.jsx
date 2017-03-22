@@ -45,6 +45,9 @@ class HostView extends React.Component {
   }
 
   openRequestModal() {
+    if (this.props.user) {
+
+    }
     this.setState({requestModalIsOpen: true});
   }
 
@@ -53,6 +56,8 @@ class HostView extends React.Component {
   }
 
   openReviewModal() {
+    if (this.props.user) {
+    }
     this.setState({reviewModalIsOpen: true});
   }
 

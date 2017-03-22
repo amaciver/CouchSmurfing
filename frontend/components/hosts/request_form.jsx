@@ -15,24 +15,44 @@ class RequestForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateBody = this.updateBody.bind(this);
+    this.renderSubmitButton = this.renderSubmitButton.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const request = {
-      user_id: this.props.user.id,
-      host_id: this.props.host.id,
-      start_date: this.state.startDate._d,
-      end_date: this.state.endDate._d
-    }
+    if (this.props.user) {
+      const request = {
+        user_id: this.props.user.id,
+        host_id: this.props.host.id,
+        start_date: this.state.startDate._d,
+        end_date: this.state.endDate._d
+      }
 
-    this.props.createRequest(request)
-    .then(this.props.closeModal);
-    // console.log(request);
+      this.props.createRequest(request)
+      .then(this.props.closeModal);
+    } else {
+      this.props.closeModal()
+    }
   }
 
   updateBody(e) {
     this.setState({body: e.currentTarget.value})
+  }
+
+  renderSubmitButton() {
+    if (this.props.user) {
+      return (
+        <ul className='mod-buttons'>
+          <button className="request-button" type='submit'>Submit</button>
+        </ul>
+      )
+    } else {
+      return (
+        <ul className='mod-buttons'>
+          <button className="request-button" type='submit'>Login to Submit</button>
+        </ul>
+      )
+    }
   }
 
   render() {
@@ -60,9 +80,7 @@ class RequestForm extends React.Component {
               </fieldset>
             </div>
             <div className='form-actions'>
-              <ul className='mod-buttons'>
-                <button className="request-button" type='submit'>Submit</button>
-              </ul>
+              {this.renderSubmitButton()}
             </div>
 
           </form>

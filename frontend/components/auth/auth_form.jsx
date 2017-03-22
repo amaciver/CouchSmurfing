@@ -74,52 +74,135 @@ class AuthForm extends React.Component {
 		);
 	}
 
+	switchModal(){
+		if (this.props.formType === "login") {
+			return (
+				() => {
+					this.props.closeModalCB(this.props.openModal("signup"));
+
+				}
+			)
+		} else {
+			return (
+				() => {
+					this.props.closeModalCB(this.props.openModal("login"));
+				}
+			)
+		}
+	}
+
 	render() {
-		return (
-			<div className="login-form-container">
-				<section className='box mod-login'>
-					<header className='box-header'>
-						<h1 className='box-header-title'>
-							Welcome to CouchSmurfing! Please {this.props.formType}
-						</h1>
+		if (this.props.formType === "login" || this.props.formType === "demo") {
+			return (
+				<div className="login-form-container">
+					<section className='box mod-login'>
+						<header className='auth-box-header'>
+							<h1 className='box-header-title'>
+								Welcome to CouchSmurfing!
+							</h1>
+							<h1 className= 'box-header-title'>
+								Please {this.props.formType}
+							</h1>
 
-					</header>
-					<div className='box-content mod-padded'>
-						{this.renderErrors()}
+						</header>
+						<div className='box-content mod-padded'>
+							{this.renderErrors()}
 
-						<form onSubmit={this.handleSubmit}>
-							<fieldset>
-								<input
-									type='text'
-									className='mod-rounded mod-padded mod-no-shadow'
-									placeholder='Username'
-									value={this.state.username}
-									onChange={this.update("username")}/>
-							</fieldset>
-							<fieldset>
-								<input
-									type='password'
-									className='mod-rounded mod-padded mod-no-shadow'
-									placeholder='Password'
-									value={this.state.password}
-									onChange={this.update("password")}/>
-							</fieldset>
-							<input className="mod-full-width" id="auth-submit-button" type="submit" value="Submit" />
-						</form>
-						<div className='footer-action u-text-center'>
-							<p>Don't have an account?</p>
-							<button className='button mod-outline mod-blue'>Join</button>
+							<form onSubmit={this.handleSubmit}>
+								<fieldset>
+									<input
+										type='text'
+										className='auth-input mod-rounded mod-padded mod-no-shadow'
+										placeholder='Username'
+										value={this.state.username}
+										onChange={this.update("username")}/>
+								</fieldset>
+								<fieldset>
+									<input
+										type='password'
+										className='auth-input mod-rounded mod-padded mod-no-shadow'
+										placeholder='Password'
+										value={this.state.password}
+										onChange={this.update("password")}/>
+								</fieldset>
+								<input className="mod-full-width" id="auth-submit-button" type="submit" value="Submit" />
+							</form>
+							<div className='footer-action u-text-center'>
+								<p>Don't have an account?</p>
+								<button onClick={this.switchModal()} className='button mod-outline mod-blue'>Join</button>
+							</div>
 						</div>
-					</div>
-				</section>
-        <img className="x-box"
-          src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
-          width="20"
-          height="20"
-          onClick={this.props.closeModal}/>
+					</section>
+					<img className="x-box"
+						src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
+						width="20"
+						height="20"
+						onClick={this.props.closeModal}/>
 
-			</div>
-		);
+				</div>
+			);
+		} else {
+			return (
+				<div className="login-form-container">
+					<section className='box mod-login'>
+						<header className='auth-box-header'>
+							<h1 className='box-header-title'>
+								Welcome to CouchSmurfing!
+							</h1>
+							<h1 className= 'box-header-title'>
+								Please {this.props.formType}
+							</h1>
+						</header>
+						<div className='box-content mod-padded'>
+							{this.renderErrors()}
+							<form onSubmit={this.handleSubmit}>
+								<fieldset>
+									<input
+										type='text'
+										className='auth-input mod-rounded mod-padded mod-no-shadow'
+										placeholder='Full Name' />
+
+								</fieldset>
+								<fieldset>
+									<input
+										type='text'
+										className='auth-input mod-rounded mod-padded mod-no-shadow'
+										placeholder='Location' />
+
+								</fieldset>
+								<fieldset>
+									<input
+										type='text'
+										className='auth-input mod-rounded mod-padded mod-no-shadow'
+										placeholder='Username'
+										value={this.state.username}
+										onChange={this.update("username")}/>
+								</fieldset>
+								<fieldset>
+									<input
+										type='password'
+										className='auth-input mod-rounded mod-padded mod-no-shadow'
+										placeholder='Password'
+										value={this.state.password}
+										onChange={this.update("password")}/>
+								</fieldset>
+								<input className="mod-full-width" id="auth-submit-button" type="submit" value="Submit" />
+							</form>
+							<div className='footer-action u-text-center'>
+								<p>Already have an account?</p>
+								<button onClick={this.switchModal()} className='button mod-outline mod-blue'>Log In</button>
+							</div>
+						</div>
+					</section>
+					<img className="x-box"
+						src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
+						width="20"
+						height="20"
+						onClick={this.props.closeModal}/>
+				</div>
+			)
+		}
+
 	}
 
 }

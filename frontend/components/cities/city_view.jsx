@@ -29,7 +29,8 @@ class CityView extends React.Component {
       background: `linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
       url(${this.props.city.banner_url})`,
-      height: "400px"
+      height: "400px",
+      backgroundPosition: "center"
     }
 
     return (

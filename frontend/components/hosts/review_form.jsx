@@ -8,25 +8,46 @@ class ReviewForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateBody = this.updateBody.bind(this);
+    this.renderSubmitButton = this.renderSubmitButton.bind(this);
 
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const review = {
-      user_id: this.props.user.id,
-      host_id: this.props.host.id,
-      body: this.state.body
-    }
 
-    this.props.createReview(review)
-      // .then(() => this.props.fetchReviews(this.props.host.id))
+    if (this.props.user) {
+
+      const review = {
+        user_id: this.props.user.id,
+        host_id: this.props.host.id,
+        body: this.state.body
+      }
+
+      this.props.createReview(review)
       .then(this.props.closeModal);
-    // console.log(request);
+    } else {
+      this.props.closeModal()
+    }
   }
 
   updateBody(e) {
     this.setState({body: e.currentTarget.value})
+  }
+
+  renderSubmitButton() {
+    if (this.props.user) {
+      return (
+        <ul className='mod-buttons'>
+          <button className="request-button" type='submit'>Submit</button>
+        </ul>
+      )
+    } else {
+      return (
+        <ul className='mod-buttons'>
+          <button className="request-button" type='submit'>Login to Submit</button>
+        </ul>
+      )
+    }
   }
 
   render() {
@@ -46,9 +67,7 @@ class ReviewForm extends React.Component {
               </fieldset>
             </div>
             <div className='form-actions'>
-              <ul className='mod-buttons'>
-                <button className="request-button" type='submit'>Submit</button>
-              </ul>
+              {this.renderSubmitButton()}
             </div>
 
           </form>

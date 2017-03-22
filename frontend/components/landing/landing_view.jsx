@@ -10,7 +10,8 @@ const LandingView = () => {
     background: `linear-gradient(rgba(0, 0, 0, 0.45),
     rgba(0, 0, 0, 0.45)),
     url("http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/smurfs-banner_uks7vm.jpg")`,
-    backgroundSize: "cover"
+    backgroundSize: "cover",
+    backgroundPosition: "center"
   }
   return (
     <div id="landing-view" className="main-view">

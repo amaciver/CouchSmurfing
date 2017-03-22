@@ -21,6 +21,7 @@
   align-items: center;
   width: 100%;
   background-size: cover;
+  background-position: center;
   height: 600px;
   h1 {
     text-align: center;
@@ -46,12 +47,7 @@
 }
 
 
-.x-box {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  opacity: 50%;
-}
+
 
 .testimonial1-main {
   width: 100%;

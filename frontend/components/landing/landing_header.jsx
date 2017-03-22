@@ -23,6 +23,7 @@ class LandingHeader extends React.Component {
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.closeModalCB = this.closeModalCB.bind(this);
   }
 
   componentWillMount() {
@@ -39,7 +40,14 @@ class LandingHeader extends React.Component {
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.setState({modalIsOpen: false})
+  }
+  closeModalCB(cb) {
+    this.setState({modalIsOpen: false}, ()=> {
+      if (cb) {
+        cb();
+      }
+    });
   }
 
   render() {
@@ -80,7 +88,10 @@ class LandingHeader extends React.Component {
               >
               <AuthFormContainer
                 formType={this.state.formType}
-                closeModal={this.closeModal}/>
+                closeModal={this.closeModal}
+                closeModalCB={this.closeModalCB}
+                openModal={this.openModal}/>
+
             </Modal>
           </div>
         </div>
