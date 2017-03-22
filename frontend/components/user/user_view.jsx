@@ -41,9 +41,8 @@ class UserView extends React.Component {
         <Header user={this.state.user} />
         <div id='user-view-content' className='user-view-content main'>
           <div className='column mod-sidebar'>
-            <div className='box'>
-              <UserCard type='user-card' user={this.state.user}/>
-            </div>
+            <UserCard type='user-card' user={this.state.user}/>
+            
 
             <div className='box'>
               <header className='box-header'>
