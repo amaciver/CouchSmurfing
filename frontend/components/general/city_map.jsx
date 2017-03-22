@@ -8,10 +8,7 @@ const _getCoordsObj = latLng => ({
   lng: latLng.lng()
 });
 
-let _mapOptions = {
-  center: {lat: 37.773972, lng: -122.431297}, // San Francisco coords
-  zoom: 13
-};
+
 
 class CityMap extends Component {
 
@@ -19,12 +16,13 @@ class CityMap extends Component {
     console.log(this.props);
     let _myMapOptions = {
       center: {lat: this.props.lat, lng: this.props.lng}, // San Francisco coords
-      zoom: 13
+      zoom: 8
     };
     // if (this.props.lat) {
 
       const map = this.refs.map;
       this.map = new google.maps.Map(map, _myMapOptions);
+      this.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
       this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
       // if (this.props.singleHost) {
       //   this.props.fetchHost(this.props.hostId);
