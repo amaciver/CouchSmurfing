@@ -36,13 +36,20 @@
   text-align: center;
   display: block;
   // padding: 30px;
+  height: 225px;
+  width: 225px;
+  border-radius: 50%;
+  border: 4px solid #EAECEE;
+  overflow: hidden;
 }
 
+
+
 .user-headshot {
-  width: 225px;
-  height: 225px;
-  border: 4px solid #EAECEE;
-  border-radius: 50%;
+  width: 100%;
+  // height: 225px;
+  // border: 4px solid #EAECEE;
+  // border-radius: 50%;
   box-sizing: content-box;
 }
 

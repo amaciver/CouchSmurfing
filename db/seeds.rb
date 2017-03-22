@@ -224,7 +224,7 @@ ActiveRecord::Base.transaction do
     about_me: "I spend most of my time trying to get into Castle Grayskull so I can take over the Universe. Not into skincare.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489979513/HeMan/skeletor.png",
     house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489979607/HeMan/houses/snake-mountain.jpg",
-    status: "Accepting Guests"
+    status: "Not Accepting Guests"
   )
 
   sorceress = Host.create!(
@@ -240,6 +240,56 @@ ActiveRecord::Base.transaction do
     about_me: "If you catch me out and about, I might look like a falcon; but come over to my place, and you'll see what an exceptionally powerful force I am.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489979993/HeMan/sorceress.jpg",
     house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489979119/HeMan/houses/castle-grayskull.jpg",
+    status: "Accepting Guests"
+  )
+
+
+
+  fizzy = Host.create!(
+    city_id: equestria.id,
+    name: "Fizzy",
+    age: 12,
+    sex: "Female",
+    city: "Eternia",
+    location: "Waterfall",
+    lat: 30,
+    lng: 20,
+    interests: ["Silliness", "Bubbles", "Ice Cream"],
+    about_me: "I'm a silly little pony who is always stumbling or bumping into things. One hot afternoon on my way to the Waterfall for a swim, I tripped over a tree stump and landed on a bed of moss. The moss was so soft and comfortable that I decided to take a nap.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,g_east,h_339,w_366,x_0/v1490150251/MyLittlePony/fizzy.png",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490150812/MyLittlePony/Houses/waterfall.jpg",
+    status: "Accepting Guests"
+  )
+
+  cherries_jubilee = Host.create!(
+    city_id: equestria.id,
+    name: "Cherries Jubilee",
+    age: 11,
+    sex: "Female",
+    city: "Eternia",
+    location: "Paradise Estates Orchard",
+    lat: 30,
+    lng: 20,
+    interests: ["Strictness", "Sports", "Cherries"],
+    about_me: "Big, red juicy cherries are my favorite snack. I carefully tend to the cherry trees in the orchard and enjoy making beautiful decorations from the pretty pink cherry blossom petals. In the Cherry Blossom parade my float is always the prettiest.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490151148/MyLittlePony/cherries_jubilee.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,g_east,h_291,w_323/v1490151298/MyLittlePony/Houses/orchard.png",
+    status: "Accepting Guests"
+  )
+
+  optimus_prime = Host.create!(
+    city_id: cybertron.id,
+    name: "Optimus Prime",
+    age: 2530,
+    sex: "Robot",
+    city: "Cybertron",
+    location: "Processing Core",
+    lat: 40,
+    lng: 20,
+    interests: ["Big Rigs", "AllSpark", "Auto-Tune"],
+    about_me: "Originally a mere civilian, I was chosen by the Matrix to command, the first in a number of heavy burdens I have been forced to bear. Every casualty, human or Cybertronian, weighs heavily on my spark. I do not show this side to my soldiers, and I never succumb to despair.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490151786/Transformers/optimus_prime.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490151855/Transformers/Houses/processing_core.jpg",
     status: "Accepting Guests"
   )
 
