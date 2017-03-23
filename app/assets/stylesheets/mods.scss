@@ -9,6 +9,10 @@
   padding: 20px;
 }
 
+.mod-centered {
+  text-align: center;
+}
+
 .mod-large {
   font-size: 1.4em;
 }
@@ -19,6 +23,9 @@
 
 .mod-on-left {
   margin-right: 10px
+}
+.mod-on-right {
+  margin-left: 10px
 }
 
 
@@ -175,7 +182,7 @@ flex-direction: row;
 .form-actions {
     background-color: #d5dde2;
     border-top: 1px solid #bfcad2;
-    padding: 0 20px 10px;
+    padding: 10px 20px 10px;
 }
 
 .footer-action {

@@ -22,10 +22,8 @@ class CityMap extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(`this ${this.props.lat}`);
-    console.log(`next ${nextProps.lat}`);
+
     if (this.props.lat !== nextProps.lat || this.props.lat !== 0) {
-      console.log('if worked');
       this.setState({lat: nextProps.lat, lng: nextProps.lng})
 
       let _myMapOptions = {

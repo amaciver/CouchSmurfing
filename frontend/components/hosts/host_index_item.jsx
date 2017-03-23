@@ -19,7 +19,10 @@ class HostIndexItem extends React.Component {
 
     return(
       <div className='host-index-item' onClick={this.handleClick}>
-        <img className='host-item-image'  src={host.image_url} />
+        <div className='host-image-wrapper'>
+
+          <img className='host-item-image'  src={host.image_url} />
+        </div>
         <div className="host-list-info">
           <div className='host-list-name'>
             {host.name}, {host.age}

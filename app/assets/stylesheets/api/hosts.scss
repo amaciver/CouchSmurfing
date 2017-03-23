@@ -41,18 +41,56 @@
     background: #F2F2F2;
     cursor: pointer;
   }
-
 }
+
+
+
+.host-image-wrapper {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #EAECEE;
+  overflow: hidden;
+  background: white;
+  text-align: center;
+}
+
+
 
 .host-item-image {
   // position: absolute;
+  height: 100%
 
-  border: 2px solid gray;
-  border-radius: 30px;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 5px;
+}
+
+
+
+.requests-box {
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+}
+
+.request-item-title {
+  display: flex;
+  // padding-bottom: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+
+
+.host-list-item {
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  &:hover {
+    background: #F2F2F2;
+    cursor: pointer;
   }
+}
 
 .host-list-info {
   padding-left: 5px;

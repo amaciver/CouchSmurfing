@@ -3,6 +3,8 @@ import Header from '../general/header';
 import UserCard from './user_card';
 import CitiesIndexContainer from '../cities/cities_index_container';
 
+import {withRouter, hashHistory} from 'react-router';
+
 class UserView extends React.Component {
   constructor(props) {
     super(props);
@@ -12,11 +14,18 @@ class UserView extends React.Component {
       test: true
     };
     props.fetchRequests(props.user.id);
+    this.handleRequestClick = this.handleRequestClick.bind(this);
   }
 
   componentDidMount() {
     // console.log(this.props);
     this.setState({test: false});
+  }
+
+  handleRequestClick(id) {
+    return () => {
+      hashHistory.push(`/hosts/${id}`)
+    };
   }
 
 
@@ -27,11 +36,20 @@ class UserView extends React.Component {
       const start = new Date(request.start_date).toDateString();
       const end = new Date(request.end_date).toDateString();
       return (
-        <li key={idx} className='list-item'>
-          <p>Host: {request.host.name}</p>
-          <p>Location: {request.host.location}, {request.host.city}</p>
-          <p>Start: {start}</p>
-          <p>End: {end}</p>
+        <li key={idx} className='host-list-item' onClick={this.handleRequestClick(request.host.id)}>
+          <div className='request-item-title'>
+            <div className='host-image-wrapper mod-on-left'>
+              <img className='host-item-image'  src={request.host.image_url} />
+            </div>
+            <div>
+
+              <h3>{request.host.name}</h3>
+              <div>{request.host.location}</div>
+            </div>
+          </div>
+
+          <div>Start: {start}</div>
+          <div>End: {end}</div>
         </li>
       );
     })
@@ -42,7 +60,7 @@ class UserView extends React.Component {
         <div id='user-view-content' className='user-view-content main'>
           <div className='column mod-sidebar'>
             <UserCard type='user-card' user={this.state.user}/>
-            
+
 
             <div className='box'>
               <header className='box-header'>
@@ -50,7 +68,7 @@ class UserView extends React.Component {
                   My Requests
                 </h3>
               </header>
-              <div className='box-content mod-padded'>
+              <div className='requests-box box-content'>
                 <ul>
                   {requests}
                 </ul>
@@ -68,4 +86,4 @@ class UserView extends React.Component {
   }
 }
 
-export default UserView;
+export default withRouter(UserView);

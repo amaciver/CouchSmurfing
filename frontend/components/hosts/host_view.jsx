@@ -15,6 +15,17 @@ const requestStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    overflow              : 'visible'
+  }
+};
+const reviewStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)'
   }
 };
@@ -98,7 +109,7 @@ class HostView extends React.Component {
                   My Home
                 </h3>
               </header>
-              <div className='box-content mod-padded'>
+              <div className='box-content mod-padded mod-centered list-item'>
                 <figcaption>{this.props.host.location}</figcaption>
                 <figure>
                   <img src={this.props.host.house_image_url} width='100%' />
@@ -208,7 +219,7 @@ class HostView extends React.Component {
             isOpen={this.state.reviewModalIsOpen}
             onRequestClose={this.closeReviewModal}
             contentLabel='Review Modal'
-            style={requestStyles}>
+            style={reviewStyles}>
             <ReviewFormContainer
               closeModal={this.closeReviewModal}/>
           </Modal>

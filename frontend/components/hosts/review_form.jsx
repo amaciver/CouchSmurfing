@@ -53,7 +53,7 @@ class ReviewForm extends React.Component {
   render() {
     const placeholder = `Tell us about your experience with ${this.props.host.name}`
     return(
-      <div className='request-form-wrapper'>
+      <div className='review-form-wrapper'>
         <div className="box-header">
           <h1 className='box-header-title'>Leave a review for {this.props.host.name}</h1>
         </div>
