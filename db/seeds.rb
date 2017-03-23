@@ -298,16 +298,96 @@ ActiveRecord::Base.transaction do
   optimus_prime = Host.create!(
     city_id: cybertron.id,
     name: "Optimus Prime",
-    age: 2530,
+    age: 25300004,
     sex: "Robot",
     city: "Cybertron",
     location: "Processing Core",
-    lat: 40,
-    lng: 20,
+    lat: 35.706377408871774,
+    lng: 139.66644287109375,
     interests: ["Big Rigs", "AllSpark", "Auto-Tune"],
     about_me: "Originally a mere civilian, I was chosen by the Matrix to command, the first in a number of heavy burdens I have been forced to bear. Every casualty, human or Cybertronian, weighs heavily on my spark. I do not show this side to my soldiers, and I never succumb to despair.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490151786/Transformers/optimus_prime.jpg",
     house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490151855/Transformers/Houses/processing_core.jpg",
+    status: "Accepting Guests"
+  )
+
+  megatron = Host.create!(
+    city_id: cybertron.id,
+    name: "Megatron",
+    age: 23508737,
+    sex: "Robot",
+    city: "Cybertron",
+    location: "Decepticons Base",
+    lat: 35.092945313732635,
+    lng: 139.49615478515625,
+    interests: ["Jets", "Cannons", "High-pitched voices"],
+    about_me: "Leader of the Decepticons. I feel great contempt for other Transformers who, I believe, betray their proud heritage by demanding peace and cooperation with weaker life forms. It is the destiny of the Decepticons to bring order to the universe through conquest.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490235774/Transformers/megatron.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490235862/Transformers/Houses/underwater_base.jpg",
+    status: "Maybe Accepting Guests"
+  )
+
+  bumblebee = Host.create!(
+    city_id: cybertron.id,
+    name: "Bumblebee",
+    age: 14563490,
+    sex: "Robot",
+    city: "Cybertron",
+    location: "Decepticons Base",
+    lat: 36.07130229942241,
+    lng: 138.77655029296875,
+    interests: ["Volkswagens", "Friendship", "FM Radio"],
+    about_me: "Some of my best friends are humans! While my stature allows me to do my job better than most Autobots could manage, I am self-conscious about my size. Maybe this is why I makes fast friends among the humans. I look up (so to speak) to the other Autobots",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490236060/Transformers/bumblebee.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490236322/Transformers/Houses/manganese_mountains.jpg",
+    status: "Accepting Guests"
+  )
+
+  starscream = Host.create!(
+    city_id: cybertron.id,
+    name: "Starscream",
+    age: 16539874,
+    sex: "Robot",
+    city: "Cybertron",
+    location: "Sea of Rust",
+    lat: 36.25756282630298,
+    lng: 140.77056884765625,
+    interests: ["Betrayal", "Science", "Immortality"],
+    about_me: "Self-proclaimed pride of the Cybertron War Academy, I'm famous not only for my incredible skill, but also for my limitless ambition. I believe I would be a much better leader than Megatron, but don't tell him that.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490236566/Transformers/starscream.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237179/Transformers/sea_of_rust.jpg",
+    status: "Accepting Guests"
+  )
+
+  leonardo = Host.create!(
+    city_id: new_york.id,
+    name: "Leonardo",
+    age: 15,
+    sex: "Male",
+    city: "New York City",
+    location: "Sewers",
+    lat: 40.876141411413684,
+    lng: -73.88580322265625,
+    interests: ["Leadership", "Swords", "Humorlessness"],
+    about_me: "I'm the serious one of the bunch. If you stay with me, we'll have fun doing chores and meditating on responsibility. No hanky-panky",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237396/TMNT/leonardo.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237584/TMNT/Houses/turtles_lair.jpg",
+    status: "Accepting Guests"
+  )
+
+  michelangelo = Host.create!(
+    city_id: new_york.id,
+    name: "Michelangelo",
+    age: 15,
+    sex: "Male",
+    city: "New York City",
+    location: "Pizza Shop",
+    lat: 40.876141411413684,
+    lng: -73.88580322265625,
+    interests: ["Numchuks", "Partying"],
+    about_me: "They call me the Party Dude. Not really into cleaning up, or doing what other people tell me to. Don't be a square, and we'll have a great time.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237752/TMNT/michelangelo.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237822/TMNT/Houses/pizza_shop.png",
     status: "Accepting Guests"
   )
 
