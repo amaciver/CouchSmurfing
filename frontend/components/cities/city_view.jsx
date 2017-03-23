@@ -22,8 +22,8 @@ class CityView extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.clearCity({});
-    this.props.clearHosts({});
+    // this.props.clearCity({});
+    // this.props.clearHosts({});
   }
 
 

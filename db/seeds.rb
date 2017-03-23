@@ -197,6 +197,22 @@ ActiveRecord::Base.transaction do
     status: "Accepting Guests"
   )
 
+  mummra = Host.create!(
+    city_id: thundera.id,
+    name: "Mumm-Ra",
+    age: 100000000,
+    sex: "Mummy",
+    city: "Thundera",
+    location: "Black Pyramids",
+    lat: 19.4665922322076,
+    lng: -98.822021484375,
+    interests: ["Incantation", "Minions", "Cotton"],
+    about_me: "I spend most of my time lounging about my sarcophagus, but I'm always up for a night club. I can transform into a muscular fiend.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490244327/ThunderCats/mummra.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490244381/ThunderCats/Houses/black_pyramids.jpg",
+    status: "Not Accepting Guests"
+  )
+
   grumpy_bear = Host.create!(
     city_id: kingdom_of_caring.id,
     name: "Grumpy Bear",
@@ -211,6 +227,38 @@ ActiveRecord::Base.transaction do
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489718402/CareBears/grumpy_bear.png",
     house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489718780/CareBears/Houses/grumpy_house.jpg",
     status: "Not Accepting Guests"
+  )
+
+  cheer_bear = Host.create!(
+    city_id: kingdom_of_caring.id,
+    name: "Cheer Bear",
+    age: 22,
+    sex: "Female",
+    city: "Kingdom of Caring",
+    location: "Rainbow",
+    lat: -22.84200839859578,
+    lng: -42.8411865234375,
+    interests: ["Happiness", "Optimism"],
+    about_me: "I think everything is great all the time. I love it when the sun shines, and when you come to stay with me, we'll just sit around and smile at how fabulous life is :)",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490243579/CareBears/cheer_bear.png",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490243631/CareBears/Houses/rainbow.jpg",
+    status: "Accepting Guests"
+  )
+
+  brave_heart_lion = Host.create!(
+    city_id: kingdom_of_caring.id,
+    name: "Brave Heart Lion",
+    age: 28,
+    sex: "Male",
+    city: "Kingdom of Caring",
+    location: "Forest of Feelings",
+    lat: -22.84200839859578,
+    lng: -42.8411865234375,
+    interests: ["Bravery", "Pride", "Crowns"],
+    about_me: "My job is to help everyone be brave. I love combing my hair and roaring into the sky. My catchphrase is 'Charge!'.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,g_east,h_502,w_397/v1490243971/CareBears/brave_heart_lion.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490244056/CareBears/Houses/forest_of_feelings.jpg",
+    status: "Accepting Guests"
   )
 
   he_man = Host.create!(
@@ -270,8 +318,8 @@ ActiveRecord::Base.transaction do
     sex: "Female",
     city: "Eternia",
     location: "Waterfall",
-    lat: 30,
-    lng: 20,
+    lat: 48.832181625698475,
+    lng: 2.164306640625,
     interests: ["Silliness", "Bubbles", "Ice Cream"],
     about_me: "I'm a silly little pony who is always stumbling or bumping into things. One hot afternoon on my way to the Waterfall for a swim, I tripped over a tree stump and landed on a bed of moss. The moss was so soft and comfortable that I decided to take a nap.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,g_east,h_339,w_366,x_0/v1490150251/MyLittlePony/fizzy.png",
@@ -286,8 +334,8 @@ ActiveRecord::Base.transaction do
     sex: "Female",
     city: "Eternia",
     location: "Paradise Estates Orchard",
-    lat: 30,
-    lng: 20,
+    lat: 48.84302835299516,
+    lng: 2.296142578125,
     interests: ["Strictness", "Sports", "Cherries"],
     about_me: "Big, red juicy cherries are my favorite snack. I carefully tend to the cherry trees in the orchard and enjoy making beautiful decorations from the pretty pink cherry blossom petals. In the Cherry Blossom parade my float is always the prettiest.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490151148/MyLittlePony/cherries_jubilee.jpg",
@@ -388,6 +436,102 @@ ActiveRecord::Base.transaction do
     about_me: "They call me the Party Dude. Not really into cleaning up, or doing what other people tell me to. Don't be a square, and we'll have a great time.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237752/TMNT/michelangelo.jpg",
     house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237822/TMNT/Houses/pizza_shop.png",
+    status: "Accepting Guests"
+  )
+
+  cobra_commander = Host.create!(
+    city_id: classified.id,
+    name: "Cobra Commander",
+    age: 45,
+    sex: "Male",
+    city: "Classified",
+    location: "Cobra Headquarters",
+    lat: 33.747180448149855,
+    lng: -135.472412109375,
+    interests: ["Face masks", "Ululation"],
+    about_me: "I think I'm a great boss, but no one seems to respect me. I have a huge crush on one of my employees but she never seems to notice me; maybe it's because of my shiny face.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490240124/GIJoe/cobra_commander.png",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490240180/GIJoe/Houses/cobra_base.jpg",
+    status: "Accepting Guests"
+  )
+
+  sgt_slaughter = Host.create!(
+    city_id: classified.id,
+    name: "Cobra Commandeer",
+    age: 41,
+    sex: "Male",
+    city: "Classified",
+    location: "Boot Camp",
+    lat: 33.408516828002675,
+    lng: -134.5330810546875,
+    interests: ["Yelling", "Initmidation", "Duffel bags"],
+    about_me: "Attention maggot! No slacking off when you stay with me, we'll be up at dawn for some morning exercise. If you can't handle the heat, stay out of my living room. Drop and give me twenty!",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490240429/GIJoe/sgt_slaughter.png",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490240531/GIJoe/Houses/boot_camp.jpg",
+    status: "Accepting Guests"
+  )
+
+  scarlett = Host.create!(
+    city_id: classified.id,
+    name: "Scarlett",
+    age: 27,
+    sex: "Female",
+    city: "Classified",
+    location: "Archery Range",
+    lat: 33.72890830547334,
+    lng: -134.5770263671875,
+    interests: ["Crossbows", "Women's rights"],
+    about_me: "My red hair isn't as firey as my personality. Don't cross me, and I won't crossbow you. Dating a blind guy, but he's a ninja around the house.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490240925/GIJoe/scarlett.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490241012/GIJoe/Houses/archery.jpg",
+    status: "Accepting Guests"
+  )
+
+  keith_kogane = Host.create!(
+    city_id: arus.id,
+    name: "Captain Kogane",
+    age: 22,
+    sex: "Male",
+    city: "Arus",
+    location: "Pilot's Lounge",
+    lat: 19.4665922322076,
+    lng: 72.872314453125,
+    interests: ["Pondering", "Strategy"],
+    about_me: "Commander and leader of the Voltron Force. I pilot the black lion. I'm a quiet individual who spends much of my time pondering my decisions, thinking up new strategies. I also have a hobby of reading books.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490242116/keith_ojvboa.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490242231/Voltron/Houses/pilot_lounge.jpg",
+    status: "Accepting Guests"
+  )
+
+  pidge = Host.create!(
+    city_id: arus.id,
+    name: "Pidge",
+    age: 12,
+    sex: "Male",
+    city: "Arus",
+    location: "Science Lab",
+    lat: 19.041348796589016,
+    lng: 73.3502197265625,
+    interests: ["Leftys", "Precociousness"],
+    about_me: "My home planet, Balto, was destroyed by nuclear missiles from King Zarkon. I graduated from the academy at a young age; my specialty is science. I am well-trained in martial arts, and I'm not afraid to speak my mind, especially to villains.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490242677/Voltron/pidge.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490243016/Voltron/Houses/science.jpg",
+    status: "Accepting Guests"
+  )
+
+  princess_allura = Host.create!(
+    city_id: arus.id,
+    name: "Princess Allura",
+    age: 19,
+    sex: "Female",
+    city: "Arus",
+    location: "Royal Palace",
+    lat: 19.02057711096681,
+    lng: 72.6910400390625,
+    interests: ["Romance", "Telepathy", "Necromancy"],
+    about_me: "Though a bit naïve, especially with matters of romance, I am a strong-willed person, and am very capable of ruling my planet, though some tend to doubt this ability. I have feelings for Keith.",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490243290/Voltron/princess_allura.jpg",
+    house_image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490243350/Voltron/palace.png",
     status: "Accepting Guests"
   )
 
