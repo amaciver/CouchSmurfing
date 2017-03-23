@@ -14,13 +14,14 @@ class CityView extends React.Component {
   }
 
   componentWillMount() {
-
     this.props.fetchCity(this.props.params.cityId)
   }
+
   componentDidMount(){
     this.props.fetchHosts(this.props.params.cityId)
-
   }
+
+
 
 
 
@@ -34,7 +35,6 @@ class CityView extends React.Component {
       backgroundPosition: "center",
       backgroundSize: "cover"
     }
-    // console.log(this.props.city);
 
     return (
       <div id="city-view" className="user-main-view">
@@ -56,7 +56,9 @@ class CityView extends React.Component {
               <HostIndexContainer />
 
             </div>
-            <CityMapContainer />
+
+            <CityMapContainer  />
+
           </div>
         </div>
 

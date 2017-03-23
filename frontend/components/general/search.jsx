@@ -59,8 +59,10 @@ class Search extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchCities()
-    ;
+    if (!this.props.cities.length > 0) {
+      this.props.fetchCities();
+    }
+
   }
 
   onChange(event, { newValue }){
@@ -86,8 +88,6 @@ class Search extends React.Component {
   }
 
   _getSuggestions(value) {
-    console.log(this.props.cities);
-    console.log(this.state.suggestions);
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 

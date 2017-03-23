@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { withRouter } from 'react-router';
+import { withRouter, hashHistory} from 'react-router';
 import MarkerManager from '../../util/marker_manager';
 
 const _getCoordsObj = latLng => ({
@@ -12,35 +12,44 @@ const _getCoordsObj = latLng => ({
 
 class CityMap extends Component {
 
-  componentDidMount() {
-    console.log(this.props);
-    let _myMapOptions = {
-      center: {lat: this.props.lat, lng: this.props.lng}, // San Francisco coords
-      zoom: 8
-    };
-    // if (this.props.lat) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lat: 0,
+      lng: 0
+    }
+    this._handleInfoClick = this._handleInfoClick.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.lat !== 0 || this.props.lat !== nextProps.lat) {
+      this.setState({lat: nextProps.lat, lng: nextProps.lng})
+
+      let _myMapOptions = {
+        center: {lat: this.state.lat, lng: this.state.lng},
+        zoom: 8
+      };
 
       const map = this.refs.map;
       this.map = new google.maps.Map(map, _myMapOptions);
       this.map.setOptions({draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
       this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
-      // if (this.props.singleHost) {
-      //   this.props.fetchHost(this.props.hostId);
-      // } else {
-      // debugger;
+
+      this.infowindow = new google.maps.InfoWindow({
+        content: `<div> Hello </div>`
+      });
+
       this._registerListeners();
       this.MarkerManager.updateMarkers(this.props.hosts);
-      // }
-    // }
+    }
+  }
+
+  componentDidMount() {
+
   }
 
   componentDidUpdate() {
-    // if (this.props.lat)
-    // if(this.props.singleHost){
-    //   this.MarkerManager.updateMarkers([this.props.hosts[Object.keys(this.props.hosts)[0]]]); //grabs only that one host
-    // } else {
       this.MarkerManager.updateMarkers(this.props.hosts);
-    // }
   }
 
   _registerListeners() {
@@ -57,13 +66,42 @@ class CityMap extends Component {
     });
   }
 
-  _handleMarkerClick(host) {
+  _handleMarkerClick(host, marker) {
     console.log(`${host.id}`);
+    let div = document.createElement('div');
+    const content =
+      `<div class='info-card'>
+        <div class='info-box-content'>
+          <header class='info-box-header'>
+            ${host.name}
+          </header>
+          <div class='info-wrapper'>
+            <div class='info-image-wrapper'>
+              <img class='info-image' src=${host.image_url} />
+              <ul class='info-list'>
+
+                <li className='info-list-item'>${host.location}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>`
+    div.innerHTML = content
+    div.onclick = this._handleInfoClick(host.id);
+
+    this.infowindow.setContent(div)
+    this.infowindow.open(this.map, marker);
     // this.props.router.push(`hosts/${host.id}`);
+  }
+
+  _handleInfoClick(id) {
+    return () => hashHistory.push(`/hosts/${id}`)
   }
 
   _handleClick(coords) {
     console.log(coords);
+    this.infowindow.close();
+    // this.infowindow.open(this.map);
     // this.props.router.push({
     //   pathname: "hosts/new",
     //   query: coords
@@ -71,7 +109,11 @@ class CityMap extends Component {
   }
 
   render() {
-    return <div id='map' className="map" ref='map'>Map</div>;
+    return (
+      <div>
+        <div id='map' className="map" ref='map'>Map</div>;
+      </div>
+    )
   }
 }
 

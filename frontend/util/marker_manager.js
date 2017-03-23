@@ -38,7 +38,7 @@ export default class MarkerManager {
       map: this.map,
       hostId: host.id
     });
-    marker.addListener('click', () => this.handleClick(host));
+    marker.addListener('click', () => this.handleClick(host, marker));
     this.markers.push(marker);
   }
 
