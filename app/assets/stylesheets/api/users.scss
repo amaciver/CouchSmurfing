@@ -19,6 +19,19 @@
 
 }
 
+.host-card {
+  margin-top: 50px;
+  // margin: 30px;
+  // width: 300px;
+  // max-width: 300px;
+  padding-top: 50px;
+  height: 400px;
+  max-height: 500px;
+  // border: 1px solid blue;
+  background: white;
+  text-align: center;
+}
+
 
 .user-card {
   margin-top: 30px;
@@ -29,10 +42,18 @@
   max-height: 500px;
   // border: 1px solid blue;
   background: white;
+  text-align: center;
+}
+
+.username {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1em;
+  text-transform: uppercase;
 }
 
 .user-image {
-  margin-bottom: 40px;
+  margin-bottom: 25pxpx;
   text-align: center;
   display: block;
   // padding: 30px;

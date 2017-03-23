@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const UserCard = (props) => {
   if (props.type === 'user-card') {
@@ -9,8 +10,8 @@ const UserCard = (props) => {
             <img
               src={props.user.image_url}
               className='user-headshot' />
-            <figcaption>{props.user.username}</figcaption>
           </figure>
+          <figcaption className='username'>{props.user.username}</figcaption>
         </div>
       </div>
     );
@@ -22,8 +23,10 @@ const UserCard = (props) => {
             <img
               src={props.host.image_url}
               className='user-headshot' />
-            <figcaption>{props.host.username}</figcaption>
           </figure>
+          <figcaption className='username'>{props.host.name}</figcaption>
+          <Link to={`/api/cities/${props.host.city_id}`}>{props.host.city}</Link>
+
         </div>
       </div>
     )

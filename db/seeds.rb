@@ -9,6 +9,8 @@ ActiveRecord::Base.transaction do
   City.destroy_all
   User.destroy_all
   Host.destroy_all
+  Request.destroy_all
+  Review.destroy_all
 
   demo_user = User.create!(
     username: "Guest",
@@ -32,6 +34,24 @@ ActiveRecord::Base.transaction do
     username: "Carlos",
     password: "andrew",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489874768/headshots/profile_photo2_head.png"
+  )
+
+  skeletor_user = User.create!(
+    username: "Skeletor",
+    password: "andrew",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489979513/HeMan/skeletor.png"
+  )
+
+  liono_user = User.create!(
+    username: "Liono",
+    password: "andrew",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1489717711/ThunderCats/liono.png"
+  )
+
+  cheer_bear_user = User.create!(
+    username: "CheerBear",
+    password: "andrew",
+    image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490243579/CareBears/cheer_bear.png"
   )
 
 
@@ -252,8 +272,8 @@ ActiveRecord::Base.transaction do
     sex: "Male",
     city: "Kingdom of Caring",
     location: "Forest of Feelings",
-    lat: -22.84200839859578,
-    lng: -42.8411865234375,
+    lat: -22.52777979869455,
+    lng: -43.08563232421875,
     interests: ["Bravery", "Pride", "Crowns"],
     about_me: "My job is to help everyone be brave. I love combing my hair and roaring into the sky. My catchphrase is 'Charge!'.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,g_east,h_502,w_397/v1490243971/CareBears/brave_heart_lion.jpg",
@@ -430,8 +450,8 @@ ActiveRecord::Base.transaction do
     sex: "Male",
     city: "New York City",
     location: "Pizza Shop",
-    lat: 40.876141411413684,
-    lng: -73.88580322265625,
+    lat: 40.80965166748853,
+    lng: -73.92974853515625,
     interests: ["Numchuks", "Partying"],
     about_me: "They call me the Party Dude. Not really into cleaning up, or doing what other people tell me to. Don't be a square, and we'll have a great time.",
     image_url: "http://res.cloudinary.com/couchsmurfing/image/upload/v1490237752/TMNT/michelangelo.jpg",
@@ -457,7 +477,7 @@ ActiveRecord::Base.transaction do
 
   sgt_slaughter = Host.create!(
     city_id: classified.id,
-    name: "Cobra Commandeer",
+    name: "Sgt. Slaughter",
     age: 41,
     sex: "Male",
     city: "Classified",
@@ -552,6 +572,60 @@ ActiveRecord::Base.transaction do
     user_id: jane.id,
     host_id: papa_smurf.id,
     body: "Reminded me of my grandpa! I love you Papa Smurf! See you next time!"
+  )
+
+  review3 = Review.create!(
+    user_id: cheer_bear_user.id,
+    host_id: he_man.id,
+    body: "I just had the most wonderful time staying with Adam. What big muscles he has!"
+  )
+
+  review4 = Review.create!(
+    user_id: carlos.id,
+    host_id: liono.id,
+    body: "Liono was super cool, but I was sneezing the whole time I was there. Guess I should have thought about the fact that I'm allergic to cats :("
+  )
+
+  review5 = Review.create!(
+    user_id: skeletor_user.id,
+    host_id: grumpy_bear.id,
+    body: "What a downer! It was a beautiful day outside, and all Grumpy Bear wanted to do was listen to Morrissey."
+  )
+
+  review6 = Review.create!(
+    user_id: demo_user.id,
+    host_id: fizzy.id,
+    body: "I'm a little concerned with how much high-fructose corn syrup Fizzy consumes..."
+  )
+
+  review7 = Review.create!(
+    user_id: jane.id,
+    host_id: leonardo.id,
+    body: "Leo showed me around the city on a skateboard. What a wiz in the kitchen! Such knife skills!"
+  )
+
+  review8 = Review.create!(
+    user_id: liono_user.id,
+    host_id: cobra_commander.id,
+    body: "Cobra Commander and I had a pretty good time together, but I think he suffers from low self-esteem."
+  )
+
+
+
+  #########################
+
+
+  request1 = Request.create!(
+    user_id: demo_user.id,
+    host_id: papa_smurf.id,
+    start_date: "Thu, 23 Jun 2017 19:00:00 UTC +00:00",
+    end_date: "Fri, 28 Aug 2017 19:00:00 UTC +00:00",
+  )
+  request2 = Request.create!(
+    user_id: demo_user.id,
+    host_id: skeletor.id,
+    start_date: "Thu, 23 Mar 2017 19:00:00 UTC +00:00",
+    end_date: "Fri, 28 Apr 2017 19:00:00 UTC +00:00",
   )
 
 end

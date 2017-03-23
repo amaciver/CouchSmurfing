@@ -72,6 +72,12 @@ class HostView extends React.Component {
       );
     }).reverse();
 
+    let interests;
+    if (this.props.host.interests) {
+
+      interests = this.props.host.interests.join(" - ");
+    }
+
     return (
       <div id="host-view" className="user-main-view">
         <Header user={this.props.user} />
@@ -93,6 +99,7 @@ class HostView extends React.Component {
                 </h3>
               </header>
               <div className='box-content mod-padded'>
+                <figcaption>{this.props.host.location}</figcaption>
                 <figure>
                   <img src={this.props.host.house_image_url} width='100%' />
                 </figure>
@@ -132,12 +139,15 @@ class HostView extends React.Component {
                   <div className='multicolumn-column mod-1-2'>
                     <ul>
                       <li>
+                        <i className="fa fa-user mod-on-left" aria-hidden="true"></i>
                         <span>{this.props.host.sex}, {this.props.host.age}</span>
                       </li>
                       <li>
-                        <span>{this.props.host.interests}</span>
+                        <i className="fa fa-tags mod-on-left" aria-hidden="true"></i>
+                        <span>{interests}</span>
                       </li>
                       <li>
+                        <i className="fa fa-location-arrow mod-on-left" aria-hidden="true"></i>
                         <span>{this.props.host.location}</span>
                       </li>
                     </ul>
@@ -177,7 +187,7 @@ class HostView extends React.Component {
               <div className='box-content mod-padded'>
                 <ul>
                   {reviews}
-                  
+
                 </ul>
               </div>
             </section>

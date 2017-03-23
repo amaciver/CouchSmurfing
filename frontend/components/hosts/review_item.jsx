@@ -35,7 +35,7 @@ class ReviewItem extends React.Component {
               <ul>
                 <li className='card-content-date'>
                   <small>
-                    Date
+                    {new Date(this.props.review.created_at).toDateString()}
                   </small>
                 </li>
               </ul>
