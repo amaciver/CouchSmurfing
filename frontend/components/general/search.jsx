@@ -2,15 +2,7 @@ import React from 'react';
 import Autosuggest from 'react-autosuggest';
 import { hashHistory } from 'react-router';
 
-// Teach Autosuggest how to calculate suggestions for any given input value.
-// const getSuggestions = value => {
-//   const inputValue = value.trim().toLowerCase();
-//   const inputLength = inputValue.length;
-//
-//   return inputLength === 0 ? [] : cities.filter(city =>
-//     city.name.toLowerCase().slice(0, inputLength) === inputValue
-//   );
-// };
+// TODO: implement isMobile on suggestions list kaimellea/isMobile
 
 // When suggestion is clicked, Autosuggest needs to populate the input element
 // based on the clicked suggestion. Teach Autosuggest how to calculate the

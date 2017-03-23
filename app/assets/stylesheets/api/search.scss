@@ -78,14 +78,24 @@
 .react-autosuggest__suggestion {
   // border: 1px solid #bfcad2;
   background: white;
+  color: #BFBFBF;
   // display: none;
   // position: absolute;
   // top: 49px;
+  padding-left: 5px;
+  font-weight: normal;
   width: 180px;
   z-index: 1;
   line-height: 30px;
   border-bottom: 1px solid #ecf0f1;
   margin-bottom: 0;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  // background: yellow;
+  // text-decoration: underline;
+  color: black;
+  // font-weight: bold;
 }
 
 .header-search-submit {

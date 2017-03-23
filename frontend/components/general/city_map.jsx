@@ -22,12 +22,14 @@ class CityMap extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.lat !== 0 || this.props.lat !== nextProps.lat) {
+    console.log(`this ${this.props.lat}`);
+    console.log(`next ${nextProps.lat}`);
+    if (this.props.lat !== nextProps.lat || this.props.lat !== 0) {
       this.setState({lat: nextProps.lat, lng: nextProps.lng})
 
       let _myMapOptions = {
         center: {lat: this.state.lat, lng: this.state.lng},
-        zoom: 8
+        zoom: 9
       };
 
       const map = this.refs.map;
