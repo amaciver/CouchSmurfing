@@ -21,6 +21,14 @@ class CityView extends React.Component {
     this.props.fetchHosts(this.props.params.cityId)
   }
 
+  componentWillReceiveProps(newProps) {
+    // console.log(this.props.params.cityId);
+    // console.log(newProps.params.cityId);
+    if (this.props.params.cityId !== newProps.params.cityId) {
+      this.props.fetchCity(newProps.params.cityId);
+      this.props.fetchHosts(newProps.params.cityId);
+    }
+  }
   componentWillUnmount() {
     // this.props.clearCity({});
     // this.props.clearHosts({});

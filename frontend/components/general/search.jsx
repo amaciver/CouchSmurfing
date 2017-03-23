@@ -1,44 +1,23 @@
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
+import { hashHistory } from 'react-router';
 
-const cities = [
- {
-   name: "Smurf Village",
-   description: "The Smurf Village is the home residence for the Smurfs. It is located in a forest, the exact location of which is unknown to all but Smurfs. It is protected by a magical field that renders it invisible to all outsiders."
- },
- {
-   name: "Thundera",
-   description: "Thundera is the homeworld of the Thunderians. Before its destruction there was such great peace - particularly among the Cats - that the natives did not even need to worry about covering themselves in protection from attack or the elements."
- },
- {
-   name: "Kingdom of Caring",
-   description: "The Kingdom of Caring is an establishment of the Care Bear Family. It may or may not be a monarchy. It is known to include the Bears' Care-a-Lot and the Cousins' Forest of Feelings."
- },
- {
-   name: "Eternia",
-   description: "Eternia is at the center of the universe. At the planet's center lies the Star Seed, a spark left over from the creation of the universe. Possessing it would grant infinite power to its holder."
- },
- {
-   name: "Equestria",
-   description: "Equestria is inhabited by magical ponies and other talking creatures, such as griffons and dragons. Other animals and creatures also live in Equestria."
- }
-]
 // Teach Autosuggest how to calculate suggestions for any given input value.
-const getSuggestions = value => {
-  const inputValue = value.trim().toLowerCase();
-  const inputLength = inputValue.length;
-
-  return inputLength === 0 ? [] : cities.filter(city =>
-    city.name.toLowerCase().slice(0, inputLength) === inputValue
-  );
-};
+// const getSuggestions = value => {
+//   const inputValue = value.trim().toLowerCase();
+//   const inputLength = inputValue.length;
+//
+//   return inputLength === 0 ? [] : cities.filter(city =>
+//     city.name.toLowerCase().slice(0, inputLength) === inputValue
+//   );
+// };
 
 // When suggestion is clicked, Autosuggest needs to populate the input element
 // based on the clicked suggestion. Teach Autosuggest how to calculate the
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => suggestion.name;
+const getSuggestionId = suggestion => suggestion.id;
 
-// Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
   <div className='search-list-item'>
     {suggestion.name}
@@ -51,25 +30,35 @@ class Search extends React.Component {
     super(props);
     this.state = {
       value: '',
-      suggestions: []
+      suggestions: [],
+      ids: []
     };
     this.onChange = this.onChange.bind(this);
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this);
     this.onSuggestionsClearRequested = this.onSuggestionsClearRequested.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillMount() {
     if (!this.props.cities.length > 0) {
       this.props.fetchCities();
     }
-
   }
 
   onChange(event, { newValue }){
     this.setState({
       value: newValue
-
     })
+  }
+
+  handleSubmit(){
+    const match = (this.props.cities.filter(city =>
+      city.name.toLowerCase() === this.state.value.toLowerCase()));
+
+    if (match.length === 1) {
+      const id = match[0].id;
+      hashHistory.push(`/cities/${id}`);
+    }
   }
 
   // Autosuggest will call this function every time you need to update suggestions.
@@ -116,7 +105,7 @@ class Search extends React.Component {
 
     return(
       <div className='header-search'>
-        <form className='header-search-form'>
+        <form className='header-search-form' onSubmit={this.handleSubmit}>
           <div className='header-search-oval'>
             <Autosuggest
               suggestions={suggestions}
@@ -140,6 +129,5 @@ class Search extends React.Component {
     );
   }
 }
-// <input className="header-search" type="text" placeholder={this.props.text}></input>
 
 export default Search;
