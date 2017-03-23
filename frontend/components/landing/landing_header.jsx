@@ -24,6 +24,7 @@ class LandingHeader extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.closeModalCB = this.closeModalCB.bind(this);
+    console.log(props);
   }
 
   componentWillMount() {
@@ -40,10 +41,11 @@ class LandingHeader extends React.Component {
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false})
+    this.setState({modalIsOpen: false}, () => this.props.clearErrors())
   }
   closeModalCB(cb) {
     this.setState({modalIsOpen: false}, ()=> {
+      this.props.clearErrors();
       if (cb) {
         cb();
       }

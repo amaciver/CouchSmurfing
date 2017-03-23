@@ -44,7 +44,9 @@ class HostView extends React.Component {
     this.closeRequestModal = this.closeRequestModal.bind(this);
     this.openReviewModal = this.openReviewModal.bind(this);
     this.closeReviewModal = this.closeReviewModal.bind(this);
+    // this.clearRequestErrors = this.clearRequestErrors.bind(this);
     props.fetchReviews(props.params.hostId);
+
   }
 
   componentWillMount() {
@@ -63,7 +65,7 @@ class HostView extends React.Component {
   }
 
   closeRequestModal() {
-    this.setState({requestModalIsOpen: false});
+    this.setState({requestModalIsOpen: false}, () => this.props.clearRequestErrors());
   }
 
   openReviewModal() {

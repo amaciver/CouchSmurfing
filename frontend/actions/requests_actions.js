@@ -3,6 +3,7 @@ import * as APIUtil from '../util/request_api_util'
 export const RECEIVE_REQUESTS = "RECEIVE_REQUESTS";
 export const RECEIVE_REQUEST = "RECEIVE_REQUEST";
 export const RECEIVE_REQUEST_ERRORS = "RECEIVE_REQUEST_ERRORS";
+export const CLEAR_REQUEST_ERRORS = "CLEAR_REQUEST_ERRORS";
 
 export const receiveRequests = requests => ({
   type: RECEIVE_REQUESTS,
@@ -18,6 +19,10 @@ export const receiveRequestErrors = errors => ({
   type: RECEIVE_REQUEST_ERRORS,
   errors
 });
+
+export const clearRequestErrors = () => ({
+  type: CLEAR_REQUEST_ERRORS
+})
 
 export const createRequest = (request) => dispatch => (
   APIUtil.createRequest(request)

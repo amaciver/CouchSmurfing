@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingHeader from './landing_header';
+import LandingHeaderContainer from './landing_header_container';
 import CitiesIndexContainer from '../cities/cities_index_container';
 import Testimonial1 from './testimonial1';
 import Testimonial2 from './testimonial2';
@@ -15,7 +15,7 @@ const LandingView = () => {
   }
   return (
     <div id="landing-view" className="main-view">
-      <LandingHeader />
+      <LandingHeaderContainer />
       <div className='splash-wrapper'>
         <div id="landing-splash" className="splash" style={imageStyle}>
           <h1>Stay with 80s Cartoons and Meet Your Heroes </h1>
