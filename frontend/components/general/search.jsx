@@ -20,10 +20,10 @@ const renderSuggestion = suggestion => (
 class Search extends React.Component {
   constructor(props) {
     super(props);
+    // console.log(props.cities);
     this.state = {
       value: '',
-      suggestions: [],
-      ids: []
+      suggestions: []
     };
     this.onChange = this.onChange.bind(this);
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this);
@@ -35,6 +35,12 @@ class Search extends React.Component {
     if (!this.props.cities.length > 0) {
       this.props.fetchCities();
     }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // if (this.props.cities.length !== nextProps.cities.length) {
+    //   this.setState({suggestions: nextProps.cities})
+    // }
   }
 
   onChange(event, { newValue }){
@@ -100,6 +106,7 @@ class Search extends React.Component {
         <form className='header-search-form' onSubmit={this.handleSubmit}>
           <div className='header-search-oval'>
             <Autosuggest
+
               suggestions={suggestions}
               onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
               onSuggestionsClearRequested={this.onSuggestionsClearRequested}

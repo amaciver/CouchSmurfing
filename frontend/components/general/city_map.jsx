@@ -25,10 +25,11 @@ class CityMap extends Component {
     console.log(`this ${this.props.lat}`);
     console.log(`next ${nextProps.lat}`);
     if (this.props.lat !== nextProps.lat || this.props.lat !== 0) {
+      console.log('if worked');
       this.setState({lat: nextProps.lat, lng: nextProps.lng})
 
       let _myMapOptions = {
-        center: {lat: this.state.lat, lng: this.state.lng},
+        center: {lat: nextProps.lat, lng: nextProps.lng},
         zoom: 9
       };
 
