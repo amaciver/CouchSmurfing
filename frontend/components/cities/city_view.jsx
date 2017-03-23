@@ -28,12 +28,12 @@ class CityView extends React.Component {
   render() {
 
     const imageStyle = {
+      backgroundSize: "cover",
       background: `linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
-      url(${this.props.city.banner_url})`,
-      height: "400px",
-      backgroundPosition: "center",
-      backgroundSize: "cover"
+      url(${this.props.city.banner_url}) center / cover no-repeat `,
+      height: "400px"
+      // backgroundPosition: "center"
     }
 
     return (
