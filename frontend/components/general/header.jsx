@@ -11,8 +11,14 @@ class Header extends React.Component {
 
   render(){
     let username;
+    let dropdown;
+
     if (this.props.user) {
       username = this.props.user.username;
+      dropdown = <div>
+        <UserDropdownContainer />
+      </div>
+
     }
     return (
       <header className='header'>
@@ -27,9 +33,7 @@ class Header extends React.Component {
             </div>
 
             <SearchContainer text="Explore Cities" />
-            <div>
-              <UserDropdownContainer />
-            </div>
+            {dropdown}
           </div>
         </div>
       </header>

@@ -23,7 +23,7 @@ class AuthForm extends React.Component {
         this.props.processForm(user)
         .then( () => this.props.closeModal())
         .then( () => hashHistory.push("/"))
-      ), 1500  );
+      ), 500  );
     }
 
   }
