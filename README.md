@@ -45,7 +45,8 @@ CouchSmurfing's backend is Ruby on Rails with a PostgreSQL database. The fronten
 
   * The bottom of the landing page features an index of cities that un-registered users can navigate through. Subsequent features are locked.
 
-  ![landing-screen][/app/assets/images/readme_photos/landing-screen.png]
+  ![landing-screen](/app/assets/images/readme_photos/landing-screen.png)
+  ![auth-modal](/app/assets/images/readme_photos/auth-modal.png)
 
 ### User Homepage
 
@@ -54,6 +55,9 @@ CouchSmurfing's backend is Ruby on Rails with a PostgreSQL database. The fronten
   * Users can navigate directly to the host's page by clicking on a stay request.
 
   * The navigation bar features a search bar that autosuggests matching city names, and a user dropdown menu that allows navigation back to the user homepage and logging out.
+
+  ![user-homepage](/app/assets/images/readme_photos/user-homepage.png)
+
 
 ### City Details
 
@@ -65,6 +69,9 @@ CouchSmurfing's backend is Ruby on Rails with a PostgreSQL database. The fronten
 
   * Each host appears as a marker on the map. Clicking the marker makes an InfoWindow appear that can also be clicked to take the user to the host's detail page.
 
+  ![city-view](/app/assets/images/readme_photos/city-view.png)
+
+
 ### Host Details
 
   * On the host detail page, users can see information about the host: age, sex, interests, availability, etc.
@@ -74,6 +81,9 @@ CouchSmurfing's backend is Ruby on Rails with a PostgreSQL database. The fronten
   * Backend validations ensure that users cannot make overlapping requests.
 
   * Users can leave reviews of hosts, and delete reviews they have authored.
+
+  ![host-view](/app/assets/images/readme_photos/host-view.png)
+
 ______
 ## Future Directions
   * Users can sign up as hosts
