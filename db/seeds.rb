@@ -610,6 +610,125 @@ ActiveRecord::Base.transaction do
     body: "Cobra Commander and I had a pretty good time together, but I think he suffers from low self-esteem."
   )
 
+  review9 = Review.create!(
+    user_id: demo_user.id,
+    host_id: smurfette.id,
+    body: "Smurfette is the life of the party, for sure. She's a little cranky after a night out at the club, but mimosa brunch was so much fun! "
+  )
+
+  review10 = Review.create!(
+    user_id: carlos.id,
+    host_id: cheetara.id,
+    body: "If you're looking for a jogging partner, Cheetara will keep you on your toes. She also swings a mean stick."
+  )
+
+  review11 = Review.create!(
+    user_id: skeletor_user.id,
+    host_id: cheer_bear.id,
+    body: "Too cheery."
+  )
+
+  review12 = Review.create!(
+    user_id: demo_user.id,
+    host_id: brave_heart_lion.id,
+    body: "Had the best time running around town confronting criminals wiht Brave Heart Lion. Some people said it was foolish, but we were just being brave!"
+  )
+
+  review13 = Review.create!(
+    user_id: jane.id,
+    host_id: he_man.id,
+    body: "We had such a romantic dinner at the Royal Palace... I think there might be a spark between us. I love you Adam!"
+  )
+
+  review14 = Review.create!(
+    user_id: cheer_bear_user.id,
+    host_id: skeletor.id,
+    body: "A little obsessive... All he would talk about was some castle he wanted to conquer. I think he needs to re-evaluate his life goals."
+  )
+
+  review15 = Review.create!(
+    user_id: skeletor_user.id,
+    host_id: sorceress.id,
+    body: "Damn you sorceress! I thought if you let me sleep on your couch, I would finally be able to take over Castle Grayskull, but you put me to sleep right after dinner with a magic spell!"
+  )
+
+  review16 = Review.create!(
+    user_id: demo_user.id,
+    host_id: cherries_jubilee.id,
+    body: "I got to stay with Cherries Jubilee during harvest season! We gorged ourselves on the sweetest fruit you can imagine. All the clopping around in the morning work me up though."
+  )
+
+  review17 = Review.create!(
+    user_id: andrew.id,
+    host_id: optimus_prime.id,
+    body: "Optimus was so inspirational. Super into country music and strange forms of energy."
+  )
+
+  review18 = Review.create!(
+    user_id: demo_user.id,
+    host_id: megatron.id,
+    body: "Total meanie. House smelled like jet fuel."
+  )
+
+  review19 = Review.create!(
+    user_id: carlos.id,
+    host_id: bumblebee.id,
+    body: "Oh my gosh, turn off the radio! Cute car though."
+  )
+
+  review20 = Review.create!(
+    user_id: liono_user.id,
+    host_id: starscream.id,
+    body: "Had a great time talking about quantum physics with Starscream."
+  )
+
+  review21 = Review.create!(
+    user_id: demo_user.id,
+    host_id: leonardo.id,
+    body: "Blue is my favorite color too!"
+  )
+
+  review22 = Review.create!(
+    user_id: cheer_bear_user.id,
+    host_id: michelangelo.id,
+    body: "Cowabunga! I thought New York would be scary, but Michelangelo showed me a great time. Ate tons of pizza!"
+  )
+
+  review23 = Review.create!(
+    user_id: skeletor_user.id,
+    host_id: cobra_commander.id,
+    body: "You've got a new recruit here! Cobra LA-LA-LA-LA!!!"
+  )
+
+  review24 = Review.create!(
+    user_id: andrew.id,
+    host_id: sgt_slaughter.id,
+    body: "I really appreciated the Sgt.'s sense of structure. I'll never make my bed the same way again."
+  )
+
+  review25 = Review.create!(
+    user_id: carlos.id,
+    host_id: scarlett.id,
+    body: "What's up Scarlett! Shout out to you and Snake Eyes!"
+  )
+
+  review26 = Review.create!(
+    user_id: jane.id,
+    host_id: keith_kogane.id,
+    body: "At first I was scared of the giant robotic lion, but Keith really has a calming demeanor and soon I was riding on top!"
+  )
+
+  review27 = Review.create!(
+    user_id: andrew.id,
+    host_id: pidge.id,
+    body: "Pretty cool for a 12 year old. We talked differential equations and reaction-diffusion models."
+  )
+
+  review28 = Review.create!(
+    user_id: skeletor_user.id,
+    host_id: princess_allura.id,
+    body: "I was surprised to find out we both have an interest in communing with the dead. I think I'm in love."
+  )
 
 
   #########################
