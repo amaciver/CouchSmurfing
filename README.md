@@ -2,7 +2,7 @@
 
 ###### [CouchSmurfing live][couchsmurfing]
 
-[couchsmurfing]: http://www.couchsmurfing.herokuapp.com
+[couchsmurfing]: https://www.couchsmurfing.herokuapp.com
 
 ##### CouchSmurfing is a full-stack web application inspired by Couchsurfing and the many great cartoon characters of the 1980's.
 
@@ -22,6 +22,7 @@ CouchSmurfing's backend is Ruby on Rails with a PostgreSQL database. The fronten
   * Google maps
   * Modal components
   * DatePicker
+  * CSS spinner
 
 ----
 ### Overview
