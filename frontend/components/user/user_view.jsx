@@ -10,16 +10,13 @@ class UserView extends React.Component {
     super(props);
     this.state = {
       user: props.user,
-      requests: props.requests,
-      test: true
+      requests: props.requests
     };
     props.fetchRequests(props.user.id);
     this.handleRequestClick = this.handleRequestClick.bind(this);
   }
 
   componentDidMount() {
-    // console.log(this.props);
-    this.setState({test: false});
   }
 
   handleRequestClick(id) {

@@ -87,8 +87,16 @@ class HostView extends React.Component {
 
     let interests;
     if (this.props.host.interests) {
-
       interests = this.props.host.interests.join(" - ");
+    }
+
+    let statusClass;
+    const host = this.props.host
+
+    if (host.status === "Not Accepting Guests") {
+      statusClass = 'mod-large mod-negative';
+    } else {
+      statusClass = 'mod-large mod-positive';
     }
 
     return (
@@ -126,7 +134,7 @@ class HostView extends React.Component {
                 <div className="multicolumn">
                   <div className="multicolumn-column">
                     <h1>
-                      <span className='mod-large mod-positive'>{this.props.host.status}</span>
+                      <span className={statusClass}>{this.props.host.status}</span>
                     </h1>
                   </div>
                   <div className='multicolumn-column'>

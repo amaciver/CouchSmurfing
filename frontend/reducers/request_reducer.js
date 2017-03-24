@@ -17,11 +17,8 @@ const RequestReducer = (state = {request: {}, errors: []}, action) => {
         errors
       });
     case CLEAR_REQUEST_ERRORS:
-      errors = [];
-      return {request: {}, errors: []};
-      // return merge({}, newState, {
-      //   errors
-      // });
+      newState.errors = [];
+      return newState;
     default:
       return state;
   }

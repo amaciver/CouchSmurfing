@@ -14,8 +14,15 @@ class HostIndexItem extends React.Component {
   }
 
   render() {
+    let statusClass;
 
     const host = this.props.host
+
+    if (host.status === "Not Accepting Guests") {
+      statusClass = 'host-list-status mod-negative';
+    } else {
+      statusClass = 'host-list-status mod-positive';
+    }
 
     return(
       <div className='host-index-item' onClick={this.handleClick}>
@@ -30,7 +37,7 @@ class HostIndexItem extends React.Component {
           <div className='host-list-interests'>
             {host.interests.join(" - ")}
           </div>
-          <div className='host-list-status'>
+          <div className={statusClass}>
             {host.status}
           </div>
         </div>
