@@ -25,7 +25,7 @@ const UserCard = (props) => {
               className='user-headshot' />
           </figure>
           <figcaption className='username'>{props.host.name}</figcaption>
-          <Link to={`/api/cities/${props.host.city_id}`}>{props.host.city}</Link>
+          <Link to={`/cities/${props.host.city_id}`}>{props.host.city}</Link>
 
         </div>
       </div>
