@@ -45,6 +45,8 @@ CouchSmurfing's backend is Ruby on Rails with a PostgreSQL database. The fronten
 
   * The bottom of the landing page features an index of cities that un-registered users can navigate through. Subsequent features are locked.
 
+  ![landing-screen][/app/assets/images/readme_photos/landing-screen.png]
+
 ### User Homepage
 
   * The user homepage is the index route for logged-in users. It includes a profile card, existing stay requests, and a list of cities to explore.
