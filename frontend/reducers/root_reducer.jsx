@@ -8,9 +8,11 @@ import HostReducer from './host_reducer';
 import RequestsReducer from './requests_reducer';
 import RequestReducer from './request_reducer';
 import ReviewsReducer from './reviews_reducer';
+import LoadingReducer from './loading_reducer';
 
 const rootReducer = combineReducers({
   session: SessionReducer,
+  loading: LoadingReducer,
   cities: CitiesReducer,
   currentCity: CityReducer,
   hosts: HostsReducer,

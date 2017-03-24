@@ -7,7 +7,8 @@ import {fetchHosts, clearHosts} from '../../actions/hosts_actions';
 const mapStateToProps = (state, ownProps) => ({
   user: state.session.currentUser,
   city: state.currentCity,
-  hosts: Object.keys(state.hosts).map( id => state.hosts[id])
+  hosts: Object.keys(state.hosts).map( id => state.hosts[id]),
+  loading: state.loading
 });
 
 const mapDispatchToProps = (dispatch) => ({

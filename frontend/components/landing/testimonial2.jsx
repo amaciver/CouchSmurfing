@@ -52,24 +52,29 @@ class Testimonial2 extends React.Component {
           <div className="testimonial-header">
             <h3>connected with</h3>
           </div>
-          <figure className='testimonial-image mod-float-right'>
-            <img
-              src="http://res.cloudinary.com/couchsmurfing/image/upload/c_pad,h_526,w_526/v1489872645/Smurfs/papa_smurf_head.png"
-              className='testimonial-headshot' />
-            <figcaption>Papa Smurf</figcaption>
-          </figure>
-          <figure className='testimonial-image mod-float-left'>
-            <img
-              src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489874768/headshots/profile_photo2_head.png"
-              className='testimonial-headshot' />
-            <figcaption>Carlos</figcaption>
-          </figure>
+          <div className='testimonial-images'>
+            <figure className='testimonial-image mod-float-right'>
+              <img
+                src="http://res.cloudinary.com/couchsmurfing/image/upload/c_pad,h_526,w_526/v1489872645/Smurfs/papa_smurf_head.png"
+                className='testimonial-headshot' />
+              <figcaption>Papa Smurf</figcaption>
+            </figure>
+            <figure className='testimonial-image mod-float-left'>
+              <img
+                src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489874768/headshots/profile_photo2_head.png"
+                className='testimonial-headshot' />
+              <figcaption>Carlos</figcaption>
+            </figure>
+          </div>
+          <p className='testimonial-subtitle'>in Smurf Village</p>
+          <hr className='mod-short'/>
+          <p className='testimonial-text'>Papa Smurf is such a wise old fellow. I learned so much from him during my stay, and his family is just lovely. I don't know why that mean old Gargamel won't just leave them alone; I'll definitely be planning another visit as soon as I can!</p>
         </div>
 
 
         <div className='test-mod-right' style={sectionStyle}>
-          <h1>Meet celebrities</h1>
-          <button onClick={this.openModal}>How It Works</button>
+          <h1>Live your dreams</h1>
+          <button onClick={this.openModal}>Get Started</button>
         </div>
 
       </div>

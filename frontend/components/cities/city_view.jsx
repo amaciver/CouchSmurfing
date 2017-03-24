@@ -3,6 +3,7 @@ import Header from '../general/header';
 import { withRouter } from 'react-router';
 import HostIndexContainer from '../hosts/host_index_container';
 import CityMapContainer from '../general/city_map_container';
+import LoadingIcon from '../general/loading_icon';
 
 
 class CityView extends React.Component {
@@ -49,34 +50,49 @@ class CityView extends React.Component {
       // backgroundPosition: "center"
     }
 
-    return (
-      <div id="city-view" className="user-main-view">
-        <Header user={this.state.user} />
-        <div id='city-view-content' className='city-view-content'>
-          <div id="city-splash" className="splash" style={imageStyle}>
+    console.log(this.props.loading);
+    if (this.props.loading.loading) {
+      console.log("laoding");
+      return (
+        <div>
+          <LoadingIcon />
+
+          <div id="city-view" className="user-main-view">
+            <Header user={this.state.user} />
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div id="city-view" className="user-main-view">
+          <Header user={this.state.user} />
+          <div id='city-view-content' className='city-view-content'>
+            <div id="city-splash" className="splash" style={imageStyle}>
               <div className='back-link' onClick={() => this.props.router.goBack()}>
                 <i className="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
                 Back
               </div>
               <h1>{this.props.city.name}</h1>
-          </div>
-          <div className='city-description-wrapper'>
+            </div>
+            <div className='city-description-wrapper'>
 
-            <div className='city-description'>{this.props.city.description}</div>
-          </div>
-          <div className='main'>
-            <div className='hosts-index'>
-              <HostIndexContainer />
+              <div className='city-description'>{this.props.city.description}</div>
+            </div>
+            <div className='main'>
+              <div className='hosts-index'>
+                <HostIndexContainer />
+
+              </div>
+
+              <CityMapContainer  />
 
             </div>
-
-            <CityMapContainer  />
-
           </div>
-        </div>
 
-      </div>
-    );
+        </div>
+      );
+    }
+
   }
 }
 

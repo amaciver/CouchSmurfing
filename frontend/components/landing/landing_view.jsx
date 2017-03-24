@@ -16,6 +16,7 @@ const LandingView = () => {
   return (
     <div id="landing-view" className="main-view">
       <LandingHeaderContainer />
+      
       <div className='splash-wrapper'>
         <div id="landing-splash" className="splash" style={imageStyle}>
           <h1>Stay with 80s Cartoons and Meet Your Heroes </h1>
