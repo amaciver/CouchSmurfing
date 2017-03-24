@@ -54,13 +54,6 @@ class CityMap extends Component {
   }
 
   _registerListeners() {
-  //   google.maps.event.addListener(this.map, 'idle', () => {
-  //     const { north, south, east, west } = this.map.getBounds().toJSON();
-  //     const bounds = {
-  //       northEast: { lat:north, lng: east },
-  //       southWest: { lat: south, lng: west } };
-  //     // this.props.updateFilter('bounds', bounds);
-  //   });
     google.maps.event.addListener(this.map, 'click', event => {
       const coords = _getCoordsObj(event.latLng);
       this._handleClick(coords);
@@ -68,7 +61,6 @@ class CityMap extends Component {
   }
 
   _handleMarkerClick(host, marker) {
-    console.log(`${host.id}`);
     let div = document.createElement('div');
     const content =
       `<div class='info-card'>
@@ -92,7 +84,6 @@ class CityMap extends Component {
 
     this.infowindow.setContent(div)
     this.infowindow.open(this.map, marker);
-    // this.props.router.push(`hosts/${host.id}`);
   }
 
   _handleInfoClick(id) {
@@ -100,13 +91,7 @@ class CityMap extends Component {
   }
 
   _handleClick(coords) {
-    console.log(coords);
     this.infowindow.close();
-    // this.infowindow.open(this.map);
-    // this.props.router.push({
-    //   pathname: "hosts/new",
-    //   query: coords
-    // });
   }
 
   render() {
@@ -117,5 +102,13 @@ class CityMap extends Component {
     )
   }
 }
+
+
+
+
+
+
+
+
 
 export default withRouter(CityMap);

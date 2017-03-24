@@ -198,3 +198,30 @@
     font-weight: 200;
   }
 }
+
+.how-it-works-button {
+  width: 200px;
+}
+
+.test-hero-left {
+  // float: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+.test-hero-right {
+  // float: right;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.test-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 7%;
+  padding-left: 7%;
+}

@@ -50,9 +50,7 @@ class CityView extends React.Component {
       // backgroundPosition: "center"
     }
 
-    console.log(this.props.loading);
     if (this.props.loading.loading) {
-      console.log("laoding");
       return (
         <div>
           <LoadingIcon />

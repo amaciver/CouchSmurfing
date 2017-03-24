@@ -336,7 +336,7 @@ ActiveRecord::Base.transaction do
     name: "Fizzy",
     age: 12,
     sex: "Female",
-    city: "Eternia",
+    city: "Equestria",
     location: "Waterfall",
     lat: 48.832181625698475,
     lng: 2.164306640625,
@@ -352,7 +352,7 @@ ActiveRecord::Base.transaction do
     name: "Cherries Jubilee",
     age: 11,
     sex: "Female",
-    city: "Eternia",
+    city: "Equestria",
     location: "Paradise Estates Orchard",
     lat: 48.84302835299516,
     lng: 2.296142578125,
@@ -655,7 +655,7 @@ ActiveRecord::Base.transaction do
   review16 = Review.create!(
     user_id: demo_user.id,
     host_id: cherries_jubilee.id,
-    body: "I got to stay with Cherries Jubilee during harvest season! We gorged ourselves on the sweetest fruit you can imagine. All the clopping around in the morning work me up though."
+    body: "I got to stay with Cherries Jubilee during harvest season! We gorged ourselves on the sweetest fruit you can imagine. All the clopping around in the morning woke me up though."
   )
 
   review17 = Review.create!(

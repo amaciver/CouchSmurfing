@@ -69,12 +69,26 @@ class Testimonial2 extends React.Component {
           <p className='testimonial-subtitle'>in Smurf Village</p>
           <hr className='mod-short'/>
           <p className='testimonial-text'>Papa Smurf is such a wise old fellow. I learned so much from him during my stay, and his family is just lovely. I don't know why that mean old Gargamel won't just leave them alone; I'll definitely be planning another visit as soon as I can!</p>
+
+          <Modal
+            onRequestClose={this.closeModal}
+            isOpen={this.state.modalIsOpen}
+            contentLabel='How Modal'
+            style={modalStyles}>
+            <HowItWorks
+              closeModal={this.closeModal} />
+          </Modal>
         </div>
 
 
         <div className='test-mod-right' style={sectionStyle}>
-          <h1>Live your dreams</h1>
-          <button onClick={this.openModal}>Get Started</button>
+          <div className='test-hero-right'>
+            <div className='test-hero-content'>
+              <h1>Live your dreams</h1>
+              <button className='how-it-works-button' onClick={this.openModal}>How it works</button>
+            </div>
+
+          </div>
         </div>
 
       </div>
