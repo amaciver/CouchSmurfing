@@ -20,8 +20,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // border-radius: 50%;
-  // border: 2vmin solid black;
   -webkit-animation: spin 1.5s infinite;
   animation: spin 1.5s infinite;
 }
@@ -31,22 +29,22 @@
     0% {
       -webkit-transform: rotateX(0deg) rotate(0deg);
     }
-    50% {
-      -webkit-transform: rotateX(360deg) rotate(-180deg);
-    }
-    100% {
-      -webkit-transform: rotateX(720deg) rotate(0deg);
-    }
+    // 50% {
+    //   -webkit-transform: rotateX(360deg) rotate(-180deg);
+    // }
+    // 100% {
+    //   -webkit-transform: rotateX(0deg) rotate(720deg);
+    // }
 }
 
 @keyframes spin {
     0% {
       transform: rotateX(0deg) rotate(0deg);
     }
-    50% {
-      transform: rotateX(360deg) rotate(-180deg);
-    }
-    100% {
-      transform: rotateX(720deg) rotate(0deg);
-    }
+    // 50% {
+    //   transform: rotateX(360deg) rotate(-180deg);
+    // }
+    // 100% {
+    //   transform: rotateX(0deg) rotate(720deg);
+    // }
 }

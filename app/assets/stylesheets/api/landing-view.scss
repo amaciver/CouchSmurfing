@@ -87,6 +87,7 @@
     letter-spacing: 1px;
     font-weight: 300;
     font-size: 56px;
+    text-align: center;
   }
 }
 .test-mod-right {
@@ -98,9 +99,11 @@
     letter-spacing: 1px;
     font-weight: 300;
     font-size: 56px;
+    text-align: center;
   }
 }
 .testimonial2-main {
+  position: relative;
   width: 90%;
   display: flex;
   align-items: center;
@@ -128,7 +131,7 @@
   height: 600px;
   width: 450px;
   position: absolute;
-  right: 90px;
+  right: 37px;
   background: white;
   // border: 1px solid blue;
   // margin: 30px;
@@ -140,7 +143,7 @@
   height: 600px;
   width: 450px;
   position: absolute;
-  left: 90px;
+  left: 37px;
   background: white;
   // border: 1px solid blue;
   // margin: 30px;
@@ -201,21 +204,31 @@
 
 .how-it-works-button {
   width: 200px;
+  transition: background .3s, ease;
+  &:hover {
+    background: #128bfb;
+    cursor: pointer;
+  }
 }
 
 .test-hero-left {
   // float: left;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: flex-start;
+  width: 50%;
+  align-items: center;
+}
+.test-hero-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
 }
 .test-hero-right {
   // float: right;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: flex-end;
+  width: 50%;
+  align-items: center;
 }
 
 .test-hero-content {

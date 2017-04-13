@@ -97,7 +97,7 @@ class CityMap extends Component {
   render() {
     return (
       <div>
-        <div id='map' className="map" ref='map'>Map</div>;
+        <div id='map' className="map" ref='map'>Map</div>
       </div>
     )
   }

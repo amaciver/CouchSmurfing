@@ -50,11 +50,15 @@ class HostView extends React.Component {
   }
 
   componentWillMount() {
+
+
+    this.scrollHeight = 0;
     Modal.setAppElement('body');
     this.props.fetchHost(this.props.params.hostId);
   }
 
   componentDidMount() {
+    window.scrollTo(0,0)
   }
 
   openRequestModal() {

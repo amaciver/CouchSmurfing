@@ -15,10 +15,11 @@ class CityView extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchCity(this.props.params.cityId)
+    this.props.fetchCity(this.props.params.cityId).then( setTimeout(()=>{}, 1000))
   }
 
   componentDidMount(){
+    window.scrollTo(0,0)
     this.props.fetchHosts(this.props.params.cityId)
   }
 
@@ -88,7 +89,7 @@ class CityView extends React.Component {
           </div>
 
         </div>
-      );
+      )
     }
 
   }

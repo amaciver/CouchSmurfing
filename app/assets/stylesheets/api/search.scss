@@ -16,7 +16,9 @@
 .header-search-form {
   border: 1px solid #aeb5ba;
   border-radius: 50px;
-  display: inline-block;
+  // display: inline-block;
+  position: relative;
+  left: 10%;
   min-height: 37px;
   padding-left: 12px;
   padding-right: 10px;

@@ -82,12 +82,15 @@ class Testimonial2 extends React.Component {
 
 
         <div className='test-mod-right' style={sectionStyle}>
-          <div className='test-hero-right'>
-            <div className='test-hero-content'>
-              <h1>Live your dreams</h1>
-              <button className='how-it-works-button' onClick={this.openModal}>How it works</button>
-            </div>
+          <div className='test-hero-wrapper'>
 
+            <div className='test-hero-right'>
+              <div className='test-hero-content'>
+                <h1>Live your dreams</h1>
+                <button className='how-it-works-button' onClick={this.openModal}>How it works</button>
+              </div>
+
+            </div>
           </div>
         </div>
 

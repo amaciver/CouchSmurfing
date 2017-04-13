@@ -160,20 +160,6 @@ class AuthForm extends React.Component {
 									<input
 										type='text'
 										className='auth-input mod-rounded mod-padded mod-no-shadow'
-										placeholder='Full Name' />
-
-								</fieldset>
-								<fieldset>
-									<input
-										type='text'
-										className='auth-input mod-rounded mod-padded mod-no-shadow'
-										placeholder='Location' />
-
-								</fieldset>
-								<fieldset>
-									<input
-										type='text'
-										className='auth-input mod-rounded mod-padded mod-no-shadow'
 										placeholder='Username'
 										value={this.state.username}
 										onChange={this.update("username")}/>
@@ -232,3 +218,23 @@ class AuthForm extends React.Component {
 // </form>
 
 export default withRouter(AuthForm);
+
+
+
+
+
+
+// <fieldset>
+// 	<input
+// 		type='text'
+// 		className='auth-input mod-rounded mod-padded mod-no-shadow'
+// 		placeholder='Full Name' />
+//
+// </fieldset>
+// <fieldset>
+// 	<input
+// 		type='text'
+// 		className='auth-input mod-rounded mod-padded mod-no-shadow'
+// 		placeholder='Location' />
+//
+// </fieldset>
