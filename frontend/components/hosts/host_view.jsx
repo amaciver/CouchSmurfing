@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../general/header';
+import HeaderContainer from '../general/header_container';
 import UserCard from '../user/user_card';
 import { withRouter } from 'react-router'
 import Modal from 'react-modal';
@@ -105,7 +105,7 @@ class HostView extends React.Component {
 
     return (
       <div id="host-view" className="user-main-view">
-        <Header user={this.props.user} />
+        <HeaderContainer user={this.props.user} />
         <div id='host-view-content' className='host-view-content main'>
           <div className='back-link' onClick={() => this.props.router.goBack()}>
             <i className="fa fa-chevron-left fa-2x" aria-hidden="true"></i>

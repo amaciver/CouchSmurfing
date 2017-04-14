@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../general/header';
+import HeaderContainer from '../general/header_container';
 import { withRouter } from 'react-router';
 import HostIndexContainer from '../hosts/host_index_container';
 import CityMapContainer from '../general/city_map_container';
@@ -57,14 +57,14 @@ class CityView extends React.Component {
           <LoadingIcon />
 
           <div id="city-view" className="user-main-view">
-            <Header user={this.state.user} />
+            <HeaderContainer user={this.state.user} />
           </div>
         </div>
       )
     } else {
       return (
         <div id="city-view" className="user-main-view">
-          <Header user={this.state.user} />
+          <HeaderContainer user={this.state.user} />
           <div id='city-view-content' className='city-view-content'>
             <div id="city-splash" className="splash" style={imageStyle}>
               <div className='back-link' onClick={() => this.props.router.goBack()}>
