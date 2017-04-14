@@ -252,7 +252,7 @@ class HostView extends React.Component {
             onRequestClose={this.closeSuccessModal}
             contentLabel='Success Modal'
             style={successStyles}>
-            <div>
+            <div className='success-modal mod-positive'>
               Success!
             </div>
           </Modal>
