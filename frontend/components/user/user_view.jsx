@@ -29,29 +29,32 @@ class UserView extends React.Component {
 
 
   render() {
-    const requests = this.props.requests.map( (request, idx) => {
+    let requests
+    if (this.props.requests[0]) {
+      requests = this.props.requests.map( (request, idx) => {
 
-      const start = new Date(request.start_date).toDateString();
-      const end = new Date(request.end_date).toDateString();
-      return (
-        <li key={idx} className='host-list-item' onClick={this.handleRequestClick(request.host.id)}>
-          <div className='request-item-title'>
-            <div className='host-image-wrapper mod-on-left'>
-              <img className='host-item-image'  src={request.host.image_url} />
+        const start = new Date(request.start_date).toDateString();
+        const end = new Date(request.end_date).toDateString();
+        return (
+          <li key={idx} className='host-list-item' onClick={this.handleRequestClick(request.host.id)}>
+            <div className='request-item-title'>
+              <div className='host-image-wrapper mod-on-left'>
+                <img className='host-item-image'  src={request.host.image_url} />
+              </div>
+              <div>
+
+                <h3>{request.host.name}</h3>
+                <div>{request.host.location}</div>
+              </div>
             </div>
-            <div>
 
-              <h3>{request.host.name}</h3>
-              <div>{request.host.location}</div>
-            </div>
-          </div>
+            <div>Start: {start}</div>
+            <div>End: {end}</div>
+          </li>
+        );
+      })
+    } else { requests = <li className='host-list-item'>No requests yet</li> }
 
-          <div>Start: {start}</div>
-          <div>End: {end}</div>
-        </li>
-      );
-    })
-    // console.log(this.props);
     return (
       <div id="user-view" className="user-main-view">
         <Header user={this.state.user} />
