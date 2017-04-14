@@ -134,7 +134,7 @@ class AuthForm extends React.Component {
 						</div>
 					</section>
 					<img className="x-box"
-						src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
+						src='https://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
 						width="20"
 						height="20"
 						onClick={this.props.closeModal}/>
@@ -181,7 +181,7 @@ class AuthForm extends React.Component {
 						</div>
 					</section>
 					<img className="x-box"
-						src='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
+						src='https://res.cloudinary.com/couchsmurfing/image/upload/v1489604610/close-icon_mzdzio.png'
 						width="20"
 						height="20"
 						onClick={this.props.closeModal}/>

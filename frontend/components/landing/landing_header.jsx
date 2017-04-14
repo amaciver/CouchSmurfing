@@ -64,7 +64,7 @@ class LandingHeader extends React.Component {
             <div className='brand'>
               <img
                 className='brand-icon'
-                src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
+                src="https://res.cloudinary.com/couchsmurfing/image/upload/v1489604248/logo_atjhje.jpg"
                 />
               <div className="brand-name">CouchSmurfing</div>
             </div>

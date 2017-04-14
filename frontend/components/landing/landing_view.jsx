@@ -9,7 +9,7 @@ const LandingView = () => {
   const imageStyle = {
     background: `linear-gradient(rgba(0, 0, 0, 0.45),
     rgba(0, 0, 0, 0.45)),
-    url("http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/smurfs-banner_uks7vm.jpg")`,
+    url("https://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/smurfs-banner_uks7vm.jpg")`,
     backgroundSize: "cover",
     backgroundPosition: "center"
   }
@@ -24,8 +24,8 @@ const LandingView = () => {
         </div>
 
       </div>
-      <Testimonial1 source='http://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/care-bears-banner_qdmud7.jpg'  />
-      <Testimonial2 source='http://res.cloudinary.com/couchsmurfing/image/upload/c_crop,g_west,h_658,w_849,x_0/v1490317356/heman_test3_ixzg3a.jpg'/>
+      <Testimonial1 source='https://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/care-bears-banner_qdmud7.jpg'  />
+      <Testimonial2 source='https://res.cloudinary.com/couchsmurfing/image/upload/c_crop,g_west,h_658,w_849,x_0/v1490317356/heman_test3_ixzg3a.jpg'/>
       <CitiesIndexContainer type="landing" />
 
     </div>

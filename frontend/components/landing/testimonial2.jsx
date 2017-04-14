@@ -55,13 +55,13 @@ class Testimonial2 extends React.Component {
           <div className='testimonial-images'>
             <figure className='testimonial-image mod-float-right'>
               <img
-                src="http://res.cloudinary.com/couchsmurfing/image/upload/c_pad,h_526,w_526/v1489872645/Smurfs/papa_smurf_head.png"
+                src="https://res.cloudinary.com/couchsmurfing/image/upload/c_pad,h_526,w_526/v1489872645/Smurfs/papa_smurf_head.png"
                 className='testimonial-headshot' />
               <figcaption>Papa Smurf</figcaption>
             </figure>
             <figure className='testimonial-image mod-float-left'>
               <img
-                src="http://res.cloudinary.com/couchsmurfing/image/upload/v1489874768/headshots/profile_photo2_head.png"
+                src="https://res.cloudinary.com/couchsmurfing/image/upload/v1489874768/headshots/profile_photo2_head.png"
                 className='testimonial-headshot' />
               <figcaption>Carlos</figcaption>
             </figure>
