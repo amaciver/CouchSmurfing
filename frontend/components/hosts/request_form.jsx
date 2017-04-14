@@ -1,5 +1,6 @@
 import React from 'react';
 import { DateRangePicker } from 'react-dates';
+import { hashHistory } from 'react-router'
 import Moment from 'moment';
 import css from 'react-dates/lib/css/_datepicker.css';
 import {START_DATE, END_DATE} from 'react-dates/constants';
@@ -29,7 +30,11 @@ class RequestForm extends React.Component {
       }
 
       this.props.createRequest(request)
-      .then(this.props.closeModal);
+      .then(this.props.closeModal)
+      .then( () => {
+        this.props.openSuccessModal();
+        setTimeout(() => hashHistory.push('/'), 1000);
+      });
     } else {
       this.props.closeModal()
     }

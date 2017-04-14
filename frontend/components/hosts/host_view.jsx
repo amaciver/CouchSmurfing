@@ -29,6 +29,16 @@ const reviewStyles = {
     transform             : 'translate(-50%, -50%)'
   }
 };
+const successStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 
 class HostView extends React.Component {
@@ -38,12 +48,15 @@ class HostView extends React.Component {
       user: props.user,
       host: props.host,
       requestModalIsOpen: false,
-      reviewModalIsOpen: false
+      reviewModalIsOpen: false,
+      successModalIsOpen: false
     };
     this.openRequestModal = this.openRequestModal.bind(this);
     this.closeRequestModal = this.closeRequestModal.bind(this);
     this.openReviewModal = this.openReviewModal.bind(this);
     this.closeReviewModal = this.closeReviewModal.bind(this);
+    this.openSuccessModal = this.openSuccessModal.bind(this);
+    this.closeSuccessModal = this.closeSuccessModal.bind(this);
     // this.clearRequestErrors = this.clearRequestErrors.bind(this);
     props.fetchReviews(props.params.hostId);
 
@@ -61,26 +74,19 @@ class HostView extends React.Component {
     window.scrollTo(0,0)
   }
 
-  openRequestModal() {
-    if (this.props.user) {
-
-    }
-    this.setState({requestModalIsOpen: true});
-  }
+  openRequestModal() { this.setState({requestModalIsOpen: true}) }
 
   closeRequestModal() {
     this.setState({requestModalIsOpen: false}, () => this.props.clearRequestErrors());
   }
 
-  openReviewModal() {
-    if (this.props.user) {
-    }
-    this.setState({reviewModalIsOpen: true});
-  }
+  openReviewModal() { this.setState({reviewModalIsOpen: true}) }
 
-  closeReviewModal() {
-    this.setState({reviewModalIsOpen: false});
-  }
+  closeReviewModal() { this.setState({reviewModalIsOpen: false}) }
+
+  openSuccessModal() { this.setState({successModalIsOpen: true}) }
+
+  closeSuccessModal() { this.setState({successModalIsOpen: false}) }
 
   render() {
     const reviews = this.props.reviews.map( (review, idx) => {
@@ -226,6 +232,8 @@ class HostView extends React.Component {
             style={requestStyles}>
 
             <RequestFormContainer
+              openSuccessModal={this.openSuccessModal}
+              closeSuccessModal={this.closeSuccessModal}
               closeModal={this.closeRequestModal}/>
 
           </Modal>
@@ -235,7 +243,18 @@ class HostView extends React.Component {
             contentLabel='Review Modal'
             style={reviewStyles}>
             <ReviewFormContainer
+              openSuccessModal={this.openSuccessModal}
+              closeSuccessModal={this.closeSuccessModal}
               closeModal={this.closeReviewModal}/>
+          </Modal>
+          <Modal
+            isOpen={this.state.successModalIsOpen}
+            onRequestClose={this.closeSuccessModal}
+            contentLabel='Success Modal'
+            style={successStyles}>
+            <div>
+              Success!
+            </div>
           </Modal>
         </div>
       </div>
