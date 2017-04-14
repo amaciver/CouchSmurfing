@@ -17,6 +17,7 @@ class UserView extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0,0);
   }
 
   handleRequestClick(id) {

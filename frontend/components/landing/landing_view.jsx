@@ -13,10 +13,11 @@ const LandingView = () => {
     backgroundSize: "cover",
     backgroundPosition: "center"
   }
+  window.scrollTo(0,0)
   return (
     <div id="landing-view" className="main-view">
       <LandingHeaderContainer />
-      
+
       <div className='splash-wrapper'>
         <div id="landing-splash" className="splash" style={imageStyle}>
           <h1>Stay with 80s Cartoons and Meet Your Heroes </h1>
