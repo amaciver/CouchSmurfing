@@ -7,8 +7,8 @@ import Testimonial2 from './testimonial2';
 
 const LandingView = () => {
   const imageStyle = {
-    background: `linear-gradient(rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.45)),
+    background: `linear-gradient(rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)),
     url("https://res.cloudinary.com/couchsmurfing/image/upload/v1489604611/smurfs-banner_uks7vm.jpg")`,
     backgroundSize: "cover",
     backgroundPosition: "center"
